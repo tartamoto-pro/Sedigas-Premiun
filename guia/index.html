@@ -3,11 +3,11 @@
 <title>Guía de estudio · Recertificación Sedigas</title>
 <link rel="stylesheet" href="../styles.css"><style>*{box-sizing:border-box}
 
-nav{position:sticky;top:44px;z-index:4;background:#fff;border-bottom:1px solid #dde3ea;padding:8px 16px;display:flex;gap:8px;overflow-x:auto;white-space:nowrap}
+nav{position:sticky;top:var(--hh,44px);z-index:4;background:#fff;border-bottom:1px solid #dde3ea;padding:8px 16px;display:flex;gap:8px;overflow-x:auto;white-space:nowrap}
 nav a{color:#0b3d6e;text-decoration:none;font-size:14px;padding:4px 10px;border:1px solid #c9d6e4;border-radius:14px;background:#f2f6fb}
 main{max-width:1000px;margin:16px auto;padding:16px 20px 60px;background:#fff;border:1px solid var(--borde);border-radius:12px}
 h1{color:var(--azul)}
-h2{font-size:1.3rem;border-bottom:2px solid #0b3d6e;padding-bottom:4px;margin-top:36px;scroll-margin-top:110px}
+h2{font-size:1.3rem;scroll-margin-top:120px;border-bottom:2px solid #0b3d6e;padding-bottom:4px;margin-top:36px;scroll-margin-top:110px}
 h3{font-size:17px;color:#0b3d6e;margin-top:22px}
 .by{color:#666;margin-top:0}
 .tw{overflow-x:auto}
@@ -25,8 +25,9 @@ p.pic img{max-width:100%;max-height:340px;cursor:zoom-in}
 #zoom{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
 #zoom img{max-width:96vw;max-height:94vh;background:#fff}
 .toggle{background:#fff;color:#0b3d6e;border:0;border-radius:14px;padding:5px 12px;font-size:14px;cursor:pointer}
+@media (max-width:600px){main{margin:0;border:0;border-radius:0;padding:12px 14px 50px}.toggle{font-size:13px;padding:5px 10px;flex:none}.cases{grid-template-columns:1fr}.case img{height:220px}td img{width:110px}}
 @media print{header,nav,.toggle{display:none}body{background:#fff}main{max-width:none;padding:0}h2{break-before:page}.case{break-inside:avoid}.case.hide-ans p{filter:none}}</style></head>
-<body><header class="top"><a class="brand" href="../" style="text-decoration:none">Destreza visual <span>Guía de estudio</span></a><button class="toggle" id="modo">Modo repaso: ocultar respuestas</button></header>
+<body><header class="top"><a class="brand" href="../" style="text-decoration:none">Destreza visual <span>Guía de estudio</span></a><button class="toggle" id="modo">Ocultar respuestas</button></header>
 <nav><a href="#cómo-es-el-examen-premium">Cómo es el examen Premium</a><a href="#la-regla-de-oro-mira-primero-qué-aviso-es">La regla de oro: mira
 primero qué aviso es</a><a href="#novedades-que-cambian-respuestas-une-606702023-y-esquemas-2022">Novedades
 que cambian respuestas (UNE 60670:2023 y esquemas 2022)</a><a href="#chuleta-de-cotas-y-valores">Chuleta de cotas y valores</a><a href="#pad-1-casos-tipo-resueltos-altas">PAD-1: casos tipo resueltos
@@ -831,12 +832,13 @@ seguridad.</p></div>
 de la Parte 4 y al 5.4 de la Parte 1 de las Especificaciones Técnicas de
 AU.</p>
 </main><div id="zoom"><img alt=""></div><script>
+const hd=document.querySelector('header.top');const setH=()=>document.documentElement.style.setProperty('--hh',hd.offsetHeight+'px');setH();addEventListener('resize',setH);
 const z=document.getElementById('zoom'),zi=z.querySelector('img');
 document.querySelectorAll('main img').forEach(i=>i.addEventListener('click',()=>{zi.src=i.src;z.style.display='flex'}));
 z.addEventListener('click',()=>z.style.display='none');
 document.addEventListener('keydown',e=>{if(e.key==='Escape')z.style.display='none'});
 document.querySelectorAll('main table').forEach(t=>{const w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)});
 const btn=document.getElementById('modo');let on=false;
-btn.addEventListener('click',()=>{on=!on;document.querySelectorAll('.case').forEach(c=>c.classList.toggle('hide-ans',on));btn.textContent=on?'Mostrar respuestas':'Modo repaso: ocultar respuestas'});
+btn.addEventListener('click',()=>{on=!on;document.querySelectorAll('.case').forEach(c=>c.classList.toggle('hide-ans',on));btn.textContent=on?'Mostrar respuestas':'Ocultar respuestas'});
 document.querySelectorAll('.case').forEach(c=>c.addEventListener('click',e=>{if(c.classList.contains('hide-ans')&&e.target.tagName!=='IMG'){c.classList.remove('hide-ans')}}));
 </script></body></html>
