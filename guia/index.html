@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guía de estudio · Recertificación Sedigas</title>
+<link rel="stylesheet" href="../styles.css"><style>*{box-sizing:border-box}
+
+nav{position:sticky;top:44px;z-index:4;background:#fff;border-bottom:1px solid #dde3ea;padding:8px 16px;display:flex;gap:8px;overflow-x:auto;white-space:nowrap}
+nav a{color:#0b3d6e;text-decoration:none;font-size:14px;padding:4px 10px;border:1px solid #c9d6e4;border-radius:14px;background:#f2f6fb}
+main{max-width:1000px;margin:16px auto;padding:16px 20px 60px;background:#fff;border:1px solid var(--borde);border-radius:12px}
+h1{color:var(--azul)}
+h2{font-size:1.3rem;border-bottom:2px solid #0b3d6e;padding-bottom:4px;margin-top:36px;scroll-margin-top:110px}
+h3{font-size:17px;color:#0b3d6e;margin-top:22px}
+.by{color:#666;margin-top:0}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;margin:8px 0;font-size:14px}
+th,td{border:1px solid #c9d3de;padding:6px 8px;vertical-align:top;text-align:left}
+th{background:#e6eef7}
+td img{width:150px;max-width:40vw;height:auto;display:block;cursor:zoom-in}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:10px 0}
+.case{border:1px solid #d5dde6;border-radius:8px;padding:10px;background:#fff}
+.case .t{margin:0 0 6px}
+.case img{display:block;width:100%;height:240px;object-fit:contain;background:#fafafa;margin-bottom:6px;cursor:zoom-in}
+.case p{margin:0}
+.case.hide-ans p:not(.t){filter:blur(6px);cursor:pointer}
+p.pic img{max-width:100%;max-height:340px;cursor:zoom-in}
+#zoom{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
+#zoom img{max-width:96vw;max-height:94vh;background:#fff}
+.toggle{background:#fff;color:#0b3d6e;border:0;border-radius:14px;padding:5px 12px;font-size:14px;cursor:pointer}
+@media print{header,nav,.toggle{display:none}body{background:#fff}main{max-width:none;padding:0}h2{break-before:page}.case{break-inside:avoid}.case.hide-ans p{filter:none}}</style></head>
+<body><header class="top"><a class="brand" href="../" style="text-decoration:none">Destreza visual <span>Guía de estudio</span></a><button class="toggle" id="modo">Modo repaso: ocultar respuestas</button></header>
+<nav><a href="#cómo-es-el-examen-premium">Cómo es el examen Premium</a><a href="#la-regla-de-oro-mira-primero-qué-aviso-es">La regla de oro: mira
+primero qué aviso es</a><a href="#novedades-que-cambian-respuestas-une-606702023-y-esquemas-2022">Novedades
+que cambian respuestas (UNE 60670:2023 y esquemas 2022)</a><a href="#chuleta-de-cotas-y-valores">Chuleta de cotas y valores</a><a href="#pad-1-casos-tipo-resueltos-altas">PAD-1: casos tipo resueltos
+(altas)</a><a href="#pad-2-casos-tipo-resueltos-inspección-periódica">PAD-2: casos
+tipo resueltos (inspección periódica)</a><a href="#od-y-au-casos-tipo-resueltos">OD y AU: casos tipo resueltos</a></nav><main><h1
+id="guía-de-estudio-recertificación-sedigas-premium-destreza-visual">Guía
+de estudio – Recertificación Sedigas Premium (destreza visual)</h1>
+<p class="by">8 de noviembre de 2026</p>
+<h2 id="cómo-es-el-examen-premium">Cómo es el examen Premium</h2>
+<p>Son 20 casos de destreza visual y se aprueba con 16. Puedes fallar
+como máximo 4. Cada acierto vale 1 punto; un fallo o una pregunta en
+blanco valen 0. <strong>No detectar el defecto cuenta como respuesta
+incorrecta</strong>, así que nunca dejes una en blanco.</p>
+<table>
+
+<thead>
+<tr class="header">
+<th>Bloque</th>
+<th>Qué trata</th>
+<th>Casos en Premium</th>
+<th>Casos en Premium Plus</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PAD-1</td>
+<td>Pruebas previas y puesta en servicio (altas)</td>
+<td>6</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td>PAD-2</td>
+<td>Inspección periódica (IP)</td>
+<td>6</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>OD</td>
+<td>Operaciones domiciliarias (TOD)</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>AU-IR</td>
+<td>Urgencias en instalaciones receptoras (TAU)</td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td>AU-Redes</td>
+<td>Urgencias en redes</td>
+<td>—</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td><strong>Total / aprobado</strong></td>
+<td></td>
+<td><strong>20 / 16</strong></td>
+<td><strong>20 / 16</strong></td>
+</tr>
+</tbody>
+</table>
+<p>En cada caso hay que dar tres cosas: el veredicto (correcto /
+incorrecto, o sin defecto / anomalía secundaria / anomalía principal),
+una explicación de una línea y, en OD y AU, la actuación en la vivienda.
+Cualquier respuesta equivalente a la oficial cuenta como buena, así que
+escribe corto y concreto: el defecto y la cota que falla.</p>
+<h2 id="la-regla-de-oro-mira-primero-qué-aviso-es">La regla de oro: mira
+primero qué aviso es</h2>
+<p>La misma instalación puede ser correcta o incorrecta según el tipo de
+aviso. Esta es la trampa que más se repite en los exámenes: antes de
+mirar el dibujo, lee qué aviso o qué inspección es.</p>
+<table>
+
+<thead>
+<tr class="header">
+<th>Tipo de aviso</th>
+<th>Qué evalúas</th>
+<th>Qué NO evalúas</th>
+<th>Actuación típica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PAD-1 · Alta / puesta en servicio</td>
+<td>Todo con la normativa completa (UNE 60670): cotas, ventilaciones,
+volúmenes, SPC</td>
+<td>—</td>
+<td>Correcto / incorrecto + qué cota falla</td>
+</tr>
+<tr class="even">
+<td>PAD-2 · Inspección periódica (IP)</td>
+<td>Anomalías de la lista de IP y si son secundarias o principales</td>
+<td>Cosas que solo se exigen en altas (p. ej. salida de aparato tipo C
+en galería: en IP no se valora; lo delataría el CO ambiente)</td>
+<td>Sin defecto / anomalía secundaria / anomalía principal</td>
+</tr>
+<tr class="odd">
+<td>OD · Cambio de contador</td>
+<td>Solo la operación</td>
+<td>Distancias y altura del contador</td>
+<td>Cambiar contador, prueba de estanqueidad y dar gas</td>
+</tr>
+<tr class="even">
+<td>OD · Reapertura <strong>sin</strong> certificado</td>
+<td>Estanqueidad</td>
+<td>Distancias (p. ej. entre salidas de calderas)</td>
+<td>Prueba de estanqueidad y dar gas</td>
+</tr>
+<tr class="odd">
+<td>OD · Reapertura <strong>con</strong> certificado</td>
+<td>Que cumpla la UNE 60670</td>
+<td>—</td>
+<td>Si falla algo grave (caldera tipo B sin salida de humos): precintar
+el aparato o la instalación</td>
+</tr>
+<tr class="even">
+<td>AU-IR · Falta de presión</td>
+<td>Solo lo que causa el aviso</td>
+<td>Falta de ventilación (no se considera defecto en estos avisos)</td>
+<td>Comprobaciones, prueba de estanqueidad y dar gas</td>
+</tr>
+<tr class="odd">
+<td>AU-IR · Sin gas</td>
+<td>Peligros graves a la vista</td>
+<td>—</td>
+<td>Aparato tipo B sin salida de humos: incorrecta, se precinta la
+caldera</td>
+</tr>
+</tbody>
+</table>
+<p>Como norma práctica: en una alta (PAD-1) se mira todo, en una IP
+(PAD-2) se clasifica la gravedad, y en OD o en urgencias se atiende al
+aviso y solo se para ante un peligro claro.</p>
+<h2 id="novedades-que-cambian-respuestas-une-606702023-y-esquemas-2022">Novedades
+que cambian respuestas (UNE 60670:2023 y esquemas 2022)</h2>
+<p>Comparado con los ejemplos de examen, las especificaciones de octubre
+de 2025 y el documento de cambios de septiembre de 2025 cambian estas
+cosas. Ante la duda, manda lo nuevo.</p>
+<table>
+
+<thead>
+<tr class="header">
+<th>Tema</th>
+<th>Antes (ejemplos de examen)</th>
+<th>Ahora</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Falta de deflector</td>
+<td>No era defecto si el aparato estaba en zona exterior</td>
+<td>Anomalía principal (IPa-5) siempre, esté donde esté</td>
+</tr>
+<tr class="even">
+<td>Altura del totalizador</td>
+<td>Se daba 2,00 m para todo</td>
+<td>1,70 m en vivienda o exterior; 2,00 m en centralizaciones; hasta
+2,40 m en módulos prefabricados con escalera</td>
+</tr>
+<tr class="odd">
+<td>Contador junto a cocina</td>
+<td>40 cm sin pantalla</td>
+<td>Se mide en proyección horizontal desde el extremo de la cocina; el
+mueble que contiene el contador cuenta como pantalla</td>
+</tr>
+<tr class="even">
+<td>Contador en baño o dormitorio</td>
+<td>Prohibido siempre</td>
+<td>Se permite en espacios diáfanos de más de 75 m³</td>
+</tr>
+<tr class="odd">
+<td>Local con contador interior</td>
+<td>—</td>
+<td>Ventilación permanente de 5 cm²</td>
+</tr>
+<tr class="even">
+<td>Toma de muestras</td>
+<td>Se podía practicar</td>
+<td>Aparatos de hasta 70 kW deben tenerla; sin toma accesible sin
+desmontar la carcasa = AS-4</td>
+</tr>
+<tr class="odd">
+<td>Puesta en marcha de aparatos</td>
+<td>—</td>
+<td>Nunca con CO ambiente de 15 ppm o más, ni con CO corregido de 500
+ppm o más</td>
+</tr>
+<tr class="even">
+<td>Armario de regulación o centralización sin puerta</td>
+<td>«Estado de conservación»</td>
+<td>Defecto propio: CS-8 «puerta o cerradura incorrecta»</td>
+</tr>
+<tr class="odd">
+<td>Contadores sin identificar en centralización</td>
+<td>—</td>
+<td>Nuevo defecto CS-10</td>
+</tr>
+<tr class="even">
+<td>Llave de aparato no bloqueable</td>
+<td>—</td>
+<td>Defecto si no está cerrada, precintada y taponada (IPa-8)</td>
+</tr>
+<tr class="odd">
+<td>Rejillas de ventilación</td>
+<td>—</td>
+<td>Deben ser fijas (las de lamas móviles no valen)</td>
+</tr>
+<tr class="even">
+<td>Cocina tipo A en loft</td>
+<td>—</td>
+<td>Permitida si tiene detección de llama, ≤ 12 kW y más de 80 m³</td>
+</tr>
+<tr class="odd">
+<td>Chimenea colectiva</td>
+<td>—</td>
+<td>Prohibido mezclar aparatos de condensación y de no condensación</td>
+</tr>
+</tbody>
+</table>
+<p>Para la renovación, desde julio de 2022 <strong>no hay examen
+teórico</strong>: solo el teórico-práctico (destreza visual) y el
+práctico, este sin la prueba de «detección de defectos». El certificado
+nuevo dura 4 años.</p>
+<h2 id="chuleta-de-cotas-y-valores">Chuleta de cotas y valores</h2>
+<p>Estos son los números que se repiten en los exámenes de práctica y en
+los ejemplos oficiales. En la columna «Trampa del examen» está el valor
+que suelen poner para que piques.</p>
+<h3 id="ventilación-y-volumen-de-locales">Ventilación y volumen de
+locales</h3>
+<table>
+
+<thead>
+<tr class="header">
+<th>Dibujo</th>
+<th>Situación</th>
+<th>Valor correcto</th>
+<th>Trampa del examen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="img/001.jpg" loading="lazy" alt="Rejilla de 50 cm²" /></td>
+<td>Orificio o rejilla de ventilación del local</td>
+<td>≥ 125 cm²</td>
+<td>50 cm², 120 cm²</td>
+</tr>
+<tr class="even">
+<td><img src="img/002.jpg" loading="lazy" alt="Extractor a 1,70 m" /></td>
+<td>Ventilación superior o extractor mecánico (sin filtro)</td>
+<td>Obra nueva: abertura superior a ≥ 1,80 m del suelo y ≤ 0,40 m del
+techo. Extractor en IP: ≥ 80 cm² libres parado (100 cm² si los tipo A
+suman más de 16 kW) y a ≥ 1,80 m del suelo O a menos de 0,40 m del
+techo</td>
+<td>1,70 m; creer que el extractor necesita 125 cm²</td>
+</tr>
+<tr class="odd">
+<td><img src="img/003.jpg" loading="lazy"
+alt="Rejilla de lamas móviles" /></td>
+<td>Rejilla de lamas móviles</td>
+<td>No vale, no es ventilación permanente</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><img src="img/004.jpg" loading="lazy"
+alt="Cocina con ventana de 0,7 × 0,5 m" /></td>
+<td>Cocina sin dispositivos de seguridad en los fuegos: ventilación
+rápida</td>
+<td>≥ 0,40 m²</td>
+<td>Ventana de 0,7 × 0,5 = 0,35 m²</td>
+</tr>
+<tr class="odd">
+<td><img src="img/005.jpg" loading="lazy"
+alt="Ventilación rápida por local contiguo" /></td>
+<td>Ventilación rápida a través de un local contiguo</td>
+<td>Puerta intermedia ≥ 1,2 m²</td>
+<td>Puerta de 1 m²</td>
+</tr>
+<tr class="even">
+<td><img src="img/006.jpg" loading="lazy"
+alt="Cocina tipo A en local menor de 6 m³" /></td>
+<td>Local con aparato tipo A (no conectado) y armario-cocina</td>
+<td>Volumen ≥ 6 m³; armario-cocina solo si la distancia más corta es ≤
+0,30 m</td>
+<td>&lt; 6 m³; L = 0,40 m</td>
+</tr>
+<tr class="odd">
+<td><img src="img/007.jpg" loading="lazy" alt="Cocina de 17 kW en 7 m³" /></td>
+<td>Aparatos de cocción de más de 16 kW</td>
+<td>Volumen ≥ ΣQn − 8 (17 kW → 9 m³); si está entre el 75 y el 100 %,
+aumentar la ventilación un 50 % (secundaria)</td>
+<td>Aumentar un 20 %</td>
+</tr>
+<tr class="even">
+<td><img src="img/008.jpg" loading="lazy"
+alt="Calentador con 120 cm²" /></td>
+<td>Aparatos conectados (tipo B)</td>
+<td>Sin volumen mínimo; ventilación ≥ 125 cm²</td>
+<td>120 cm²</td>
+</tr>
+<tr class="odd">
+<td><img src="img/009.jpg" loading="lazy"
+alt="Aparato tipo A en 9 m³" /></td>
+<td>AU, aviso de falta de presión</td>
+<td>Local sin ventilación de más de 8 m³: no es defecto</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><img src="img/010.jpg" loading="lazy"
+alt="Zona exterior que cumple" /></td>
+<td>Zona exterior (galería abierta)</td>
+<td>Abertura &gt; 1,5 m² y parte superior a &lt; 0,50 m del techo</td>
+<td>S &gt; 1,3 m²; L &lt; 1 m</td>
+</tr>
+<tr class="odd">
+<td><img src="img/011.jpg" loading="lazy"
+alt="Patio con aporte de 200 cm²" /></td>
+<td>Patio de ventilación de menos de 3 m² (edificio existente)</td>
+<td>Aporte de aire ≥ 300 cm²; si está techado, superficie libre ≥ 2
+m²</td>
+<td>200 cm²</td>
+</tr>
+<tr class="even">
+<td><img src="img/012.jpg" loading="lazy"
+alt="Patio de edificio nuevo" /></td>
+<td>Patio de ventilación (edificio nuevo)</td>
+<td>Lado mínimo 1 m y sección de 3 m²: correcto</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><img src="img/013.jpg" loading="lazy"
+alt="Armario de contadores con 100 cm²" /></td>
+<td>Armario de centralización de contadores (más de 2)</td>
+<td>Armario interior: superior e inferior ≥ 200 cm² cada una (armario
+exterior: 50 cm²; si el conducto mide más de 3 m, +50 %)</td>
+<td>100 cm²</td>
+</tr>
+<tr class="even">
+<td><img src="img/014.jpg" loading="lazy" alt="Conductos técnicos" /></td>
+<td>Conductos técnicos</td>
+<td>Ventilación superior e inferior ≥ 150 cm² (confirmado en el Tema 3)
+y 100 cm² libres al atravesar cada forjado</td>
+<td>100 cm²</td>
+</tr>
+<tr class="odd">
+<td><img src="img/015.jpg" loading="lazy"
+alt="Armario de regulación en vestíbulo" /></td>
+<td>Armario de regulación no estanco en vestíbulo cerrado</td>
+<td>Debe ventilar directamente al exterior</td>
+<td>Rejillas al vestíbulo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contadores">Contadores</h3>
+<table>
+
+<thead>
+<tr class="header">
+<th>Dibujo</th>
+<th>Situación</th>
+<th>Valor correcto</th>
+<th>Trampa del examen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="img/016.jpg" loading="lazy"
+alt="Contador junto a la cocina" /></td>
+<td>Contador sobre los fuegos de una cocina</td>
+<td>≥ 40 cm en proyección horizontal, salvo pantalla de protección (vale
+el lateral de un mueble que lo contenga)</td>
+<td>20 cm</td>
+</tr>
+<tr class="even">
+<td><img src="img/017.jpg" loading="lazy"
+alt="Contador junto a calentador" /></td>
+<td>Contador junto a aparato de ACS o calefacción, o a mecanismos
+eléctricos</td>
+<td>≥ 20 cm</td>
+<td>15 cm</td>
+</tr>
+<tr class="odd">
+<td><img src="img/018.jpg" loading="lazy"
+alt="Locales para el contador" /></td>
+<td>Contador junto al fregadero; locales prohibidos</td>
+<td>Nunca bajo la proyección vertical del fregadero; nunca en
+dormitorio, baño, ducha o aseo (salvo espacio diáfano de más de 75
+m³)</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><img src="img/019.jpg" loading="lazy"
+alt="Altura de contadores" /></td>
+<td>Altura máxima del totalizador</td>
+<td>≤ 1,70 m en vivienda · ≤ 2,00 m en centralización de contadores</td>
+<td>2,20 m</td>
+</tr>
+<tr class="odd">
+<td><img src="img/020.jpg" loading="lazy"
+alt="Armario no prefabricado de 2,4 m" /></td>
+<td>Armario de contadores no prefabricado</td>
+<td>Totalizador a ≤ 2,00 m (hasta 2,40 m solo en módulos prefabricados
+con escalera)</td>
+<td>2,40 m</td>
+</tr>
+<tr class="even">
+<td><img src="img/021.jpg" loading="lazy"
+alt="Caldera tipo B sobre la cocina" /></td>
+<td>Proyección vertical de caldera tipo B sobre la cocina</td>
+<td>≥ 40 cm</td>
+<td>Menos de 40 cm</td>
+</tr>
+</tbody>
+</table>
+<h3 id="salidas-de-humos-spc">Salidas de humos (SPC)</h3>
+<table>
+
+<thead>
+<tr class="header">
+<th>Dibujo</th>
+<th>Situación</th>
+<th>Valor correcto</th>
+<th>Trampa del examen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="img/022.jpg" loading="lazy"
+alt="Las 4 cotas de salida de humos" /></td>
+<td>Las 4 cotas del dibujo de salida (PAD-1)</td>
+<td>≥ 10 cm al forjado · ≥ 40 cm a pared lateral · ≥ 20 cm a tubo de
+desagüe o resalte · ≥ 40 cm del deflector a aleros y cornisas</td>
+<td>Poner 40 en la de 20</td>
+</tr>
+<tr class="even">
+<td><img src="img/023.jpg" loading="lazy"
+alt="Codo directo sin tramo vertical" /></td>
+<td>Aparato tipo B de tiro natural</td>
+<td>Tramo vertical ≥ 20 cm a la salida del aparato y toma de
+muestras</td>
+<td>Codo directo</td>
+</tr>
+<tr class="odd">
+<td><img src="img/024.jpg" loading="lazy"
+alt="Trazado descendente" /></td>
+<td>Trazado descendente</td>
+<td>Anomalía principal en IP</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><img src="img/025.jpg" loading="lazy"
+alt="Conductos sin deflector" /></td>
+<td>Conducto sin deflector</td>
+<td>Anomalía principal siempre (UNE 60670:2023: ya no se exceptúa la
+zona exterior)</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><img src="img/026.jpg" loading="lazy" alt="Tubo corrugado" /></td>
+<td>Tubo corrugado en IP</td>
+<td>Permitido; sin toma de muestras si tiene rejilla frontal</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><img src="img/027.jpg" loading="lazy"
+alt="Salida que sobresale de la fachada" /></td>
+<td>Salida a fachada</td>
+<td>Tipo C por fachada: no sobresale más de 10 cm. Tipo B: extremo a ≥
+10 cm del muro que atraviesa</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><img src="img/028.jpg" loading="lazy"
+alt="Salida bajo balcón" /></td>
+<td>Bajo balcón o terraza (a &lt; 30 cm del techo)</td>
+<td>Extremo a ≤ 10 cm del borde exterior; no lo pasa</td>
+<td>≥ 20 cm</td>
+</tr>
+<tr class="even">
+<td><img src="img/029.jpg" loading="lazy"
+alt="Salida junto a ventana" /></td>
+<td>Distancia a ventanas y aberturas permanentes</td>
+<td>≥ 40 cm</td>
+<td>30 cm</td>
+</tr>
+<tr class="odd">
+<td><img src="img/030.jpg" loading="lazy"
+alt="Dos salidas a 0,50 m" /></td>
+<td>Entre dos salidas de calderas estancas (alta)</td>
+<td>≥ 60 cm (30 cm con deflectores divergentes)</td>
+<td>50 cm</td>
+</tr>
+<tr class="even">
+<td><img src="img/031.jpg" loading="lazy"
+alt="Salidas con deflector divergente" /></td>
+<td>A pared lateral</td>
+<td>≥ 1 m con ventanas (a ≤ 3 m); ≥ 30 cm sin ventanas; la mitad con
+deflector divergente. Pared frontal: 3 m con ventana, 2 m sin ella (2,2
+m / 1,5 m con deflector a 45º)</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><img src="img/032.jpg" loading="lazy"
+alt="Salida en zona privada" /></td>
+<td>Caldera estanca en zona privada del usuario</td>
+<td>Sin límite de altura en zona privada; fuera de ella ≥ 2,20 m sobre
+el suelo exterior</td>
+<td>Pensar que necesita 1,80 m</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tuberías-armarios-y-otros">Tuberías, armarios y otros</h3>
+<table>
+
+<thead>
+<tr class="header">
+<th>Dibujo</th>
+<th>Situación</th>
+<th>Valor correcto</th>
+<th>Trampa del examen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><img src="img/033.jpg" loading="lazy" alt="Tubería por segundo sótano"></td>
+<td>Tubería por segundo sótano</td>
+<td>Prohibido (anomalía secundaria en IP)</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><img src="img/034.jpg" loading="lazy" alt="Vaina de PVC en garaje"></td>
+<td>Vaina de protección en garaje</td>
+<td>De acero o material de resistencia similar hasta ≥ 1,8 m</td>
+<td>PVC</td>
+</tr>
+<tr class="odd">
+<td><img src="img/035.jpg" loading="lazy" alt="Empotramiento de 3 m"></td>
+<td>Empotramiento de tubería</td>
+<td>≤ 0,40 m; ≤ 2,5 m en la conexión a armario de regulación</td>
+<td>3 m</td>
+</tr>
+<tr class="even">
+<td><img src="img/036.jpg" loading="lazy" alt="Armarios A-6, A-10 y A-25"></td>
+<td>Armarios de regulación</td>
+<td>A-6 unifamiliar · A-10 bifamiliar · A-25 (después A-50, A-100)</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><img src="img/037.jpg" loading="lazy" alt="Llave con limitador de caudal"></td>
+<td>Limitador de caudal roscado</td>
+<td>Con pasta de estanqueidad, no con teflón</td>
+<td>Teflón</td>
+</tr>
+<tr class="even">
+<td><img src="img/038.jpg" loading="lazy" alt="Ticket de combustión"></td>
+<td>CO corregido en la prueba de combustión</td>
+<td>500–1000 ppm: secundaria (AS-6) · más de 1000 ppm: principal (AP-2)
+· CO ambiente: 15–50 ppm AS-1, más de 50 ppm AP-1</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td><img src="img/039.jpg" loading="lazy" alt="Explosímetro"></td>
+<td>Explosímetro sin riesgo</td>
+<td>LIE &lt; 20 % y O₂ ≥ 19 % (gas natural: LIE 4,7 % · LSE 13,7 %)</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><img src="img/040.jpg" loading="lazy" alt="Manómetro de 0 a 6 bar"></td>
+<td>Manómetro de 0 a 6 bar</td>
+<td>La presión de prueba debe quedar entre el 35 y el 75 % del fondo de
+escala (≈ 2–4,5 bar)</td>
+<td>0–6 bar</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pad-1-casos-tipo-resueltos-altas">PAD-1: casos tipo resueltos
+(altas)</h2>
+<p>En PAD-1 la respuesta es correcto o incorrecto, y si es incorrecto
+hay que nombrar la cota o el requisito que falla. Estos son los casos
+que se repiten entre los ejemplos oficiales y los exámenes de
+práctica.</p>
+<div class="cases"><div class="case"><p class="t"><strong>1. Contador junto a la cocina (20 cm)</strong></p><img src="img/041.jpg" loading="lazy"
+alt="Contador a 20 cm de la cocina" /><p><strong>Incorrecto.</strong> Sobre los fuegos de cocción hacen falta
+40 cm sin pantalla de protección.</p></div>
+<div class="case"><p class="t"><strong>2. Contador junto a un calentador (0,15 m)</strong></p><img src="img/042.jpg" loading="lazy"
+alt="Contador a 0,15 m de un calentador" /><p><strong>Incorrecto.</strong> Mínimo 20 cm a un aparato de ACS.</p></div>
+<div class="case"><p class="t"><strong>3. ¿En cuál de los 4 locales se puede poner el
+contador?</strong></p><img src="img/043.jpg" loading="lazy"
+alt="Aseo, baño, dormitorio y fregadero" /><p><strong>Solo en el 4.</strong> El 1 es aseo, el 2 baño y el 3
+dormitorio, que están prohibidos. El 4 vale porque no está debajo de la
+proyección vertical del fregadero.</p></div>
+<div class="case"><p class="t"><strong>4a. Contador dentro de la vivienda (≤ 2,20 m)</strong></p><img src="img/contador_vivienda.jpg" loading="lazy" alt="Contador en vivienda a 2,20 m" /><p><strong>Incorrecto.</strong> En vivienda el totalizador debe quedar a 1,70 m como máximo, accesible sin abrir cerraduras ni usar escaleras (Tema 3 y UNE 60670-5:2023). El local debe tener además una ventilación permanente de 5 cm².</p></div>
+<div class="case"><p class="t"><strong>4b. Contadores centralizados en armario (≤ 2,20 m)</strong></p><img src="img/contadores_centralizados.jpg" loading="lazy" alt="Contadores centralizados a 2,20 m" /><p><strong>Incorrecto.</strong> En centralizaciones el totalizador debe quedar a 2,00 m como máximo. Solo los módulos prefabricados pueden llegar a 2,40 m, con escalera o útil similar.</p></div>
+<div class="case"><p class="t"><strong>5. Patio de 2,8 m² en edificio existente con aporte de 200
+cm²</strong></p><img src="img/045.jpg" loading="lazy"
+alt="Patio de ventilación con aporte de 200 cm²" /><p><strong>Incorrecto.</strong> Aporte de aire insuficiente: deben ser
+300 cm². Si el patio está techado, la superficie libre mínima es de 2
+m².</p></div>
+<div class="case"><p class="t"><strong>6. Cocina tipo A en local de menos de 6 m³ (L = 0,40
+m)</strong></p><img src="img/046.jpg" loading="lazy"
+alt="Cocina tipo A en local menor de 6 m³" /><p><strong>Incorrecto.</strong> No es armario-cocina (máximo 0,30 m) y
+el volumen es menor de 6 m³.</p></div>
+<div class="case"><p class="t"><strong>7. Extractor a 1,70 m del suelo</strong></p><img src="img/047.jpg" loading="lazy"
+alt="Extractor mecánico a 1,70 m" /><p><strong>Incorrecto.</strong> Los 80 cm² son correctos, pero la altura
+mínima es 1,80 m y debe quedar a menos de 0,40 m del techo.</p></div>
+<div class="case"><p class="t"><strong>8. Cocina sin seguridades con ventana de 0,7 × 0,5
+m</strong></p><img src="img/048.jpg" loading="lazy"
+alt="Cocina sin dispositivos de seguridad y ventana de 0,7 × 0,5 m" /><p><strong>Incorrecto.</strong> Ventilación rápida mínima 0,40 m²; la
+ventana tiene 0,35 m².</p></div>
+<div class="case"><p class="t"><strong>9. Calentador en local de 4 m³ con 120 cm² de
+ventilación</strong></p><img src="img/049.jpg" loading="lazy"
+alt="Calentador con ventilación de 120 cm²" /><p><strong>Incorrecto.</strong> Ventilación mínima 125 cm². Los aparatos
+conectados no tienen volumen mínimo.</p></div>
+<div class="case"><p class="t"><strong>10. Armario de regulación no estanco en vestíbulo
+cerrado</strong></p><img src="img/050.jpg" loading="lazy"
+alt="Armario de regulación en prevestíbulo cerrado" /><p><strong>Incorrecto.</strong> Armario no estanco dentro del edificio y
+sin ventilación directa al exterior.</p></div>
+<div class="case"><p class="t"><strong>11. Salida de caldera estanca a 1,80 m en zona
+privada</strong></p><img src="img/051.jpg" loading="lazy"
+alt="Salida de caldera estanca en zona privada" /><p><strong>Correcto.</strong> En la zona privada del usuario no hay
+límite de altura.</p></div>
+<div class="case"><p class="t"><strong>12. Dos salidas de calderas a 0,50 m</strong></p><img src="img/052.jpg" loading="lazy"
+alt="Dos salidas de humos a 0,50 m" /><p><strong>Incorrecto.</strong> La separación mínima entre dos salidas
+es de 60 cm (30 cm con deflectores divergentes).</p></div>
+<div class="case"><p class="t"><strong>13. Salida a 0,30 m de una ventana</strong></p><img src="img/053.jpg" loading="lazy"
+alt="Salida de humos a 0,30 m de la ventana" /><p><strong>Incorrecto.</strong> Mínimo 0,40 m a ventanas y aberturas
+permanentes.</p></div>
+<div class="case"><p class="t"><strong>14. Salida bajo balcón que sobresale 20 cm del
+borde</strong></p><img src="img/054.jpg" loading="lazy"
+alt="Salida de humos bajo balcón" /><p><strong>Incorrecto.</strong> A menos de 30 cm del techo, el extremo
+del tubo debe quedar a 10 cm como máximo del límite exterior.</p></div>
+<div class="case"><p class="t"><strong>15. Salidas a pared lateral con deflector divergente (≥ 60 cm
+y ≥ 25 cm)</strong></p><img src="img/055.jpg" loading="lazy"
+alt="Salidas con deflectores divergentes" /><p><strong>Correcto.</strong> Con deflector divergente, el metro (con
+ventanas) y los 30 cm (sin ventanas) se reducen a la mitad.</p></div>
+<div class="case"><p class="t"><strong>16. Zona exterior con S &gt; 1,3 m² y L &lt; 1 m</strong></p><img src="img/056.jpg" loading="lazy" alt="Zona exterior con abertura de 1,3 m²"><p><strong>Incorrecto.</strong> Hace falta una abertura de más de 1,5 m²
+y la parte superior a menos de 0,50 m del techo.</p></div>
+<div class="case"><p class="t"><strong>17. Tubería que baja a un segundo sótano</strong></p><img src="img/033.jpg" loading="lazy" alt="Tubería por segundo sótano"><p><strong>Incorrecto.</strong> Una instalación de gas no puede pasar
+nunca por un segundo sótano.</p></div>
+<div class="case"><p class="t"><strong>18. Llave de cocina con limitador de caudal roscado con
+teflón</strong></p><img src="img/037.jpg" loading="lazy" alt="Llave de cocina con limitador de caudal"><p><strong>Incorrecto.</strong> Debe roscarse con pasta de
+estanqueidad.</p></div>
+<div class="case"><p class="t"><strong>19. Rejilla de lamas móviles</strong></p><img src="img/057.jpg" loading="lazy"
+alt="Rejilla de lamas móviles" /><p><strong>Incorrecto.</strong> No es una ventilación permanente.</p></div>
+<div class="case"><p class="t"><strong>20. Calentador tipo B con codo directo</strong></p><img src="img/058.jpg" loading="lazy"
+alt="Salida de humos con codo directo" /><p><strong>Incorrecto.</strong> Falta el tramo vertical de 20 cm y la
+toma de muestras.</p></div>
+</div><p><strong>Dispositivos que hay que saber nombrar</strong></p>
+<ul>
+<li><p><strong>VIS de mínima (1):</strong> corta el paso de gas cuando
+la presión baja del valor de tarado.</p></li>
+<li><p><strong>Regulador de abonado con VIS de mínima (2):</strong>
+reduce la presión y corta el gas por mínima presión.</p></li>
+</ul>
+<p class="pic"><img src="img/059.jpg" loading="lazy" alt="VIS de mínima (1) y regulador de abonado (2)"></p>
+<ul>
+<li><p><strong>Conjunto de regulación A-25:</strong> llave de entrada de
+obturador esférico, toma de presión tipo Peterson (aguas arriba),
+filtro, VIS de máxima y/o mínima (basta con poner «seguridades»),
+regulador con VAS, toma de presión de débil calibre, llave de salida y
+recogedor de residuos. En la foto del examen los números cambian, así
+que apréndete los nombres, no el orden.</p></li>
+</ul>
+<p class="pic"><img src="img/060.jpg" loading="lazy" alt="Conjunto de regulación A-25 numerado"></p>
+<ul>
+<li><p><strong>Armarios de regulación:</strong> A-6 unifamiliar, A-10
+bifamiliar y A-25.</p></li>
+</ul>
+<p class="pic"><img src="img/036.jpg" loading="lazy" alt="Armarios A-6, A-10 y A-25"></p>
+<ul>
+<li><p><strong>Llaves de la instalación receptora, por orden:</strong> 1
+acometida · 2 edificio · 3 regulador · 4 montante colectivo · 5 abonado
+· 6 contador · 7 vivienda o local privado · 8 aparato.</p></li>
+</ul>
+<h2 id="pad-2-casos-tipo-resueltos-inspección-periódica">PAD-2: casos
+tipo resueltos (inspección periódica)</h2>
+<p>En PAD-2 lo que puntúa es acertar la gravedad. Para decidir: si hay
+riesgo directo de intoxicación o de fuga (humos que vuelven al local,
+gas sin cerrar) es <strong>principal</strong>; si el problema es de
+ventilación, de conservación o de materiales, suele ser
+<strong>secundaria</strong>.</p>
+<div class="cases"><div class="case"><p class="t"><strong>1. SPC de calentador tipo B con trazado
+descendente</strong></p><img src="img/061.jpg" loading="lazy"
+alt="Salida de humos con trazado descendente" /><p><strong>Anomalía principal.</strong> Trazado descendente.</p></div>
+<div class="case"><p class="t"><strong>2. Caldera tipo B y extractor en la misma
+chimenea</strong></p><img src="img/062.jpg" loading="lazy" alt="Caldera y extractor conectados a la misma chimenea"><p><strong>Anomalía principal.</strong> El extractor mecánico conectado
+a la chimenea de los aparatos tipo B puede hacer que los PDC vuelvan al
+local.</p></div>
+<div class="case"><p class="t"><strong>3. Conductos de evacuación que salen al exterior</strong></p><img src="img/063.jpg" loading="lazy"
+alt="Conductos de evacuación sin deflector" /><p><strong>Anomalía principal.</strong> Falta deflector (IPa-5). Desde
+la UNE 60670:2023 es anomalía siempre, también en zona exterior.</p></div>
+<div class="case"><p class="t"><strong>4. Caldera en cuarto de baño</strong></p><img src="img/064.jpg" loading="lazy" alt="Caldera tipo B en cuarto de baño"><p><strong>Anomalía principal.</strong> Aparato tipo B conectado en un
+baño. Si no aparece el inodoro, el defecto es «aparato sin conducto de
+evacuación».</p></div>
+<div class="case"><p class="t"><strong>5. Llave que daba gas a una cocina antigua</strong></p><img src="img/065.jpg" loading="lazy" alt="Llave de aparato sin conectar"><p><strong>Anomalía principal.</strong> Llave de aparato sin conectar
+que no está cerrada, bloqueada, precintada y taponada.</p></div>
+<div class="case"><p class="t"><strong>6. Cocina de 17 kW en local de 7 m³</strong></p><img src="img/066.jpg" loading="lazy"
+alt="Cocina de 17 kW en local de 7 m³" /><p><strong>Anomalía secundaria.</strong> Volumen necesario 17 − 8 = 9
+m³. Al estar entre el 75 y el 100 %, se aumenta la ventilación un 50 %
+(no un 20 %).</p></div>
+<div class="case"><p class="t"><strong>7. Aparato tipo A junto a galería cerrada</strong></p><img src="img/067.jpg" loading="lazy" alt="Cocina junto a galería cerrada"><p><strong>Anomalía secundaria.</strong> Falta orificio de ventilación y
+no hay campana ni extractor.</p></div>
+<div class="case"><p class="t"><strong>8. Rejilla de 50 cm² en edificio existente</strong></p><img src="img/068.jpg" loading="lazy"
+alt="Cocinas con rejilla de 50 cm²" /><p><strong>Anomalía secundaria.</strong> Sección mínima 125 cm².</p></div>
+<div class="case"><p class="t"><strong>9. Extractor (80 cm²) a 1,70 m sin campana</strong></p><img src="img/069.jpg" loading="lazy"
+alt="Extractor mecánico a 1,70 m" /><p><strong>Anomalía secundaria.</strong> La superficie (80 cm²) es
+correcta; falla la altura. En IP el extractor debe estar a ≥ 1,80 m del
+suelo o a menos de 0,40 m del techo, y no cumple ninguna de las dos
+(ISa-5).</p></div>
+<div class="case"><p class="t"><strong>10. Armario de contadores con 100 cm² por
+ventilación</strong></p><img src="img/070.jpg" loading="lazy"
+alt="Armario interior de centralización de contadores" /><p><strong>Anomalía secundaria.</strong> Con más de 2 contadores, cada
+ventilación necesita al menos 200 cm².</p></div>
+<div class="case"><p class="t"><strong>11. Empotramiento de 3 m hasta el armario de
+regulación</strong></p><img src="img/035.jpg" loading="lazy" alt="Armario empotrado con 3 m de empotramiento"><p><strong>Anomalía secundaria.</strong> Máximo 2,5 m en la conexión a
+armarios de regulación (0,40 m en el resto).</p></div>
+<div class="case"><p class="t"><strong>12. Tubería de cobre en garaje con vaina de PVC</strong></p><img src="img/034.jpg" loading="lazy" alt="Tubería con vaina de PVC en garaje"><p><strong>Anomalía secundaria.</strong> La vaina debe ser de acero o de
+un material de resistencia similar.</p></div>
+<div class="case"><p class="t"><strong>13. Tubería por segundo sótano</strong></p><img src="img/033.jpg" loading="lazy" alt="Tubería por segundo sótano"><p><strong>Anomalía secundaria.</strong> Prohibido pasar por un segundo
+sótano.</p></div>
+<div class="case"><p class="t"><strong>14. Ventilación de conductos técnicos</strong></p><img src="img/071.jpg" loading="lazy"
+alt="Conductos técnicos con su ventilación" /><p><strong>Anomalía secundaria.</strong> La ventilación inferior y la
+superior han de tener al menos 150 cm² (Tema 3).</p></div>
+<div class="case"><p class="t"><strong>15. Armario de contador sin puerta</strong></p><img src="img/072.jpg" loading="lazy" alt="Armario de contador sin puerta"><p><strong>Anomalía secundaria.</strong> Falta puerta: «puerta o
+cerradura incorrecta» (CS-8 en instalación común; ISa-2 en individual).
+Una tubería con corrosión manifiesta es ISa-2, por estado de
+conservación.</p></div>
+<div class="case"><p class="t"><strong>16. Elastómero de cocina móvil</strong></p><img src="img/073.jpg" loading="lazy" alt="Elastómero de conexión de cocina"><p><strong>Anomalía secundaria.</strong> Goma caducada.</p></div>
+<div class="case"><p class="t"><strong>17. Llama del quemador</strong></p><img src="img/074.jpg" loading="lazy" alt="Llama amarilla en un quemador"><p><strong>Anomalía secundaria.</strong> Funcionamiento incorrecto por
+suciedad o falta de aire primario.</p></div>
+<div class="case"><p class="t"><strong>18. Ticket de combustión con 660 ppm de CO
+corregido</strong></p><img src="img/038.jpg" loading="lazy" alt="Ticket del analizador de combustión"><p><strong>Anomalía secundaria.</strong> CO corregido entre 500 y 1000
+ppm (AS-6). Por encima de 1000 ppm sería principal (AP-2).</p></div>
+<div class="case"><p class="t"><strong>19. Aparato tipo C que sale a una galería
+cerrada</strong></p><img src="img/075.jpg" loading="lazy" alt="Salida de aparato tipo C en galería cerrada"><p><strong>Sin defecto.</strong> En IP no se valora para aparatos tipo
+C; lo delataría el CO ambiente. En un alta sí tendría que salir al
+exterior.</p></div>
+<div class="case"><p class="t"><strong>20. Caldera con tubo corrugado</strong></p><img src="img/076.jpg" loading="lazy"
+alt="Caldera con salida de tubo corrugado" /><p><strong>Sin defecto.</strong> El corrugado está permitido en IP y no
+hace falta toma de muestras al tener rejilla frontal. Si no hubiera toma
+accesible sin desmontar la carcasa, sería AS-4.</p></div>
+<div class="case"><p class="t"><strong>21. Zona exterior con S &gt; 1,5 m² y L &lt; 50
+cm</strong></p><img src="img/077.jpg" loading="lazy"
+alt="Zona exterior que cumple" /><p><strong>Sin defecto.</strong> Cumple las condiciones de zona
+exterior.</p></div>
+<div class="case"><p class="t"><strong>22. Salida bajo balcón a ≤ 30 cm del techo y ≤ 10 cm del
+borde</strong></p><img src="img/078.jpg" loading="lazy" alt="Salida de humos bajo balcón que cumple"><p><strong>Sin defecto.</strong> Cumple.</p></div>
+</div><h2 id="od-y-au-casos-tipo-resueltos">OD y AU: casos tipo resueltos</h2>
+<p>En OD y AU hay que escribir siempre dos cosas: la explicación y la
+actuación en la vivienda. La actuación casi siempre acaba en «prueba de
+estanqueidad y dar gas» o en «precintar».</p>
+<h3 id="od-operaciones-domiciliarias">OD (operaciones
+domiciliarias)</h3>
+<div class="cases"><div class="case"><p class="t"><strong>1. Cambio de contador con el contador a 2,45 m</strong></p><img src="img/079.jpg" loading="lazy" alt="Vivienda con contador a 2,45 m"><p><strong>Correcta.</strong> En un cambio de contador no se evalúan las
+distancias. <em>Actuación:</em> cambiar el contador, prueba de
+estanqueidad y dar gas.</p></div>
+<div class="case"><p class="t"><strong>2. Reapertura sin certificado: dos calderas estancas a 45
+cm</strong></p><img src="img/080.jpg" loading="lazy" alt="Dos salidas de calderas estancas a 45 cm"><p><strong>Correcta.</strong> En reaperturas sin certificado no se
+evalúa esa distancia. <em>Actuación:</em> prueba de estanqueidad y dar
+gas.</p></div>
+<div class="case"><p class="t"><strong>3. Reapertura con certificado: caldera tipo B sin
+conducto</strong></p><img src="img/081.jpg" loading="lazy" alt="Caldera tipo B sin conducto de evacuación"><p><strong>Incorrecta.</strong> Caldera sin conducto de evacuación; no
+cumple la UNE 60670. <em>Actuación:</em> precintar la caldera o la
+instalación.</p></div>
+</div><h3 id="au-ir-urgencias-en-instalaciones-receptoras">AU-IR (urgencias en
+instalaciones receptoras)</h3>
+<div class="cases"><div class="case"><p class="t"><strong>1. Falta de presión: cocina tipo A en 9 m³ sin
+ventilación</strong></p><img src="img/082.jpg" loading="lazy"
+alt="Aparato tipo A en local de 9 m³" /><p><strong>Correcta.</strong> En este aviso la falta de ventilación no
+es un defecto a considerar (más de 8 m³). <em>Actuación:</em>
+comprobaciones, prueba de estanqueidad y dar gas.</p></div>
+<div class="case"><p class="t"><strong>2. Sin gas: caldera tipo B sin salida de humos</strong></p><img src="img/083.jpg" loading="lazy" alt="Caldera tipo B sin salida de humos"><p><strong>Incorrecta.</strong> Caldera sin conducto de evacuación de
+PDC. <em>Actuación:</em> cerrar el gas y precintar la caldera.</p></div>
+<div class="case"><p class="t"><strong>3. Fuga entre el buzón de acometida y el armario de
+regulación</strong></p><img src="img/084.jpg" loading="lazy" alt="Fachada con buzón de acometida y armario de regulación"><p><em>Actuación:</em> avisar al CCAU y dejarlo en seguridad (cerrar la
+llave de acometida si lo indican). Ese tramo ya es instalación receptora
+(acometida interior o instalación común): se aísla la parte afectada y
+se indica a los clientes cómo corregirlo; la reparación corresponde a la
+comunidad o titular (AU, Parte 2).</p></div>
+<div class="case"><p class="t"><strong>4. Manómetro de 0 a 6 bar</strong></p><img src="img/040.jpg" loading="lazy" alt="Manómetro de 0 a 6 bar"><p><strong>Entre 2 y 4 bar.</strong> La presión a medir debe quedar
+entre el 35 y el 75 % del fondo de escala (con 6 bar: de 2,1 a 4,5
+bar).</p></div>
+</div><h3 id="explosímetro-cómo-razonarlo">Explosímetro: cómo razonarlo</h3>
+<p>Hay dos condiciones y deben cumplirse las dos para que no haya
+riesgo: <strong>LIE por debajo del 20 % y oxígeno al 19 % o
+más</strong>.</p>
+<div class="cases"><div class="case"><p class="t"><strong>7 % del LIE, 20,7 % de O₂ y 2 ppm de CO</strong></p><img src="img/039.jpg" loading="lazy" alt="Explosímetro con 7 % del LIE"><p><strong>Sin riesgo.</strong> Se hace el aviso ventilando y trabajando
+con seguridad.</p></div>
+<div class="case"><p class="t"><strong>9 % de CH₄, 17,2 % de O₂ y 0 ppm de CO</strong></p><img src="img/085.jpg" loading="lazy" alt="Explosímetro con 9 % de metano y 17,2 % de oxígeno"><p><strong>Situación de riesgo.</strong> El oxígeno está por debajo del
+19 %, y un 9 % de metano en volumen está dentro del rango explosivo (del
+4,7 al 13,7 % para el gas natural). Las flechas del aparato indican que
+el metano se ha salido de escala. <em>Actuación:</em> no entrar; abrir
+tapas y puertas para ventilar sin acceder; con ≥ 50 % del LIE permanecer
+fuera, acordonar, ventilación forzada, cortar el gas desde el exterior y
+valorar evacuar; nada que haga chispa; avisar al CCAU. Con O₂ &lt; 19 %
+solo se entra con equipo de respiración autónomo o semiautónomo (AU,
+Parte 4, apartado 3.4).</p></div>
+<div class="case"><p class="t"><strong>AU-Redes: tubo de PE con gas dañado junto a un cable con
+tensión</strong></p><img src="img/086.jpg" loading="lazy" alt="Tubo de polietileno dañado junto a cable eléctrico"><p><strong>Riesgo inmediato.</strong> Avisar al CCAU y poner la zona en
+seguridad.</p></div>
+</div><p>Los ejemplos oficiales remiten para el explosímetro al apartado 3.4
+de la Parte 4 y al 5.4 de la Parte 1 de las Especificaciones Técnicas de
+AU.</p>
+</main><div id="zoom"><img alt=""></div><script>
+const z=document.getElementById('zoom'),zi=z.querySelector('img');
+document.querySelectorAll('main img').forEach(i=>i.addEventListener('click',()=>{zi.src=i.src;z.style.display='flex'}));
+z.addEventListener('click',()=>z.style.display='none');
+document.addEventListener('keydown',e=>{if(e.key==='Escape')z.style.display='none'});
+document.querySelectorAll('main table').forEach(t=>{const w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)});
+const btn=document.getElementById('modo');let on=false;
+btn.addEventListener('click',()=>{on=!on;document.querySelectorAll('.case').forEach(c=>c.classList.toggle('hide-ans',on));btn.textContent=on?'Mostrar respuestas':'Modo repaso: ocultar respuestas'});
+document.querySelectorAll('.case').forEach(c=>c.addEventListener('click',e=>{if(c.classList.contains('hide-ans')&&e.target.tagName!=='IMG'){c.classList.remove('hide-ans')}}));
+</script></body></html>
