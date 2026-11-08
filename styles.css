@@ -15,7 +15,8 @@ h2{font-size:1.15rem;margin:1.6em 0 .6em;color:var(--azul)}
 .sub{color:var(--gris);margin:0 0 1.2em}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
 .card{background:#fff;border:1px solid var(--borde);border-radius:10px;padding:16px;text-align:left}
-button.card:hover{border-color:var(--azul);box-shadow:0 2px 8px rgba(11,61,110,.12)}
+a.card{display:block;text-decoration:none;color:inherit}
+button.card:hover,a.card:hover{border-color:var(--azul);box-shadow:0 2px 8px rgba(11,61,110,.12)}
 .card b{display:block;font-size:1.02rem;margin-bottom:4px;color:var(--azul)}
 .card small{color:var(--gris)}
 .stats{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 4px}

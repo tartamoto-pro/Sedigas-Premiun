@@ -6,6 +6,7 @@ Web de práctica para el examen teórico-práctico (destreza visual) de la recer
 - **Simulacro Premium**: 20 casos al azar (6 PAD-1, 6 PAD-2, 3 OD y 5 AU), con nota al final. Se aprueba con 16.
 - **Práctica por bloques** con corrección inmediata, y repaso solo de los fallos.
 - Las respuestas siguen las especificaciones Sedigas Rev. 02 (octubre de 2025) y los cambios de la UNE 60670:2023.
+- **Guía de estudio** en la carpeta `guia/`: chuleta de cotas con dibujos, novedades de 2025 y casos tipo resueltos, con modo repaso para ocultar las respuestas. Se abre desde el botón «Guía de estudio» de la portada.
 - No necesita servidor ni instalar nada. El progreso se guarda en el navegador de cada dispositivo.
 
 ## Probarla en tu ordenador
@@ -15,7 +16,7 @@ Descomprime la carpeta y abre `index.html` con el navegador.
 ## Publicarla en GitHub Pages
 
 1. Crea un repositorio en GitHub (por ejemplo `destreza-visual`).
-2. Sube **todo el contenido** de esta carpeta a la raíz del repositorio: `index.html`, `app.js`, `styles.css`, `preguntas.js` y la carpeta `img/`.
+2. Sube **todo el contenido** de esta carpeta a la raíz del repositorio: `index.html`, `app.js`, `styles.css`, `preguntas.js` y las carpetas `img/` y `guia/`.
    Desde la web: *Add file → Upload files*, arrastra los archivos y la carpeta, y pulsa *Commit changes*.
 3. Ve a *Settings → Pages*. En *Build and deployment*, elige *Deploy from a branch*, la rama `main` y la carpeta `/ (root)`, y pulsa *Save*.
 4. En uno o dos minutos la web estará en `https://TU-USUARIO.github.io/destreza-visual/`.

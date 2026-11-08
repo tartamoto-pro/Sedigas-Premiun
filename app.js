@@ -53,6 +53,7 @@ const App = (() => {
       </div>
       <h2>Consulta</h2>
       <div class="grid">
+        <a class="card" href="guia/"><b>Guía de estudio</b><small>Chuleta de cotas, novedades 2025 y casos tipo con dibujo</small></a>
         <button class="card" onclick="App.lista()"><b>Ver todas con su solución</b><small>Para repasar con calma</small></button>
         <button class="card" onclick="App.borrar()"><b>Borrar mi progreso</b><small>Se guarda solo en este navegador</small></button>
       </div>
