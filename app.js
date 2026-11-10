@@ -29,33 +29,36 @@ const App = (() => {
     const fallos = P.filter(q => est[q.id] && est[q.id].ultima === 'mal').length;
     const nuevas = P.filter(q => q.nueva).length;
     const ok = Object.values(est).reduce((a, s) => a + s.ok, 0), mal = Object.values(est).reduce((a, s) => a + s.mal, 0);
+    const pct = ok + mal ? Math.round(100 * ok / (ok + mal)) : 0;
+    const tarjeta = (onclick, color, ico, titulo, texto, extra = '') => `<button class="card ${color}" onclick="${onclick}" ${extra}><span class="ico">${ico}</span><b>${titulo}</b><small>${texto}</small></button>`;
     $app.innerHTML = `
-      <h1>Practica la destreza visual</h1>
-      <p class="sub">${P.length} casos con dibujo de PAD-1, PAD-2, OD y AU, ${nuevas} de ellos nuevos. Corregidos con las especificaciones Sedigas de 2025 y los cambios de la UNE 60670:2023.</p>
-      <div class="stats">
-        <div class="stat"><strong>${ok}</strong>aciertos</div>
-        <div class="stat"><strong>${mal}</strong>fallos</div>
-        <div class="stat"><strong>${ok + mal ? Math.round(100 * ok / (ok + mal)) : 0}%</strong>acierto</div>
-      </div>
-      <h2>Examen</h2>
-      <div class="grid">
-        <button class="card" onclick="App.examen()"><b>Simulacro Premium</b><small>20 casos al azar (6 PAD-1, 6 PAD-2, 3 OD, 5 AU). Ves la nota al final; se aprueba con 16.</small></button>
-      </div>
+      <section class="hero">
+        <span class="kicker">Recertificación Sedigas Premium</span>
+        <h1>Practica la destreza visual</h1>
+        <p class="sub">${P.length} casos con dibujo de PAD-1, PAD-2, OD y AU, ${nuevas} de ellos nuevos. Corregidos con las especificaciones de 2025 y la UNE 60670:2023.</p>
+        <div class="stats">
+          <div class="stat"><strong>${ok}</strong>aciertos</div>
+          <div class="stat"><strong>${mal}</strong>fallos</div>
+          <div class="stat"><strong>${pct}%</strong>acierto</div>
+        </div>
+        <button class="btn" onclick="App.examen()">Empezar simulacro · 20 casos</button>
+      </section>
       <h2>Práctica con corrección inmediata</h2>
       <div class="grid">
-        <button class="card" onclick="App.practica('PAD-1')"><b>PAD-1 · Altas</b><small>${por('PAD-1')} casos</small></button>
-        <button class="card" onclick="App.practica('PAD-2')"><b>PAD-2 · Inspección periódica</b><small>${por('PAD-2')} casos</small></button>
-        <button class="card" onclick="App.practica('OD')"><b>OD · Operaciones domiciliarias</b><small>${por('OD')} casos</small></button>
-        <button class="card" onclick="App.practica('AU')"><b>AU · Urgencias</b><small>${por('AU')} casos</small></button>
-        <button class="card" onclick="App.practica('nuevas')"><b>Solo preguntas nuevas</b><small>${nuevas} casos</small></button>
-        <button class="card" onclick="App.practica('todas')"><b>Todas mezcladas</b><small>${P.length} casos</small></button>
-        <button class="card" onclick="App.practica('fallos')" ${fallos ? '' : 'disabled'}><b>Repasar mis fallos</b><small>${fallos ? fallos + ' casos que fallaste la última vez' : 'Aún no hay fallos'}</small></button>
+        ${tarjeta("App.practica('PAD-1')", '', 'P1', 'PAD-1 · Altas', por('PAD-1') + ' casos')}
+        ${tarjeta("App.practica('PAD-2')", 'c-violeta', 'P2', 'PAD-2 · Inspección periódica', por('PAD-2') + ' casos')}
+        ${tarjeta("App.practica('OD')", 'c-verde', 'OD', 'OD · Operaciones domiciliarias', por('OD') + ' casos')}
+        ${tarjeta("App.practica('AU')", 'c-rosa', 'AU', 'AU · Urgencias', por('AU') + ' casos')}
+        ${tarjeta("App.practica('nuevas')", 'c-naranja', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg>', 'Solo preguntas nuevas', nuevas + ' casos')}
+        ${tarjeta("App.practica('todas')", '', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>', 'Todas mezcladas', P.length + ' casos')}
+        ${tarjeta("App.practica('fallos')", 'c-rosa', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>', 'Repasar mis fallos', fallos ? fallos + ' casos que fallaste la última vez' : 'Aún no hay fallos', fallos ? '' : 'disabled')}
       </div>
-      <h2>Consulta</h2>
+      <h2>Estudio y consulta</h2>
       <div class="grid">
-        <a class="card" href="guia/"><b>Guía de estudio</b><small>Chuleta de cotas, novedades 2025 y casos tipo con dibujo</small></a>
-        <button class="card" onclick="App.lista()"><b>Ver todas con su solución</b><small>Para repasar con calma</small></button>
-        <button class="card" onclick="App.borrar()"><b>Borrar mi progreso</b><small>Se guarda solo en este navegador</small></button>
+        <a class="card c-naranja" href="guia/"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M8 7h8M8 11h6"/></svg></span><b>Guía de estudio</b><small>Chuleta de cotas, novedades 2025 y casos tipo con dibujo</small></a>
+        <a class="card c-verde" href="practico/"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span><b>Examen práctico</b><small>Armario de regulación, combustión de caldera y cocina con butano</small></a>
+        ${tarjeta('App.lista()', 'c-violeta', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3 6 1.5 1.5L7 5M3 12l1.5 1.5L7 11M3 18l1.5 1.5L7 17"/></svg>', 'Todas con su solución', 'Para repasar con calma')}
+        ${tarjeta('App.borrar()', 'c-gris', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/></svg>', 'Borrar mi progreso', 'Se guarda solo en este navegador')}
       </div>
       <p class="aviso">El progreso se guarda en este navegador. Las imágenes proceden de material de Sedigas: úsalas solo para estudio personal.</p>`;
     progreso(); scrollTo(0, 0);

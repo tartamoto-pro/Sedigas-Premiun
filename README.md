@@ -52,3 +52,7 @@ Edita `preguntas.js`. Cada pregunta es un bloque como este:
 
 - Teclas `1`, `2` y `3`: elegir respuesta.
 - `Enter`: pasar a la siguiente pregunta en el modo práctica.
+
+## Fichas del examen práctico
+
+En `practico/` hay fichas paso a paso (con casillas que se guardan en el navegador) para la comprobación del armario de regulación, el análisis de combustión de una caldera y la cocina con horno y goma de butano. Se enlazan desde «Consulta» en la página de inicio y se pueden imprimir.

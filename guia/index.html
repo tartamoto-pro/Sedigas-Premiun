@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Guía de estudio · Recertificación Sedigas</title>
-<link rel="stylesheet" href="../styles.css"><style>*{box-sizing:border-box}
-
-nav{position:sticky;top:var(--hh,44px);z-index:4;background:#fff;border-bottom:1px solid #dde3ea;padding:8px 16px;display:flex;gap:8px;overflow-x:auto;white-space:nowrap}
-nav a{color:#0b3d6e;text-decoration:none;font-size:14px;padding:4px 10px;border:1px solid #c9d6e4;border-radius:14px;background:#f2f6fb}
-main{max-width:1000px;margin:16px auto;padding:16px 20px 60px;background:#fff;border:1px solid var(--borde);border-radius:12px}
-h1{color:var(--azul)}
-h2{font-size:1.3rem;scroll-margin-top:120px;border-bottom:2px solid #0b3d6e;padding-bottom:4px;margin-top:36px;scroll-margin-top:110px}
-h3{font-size:17px;color:#0b3d6e;margin-top:22px}
-.by{color:#666;margin-top:0}
-.tw{overflow-x:auto}
-table{border-collapse:collapse;width:100%;margin:8px 0;font-size:14px}
-th,td{border:1px solid #c9d3de;padding:6px 8px;vertical-align:top;text-align:left}
-th{background:#e6eef7}
-td img{width:150px;max-width:40vw;height:auto;display:block;cursor:zoom-in}
-.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:10px 0}
-.case{border:1px solid #d5dde6;border-radius:8px;padding:10px;background:#fff}
-.case .t{margin:0 0 6px}
-.case img{display:block;width:100%;height:240px;object-fit:contain;background:#fafafa;margin-bottom:6px;cursor:zoom-in}
-.case p{margin:0}
-.case.hide-ans p:not(.t){filter:blur(6px);cursor:pointer}
-p.pic img{max-width:100%;max-height:340px;cursor:zoom-in}
-#zoom{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
+<link rel="stylesheet" href="../styles.css"><style>
+nav{position:sticky;top:var(--hh,52px);z-index:4;background:var(--hdr);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--borde);padding:10px 20px;display:flex;gap:8px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--tinta);text-decoration:none;font-size:13.5px;font-weight:550;padding:6px 14px;border:1px solid var(--borde);border-radius:99px;background:var(--card);transition:all .12s}
+nav a:hover{border-color:var(--azul);color:var(--azul)}
+main{max-width:1060px}
+main>h1{font-size:2.2rem;margin-top:.3em}
+h2{font-size:1.45rem;text-transform:none;letter-spacing:-.02em;color:var(--tinta);font-weight:800;margin:2.4em 0 .7em;padding-top:4px;scroll-margin-top:120px;display:flex;align-items:center;gap:10px}
+h2:before{content:"";width:6px;height:24px;border-radius:3px;background:linear-gradient(#ff8a3d,#2457e6);flex:none}
+h3{font-size:1.05rem;color:var(--azul);margin-top:24px}
+.by{color:var(--gris);margin-top:0}
+main>p,main>ul,main>ol{max-width:75ch}
+.tw,main>table{display:block;overflow-x:auto}
+table{border-collapse:separate;border-spacing:0;width:100%;margin:10px 0 18px;font-size:14px;background:var(--card);border:1px solid var(--borde);border-radius:14px;overflow:hidden;box-shadow:var(--sombra)}
+th,td{border-bottom:1px solid var(--borde);padding:9px 12px;vertical-align:top;text-align:left}
+tr:last-child td{border-bottom:0}
+th{background:var(--card2);font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--gris)}
+td img{width:150px;max-width:40vw;height:auto;display:block;cursor:zoom-in;background:#fff;border:1px solid var(--borde)}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:12px 0}
+.case{border:1px solid var(--borde);border-radius:18px;padding:14px;background:var(--card);box-shadow:var(--sombra);transition:transform .15s,box-shadow .15s}
+.case:hover{transform:translateY(-2px);box-shadow:var(--sombra2)}
+.case .t{margin:0 0 8px}
+.case img{display:block;width:100%;height:240px;object-fit:contain;background:#fff;border:1px solid var(--borde);margin-bottom:10px;cursor:zoom-in}
+.case p{margin:0;font-size:.95rem}
+.case.hide-ans p:not(.t){filter:blur(6px);cursor:pointer;user-select:none}
+p.pic img{max-width:100%;max-height:340px;cursor:zoom-in;background:#fff}
+#zoom{position:fixed;inset:0;background:rgba(8,10,16,.88);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
 #zoom img{max-width:96vw;max-height:94vh;background:#fff}
-.toggle{background:#fff;color:#0b3d6e;border:0;border-radius:14px;padding:5px 12px;font-size:14px;cursor:pointer}
-@media (max-width:600px){main{margin:0;border:0;border-radius:0;padding:12px 14px 50px}.toggle{font-size:13px;padding:5px 10px;flex:none}.cases{grid-template-columns:1fr}.case img{height:220px}td img{width:110px}}
-@media print{header,nav,.toggle{display:none}body{background:#fff}main{max-width:none;padding:0}h2{break-before:page}.case{break-inside:avoid}.case.hide-ans p{filter:none}}</style></head>
+.toggle{background:var(--azul);color:#fff;border:0;border-radius:99px;padding:7px 14px;font-size:13.5px;font-weight:650;cursor:pointer;flex:none}
+@media (prefers-color-scheme:dark){.toggle{color:#0c0f17}}
+@media (max-width:600px){main>h1{font-size:1.6rem}h2{font-size:1.2rem}nav{padding:8px 14px}.toggle{font-size:12.5px;padding:6px 11px}.cases{grid-template-columns:1fr}.case img{height:220px}td img{width:110px}}
+@media print{header,nav,.toggle{display:none}body{background:#fff}main{max-width:none;padding:0}h2{break-before:page}.case{break-inside:avoid;box-shadow:none}.case.hide-ans p{filter:none}}
+</style></head>
 <body><header class="top"><a class="brand" href="../" style="text-decoration:none">Destreza visual <span>Guía de estudio</span></a><button class="toggle" id="modo">Ocultar respuestas</button></header>
 <nav><a href="#cómo-es-el-examen-premium">Cómo es el examen Premium</a><a href="#la-regla-de-oro-mira-primero-qué-aviso-es">La regla de oro: mira
 primero qué aviso es</a><a href="#novedades-que-cambian-respuestas-une-606702023-y-esquemas-2022">Novedades
