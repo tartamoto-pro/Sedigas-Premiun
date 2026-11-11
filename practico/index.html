@@ -66,15 +66,23 @@ th{background:var(--card2);font-size:.75rem;text-transform:uppercase;letter-spac
 </nav>
 <main>
 <h1>Fichas del examen práctico</h1>
-<p class="sub">Las pruebas de Premium según el PG-IR-02 (hoja de examen FPG-IR-02-03-B y acta del examinador FPG-IR-02-5-5), con los valores de las especificaciones Sedigas Rev. 02 (2025). Toca cada paso para marcarlo como hecho.</p>
+<p class="sub">Las pruebas de Premium según el PG-IR-02 edición 09 (julio de 2024): hoja de examen FPG-IR-02-03-B y acta del examinador FPG-IR-02-5-5. Los valores son de las especificaciones Sedigas Rev. 02 (2025). Toca cada paso para marcarlo como hecho.</p>
 
 <div class="ojo"><b>Cómo se aprueba:</b> el examinador va marcando en su acta cada fallo que cometes, y para superar el práctico <b>no puedes tener ningún defecto en ninguna prueba</b>. Cada prueba se valora 0 (bien ejecutada) o 1 (mal ejecutada). Además rellenas la hoja de examen, así que <b>apunta presiones, tiempos y valores</b>: dejar campos en blanco o mal rellenados también cuenta como fallo.</div>
+<div class="clave"><b>Lo que dice el PG-IR-01/02 de la recertificación:</b>
+<ul style="margin:6px 0 0;padding-left:18px">
+<li>Solo hay <b>teórico-práctico</b> (destreza visual, 20 casos, aprobado con 16, <b>2,5 horas</b> en Premium) y <b>práctico</b>. No hay test teórico.</li>
+<li>En el práctico entran las pruebas <b>1, 2, 3, 5, 6 y 7</b>. La 4, detección de defectos, es «SOLO CERTIFICACIÓN».</li>
+<li>Las pruebas que hagas <b>sin fallos se te guardan</b>, siempre que no gastes 3 convocatorias ni pasen más de 3 meses entre una y otra.</li>
+<li>No se evalúa si conoces cada aparato, sino si sigues bien el procedimiento e interpretas bien los datos. <b>Si no conoces un equipo, puedes preguntar</b> al examinador y te lo explica. Él también te puede hacer preguntas mientras trabajas.</li>
+<li>En el taller habrá: un armario <b>A-6 o A-10</b> y otro <b>A-25 o A-50</b> con compresor de aire, toma Peterson y llaves de abonado, vivienda y aparato; 2 contadores G-4 en panel; dos calderas y un calentador; una cocina móvil con horno; columnas de agua de 600 y 1.500 mm cda; detector de fugas, analizador, explosímetro y cronómetro.</li>
+</ul></div>
 
 <div class="indice noprint">
   <a href="#fugas"><span class="n">1</span><span>Estanquidad y localización de fugas<small>Detector y columna de agua</small></span></a>
   <a href="#combustion"><span class="n">2</span><span>Combustión, tiro y CO ambiente<small>Ticket del analizador</small></span></a>
   <a href="#cocina"><span class="n">3</span><span>Cocina con horno<small>Llamas, termopar y goma</small></span></a>
-  <a href="#defectos"><span class="n">4</span><span>Detección de defectos<small>Solo certificación inicial</small></span></a>
+  <a href="#defectos"><span class="n">4</span><span>Detección de defectos<small>No entra en recertificación</small></span></a>
   <a href="#armario"><span class="n">5</span><span>Puesta en servicio del conjunto de regulación<small>VIS, VAS y caudal nulo</small></span></a>
   <a href="#contador"><span class="n">6</span><span>Cambio de contador y parte<small>Comprobar si marca</small></span></a>
   <a href="#explosimetro"><span class="n">7</span><span>Explosímetro<small>O₂ y % LIE</small></span></a>
@@ -143,7 +151,7 @@ Pegas el ticket del analizador, rellenas los valores de referencia e indicas si 
 <li><label><input type="checkbox">Usa un analizador conforme a la UNE-EN 50379, calibrado hace 18 meses o menos. Ponlo en marcha en aire limpio <b>antes</b> de encender el aparato.</label></li>
 <li><label><input type="checkbox">Pon la caldera a <b>máxima potencia</b>, sin que module. Si es mixta, abre el grifo de agua caliente al máximo. Si es solo de calefacción, sube los termostatos al máximo. Si tiene función deshollinador, úsala.</label></li>
 <li><label><input type="checkbox"><b>Espera 2 minutos</b> a que trabaje en régimen estable. Meter la sonda a la vez que enciendes el aparato es fallo.</label></li>
-<li><label><input type="checkbox">Mete la sonda en la toma de muestras, <b>perpendicular</b> y en el <b>centro de la vena de humos</b>. En aparatos con cortatiros, nunca por encima del cortatiros.</label></li>
+<li><label><input type="checkbox">Mete la sonda en la toma de muestras, <b>perpendicular</b> y en el <b>centro de la vena de humos</b>. En aparatos tipo B con cortatiros, la sonda va <b>por encima del cortatiros</b>, en el conducto y cerca del collarín. Solo si hay inversión de tiro se mide en la parte inferior.</label></li>
 <li><label><input type="checkbox">Mantén la medición <b>2 minutos</b> con valores estables. Imprime el ticket.</label></li>
 <li><label><input type="checkbox">Si sale <b>O₂ alto y temperatura de humos baja</b>, sospecha <b>inversión de tiro</b> o sonda mal colocada: recoloca la sonda y repite (en caso de inversión, mide en la parte inferior del cortatiros).</label></li>
 <li><label><input type="checkbox"><b>Mide el tiro y el revoco</b> si es tipo B de tiro natural, con puertas y ventanas cerradas y el extractor, si hay, al máximo.</label></li>
@@ -155,7 +163,8 @@ Pegas el ticket del analizador, rellenas los valores de referencia e indicas si 
 
 <div class="fallos"><b class="t">Lo que el examinador apunta como fallo</b><ul>
 <li>No poner el aparato a máxima potencia, o no esperar los 2 minutos a régimen estable.</li>
-<li>Meter la sonda a la vez que enciendes el aparato, o ponerla por encima del cortatiros.</li>
+<li>Meter la sonda a la vez que enciendes el aparato.</li>
+<li>No colocar la sonda por encima del cortatiros.</li>
 <li>No esperar los 2 minutos de medición con valores estables.</li>
 <li>No medir el tiro y el revoco en tiro natural, o medirlos mal.</li>
 <li>No saber los valores de Tª de humos, O₂, CO₂ y λ, o dar por buena una combustión con un CO fuera de especificación.</li>
@@ -207,7 +216,7 @@ Pegas el ticket del analizador, rellenas los valores de referencia e indicas si 
 <section class="ficha" id="defectos">
 <h2><span class="n">4</span>Detección de defectos</h2>
 <p class="fuente">Hoja de examen, apartado 4.</p>
-<div class="clave">Según te indicaron, <b>en la recertificación no se hace</b>. La hoja la trae para la certificación inicial. Por si acaso, esto es lo que se pide.</div>
+<div class="clave">El PG-IR-02 edición 09 la marca como <b>«SOLO CERTIFICACIÓN»</b>: <b>en la recertificación no se hace</b>. Te la dejo resumida por si te sirve.</div>
 <p>Se trata de indicar por escrito <b>todos los defectos</b> y la actuación que harías en cada caso, revisando:</p>
 <ul>
 <li>conductos de evacuación de productos de la combustión,</li>
@@ -334,9 +343,25 @@ Pegas el ticket del analizador, rellenas los valores de referencia e indicas si 
 <!-- ============ 7 EXPLOSÍMETRO ============ -->
 <section class="ficha" id="explosimetro">
 <h2><span class="n">7</span>Uso del explosímetro (atmósferas explosivas)</h2>
-<p class="fuente">Prueba 10 de la tabla del PG-IR-02, solo para Premium y Premium Plus. Fuente: AT Parte 4 (prevención de riesgos).</p>
+<p class="fuente">Hoja de examen, apartado 7 (prueba 10 de la tabla del PG-IR-02), solo para Premium y Premium Plus. Fuente: AT Parte 4 (prevención de riesgos).</p>
+<div class="hoja"><b class="t">Cómo es en la edición 09: una prueba escrita</b>
+El examinador te da unos valores de <b>O₂</b>, <b>% LIE</b> y <b>concentración de metano (CH₄)</b> en un local cerrado. Tú escribes en la hoja:
+<ul style="margin:6px 0 0;padding-left:18px">
+<li><b>Si se puede acceder</b>: sí, no, o solo para ponerlo en seguridad.</li>
+<li><b>Condiciones de acceso (equipos que usarías)</b>: explosímetro encendido todo el tiempo; si el O₂ está por debajo del 19 %, equipo de respiración autónomo o semiautónomo.</li>
+<li><b>Actuaciones</b>: ventilar, cortar el gas desde fuera, eliminar fuentes de ignición, acordonar, avisar al CCAU…</li>
+</ul></div>
+<div class="tw"><table>
+<tr><th>Ejemplo que te pueden dar</th><th>Respuesta modelo</th></tr>
+<tr><td>O₂ 20,9 % · LIE 10 % · CH₄ 0,5 %</td><td>Se puede acceder con el explosímetro encendido, sin fumar ni hacer chispas. Localizar la fuga, ventilar y corregirla.</td></tr>
+<tr><td>O₂ 20,9 % · LIE 35 % · CH₄ 1,7 %</td><td>Acceso <b>solo para ponerlo en seguridad</b>: abrir para ventilar y cerrar la llave de gas. Sin chispas ni interruptores; el explosímetro siempre encendido.</td></tr>
+<tr><td>O₂ 20,9 % · LIE 60 % · CH₄ 3 %</td><td><b>No se entra.</b> Ventilación forzada desde fuera, cortar el gas desde el exterior, acordonar (zona segura por debajo del 20 % LIE), avisar al CCAU y valorar la evacuación.</td></tr>
+<tr><td>O₂ 17 % · LIE 0 %</td><td><b>No se entra sin equipo de respiración</b> autónomo o semiautónomo. Ventilar desde fuera y volver a medir.</td></tr>
+</table></div>
+<div class="ojo">Para pasar de % CH₄ a % LIE: el LIE del metano es aproximadamente un 5 % en volumen, así que 1 % de CH₄ ≈ 20 % LIE, 2,5 % ≈ 50 % LIE y 5 % ≈ 100 % LIE. Algunos equipos toman 4,4 %, y entonces las cifras cambian un poco.</div>
+<h3>Si te dejan usar el explosímetro</h3>
 <ol class="pasos" data-f="explo">
-<li><label><input type="checkbox">Enciende el explosímetro en <b>aire limpio</b>, fuera del recinto, y espera a que se ajuste a cero.</label></li>
+<li><label><input type="checkbox">Si te dejan usar el explosímetro, enciéndelo en <b>aire limpio</b>, fuera del recinto, y espera a que se ajuste a cero.</label></li>
 <li><label><input type="checkbox">Mide <b>antes de abrir o entrar</b>: concentración de <b>oxígeno</b> y <b>% del LIE</b>, primero desde la puerta o la tapa.</label></li>
 <li><label><input type="checkbox">Interpreta los valores con la tabla de abajo y dilo en voz alta al examinador.</label></li>
 <li><label><input type="checkbox">Mantén el detector <b>encendido durante toda la actuación</b>. Apagarlo es fallo.</label></li>
@@ -357,7 +382,7 @@ Pegas el ticket del analizador, rellenas los valores de referencia e indicas si 
 <li>No mantener el detector encendido durante la actuación.</li></ul></div>
 </section>
 
-<p class="aviso">Fuentes: PG-IR-02 edición 06 (abril de 2020) y especificaciones Sedigas Rev. 02 (2025). Si tu convocatoria trae una edición más nueva del PG-IR-02, manda esa. Las casillas que marques se guardan en este navegador.</p>
+<p class="aviso">Fuentes: PG-IR-01 y PG-IR-02 edición 09 (julio de 2024) y especificaciones Sedigas Rev. 02 (2025). Las casillas que marques se guardan en este navegador.</p>
 <div class="acciones noprint"><a class="btn sec" href="../">Volver al inicio</a></div>
 </main>
 <script>
