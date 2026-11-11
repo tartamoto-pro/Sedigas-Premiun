@@ -63,6 +63,7 @@ th{background:var(--card2);font-size:.75rem;text-transform:uppercase;letter-spac
   <a href="#armario">5 · Regulación</a>
   <a href="#contador">6 · Contador y parte</a>
   <a href="#explosimetro">7 · Explosímetro</a>
+  <a href="#tramo">8 · Prueba de un tramo</a>
 </nav>
 <main>
 <h1>Fichas del examen práctico</h1>
@@ -72,7 +73,7 @@ th{background:var(--card2);font-size:.75rem;text-transform:uppercase;letter-spac
 <div class="clave"><b>Lo que dice el PG-IR-01/02 de la recertificación:</b>
 <ul style="margin:6px 0 0;padding-left:18px">
 <li>Solo hay <b>teórico-práctico</b> (destreza visual, 20 casos, aprobado con 16, <b>2,5 horas</b> en Premium) y <b>práctico</b>. No hay test teórico.</li>
-<li>En el práctico entran las pruebas <b>1, 2, 3, 5, 6 y 7</b>. La 4, detección de defectos, es «SOLO CERTIFICACIÓN».</li>
+<li>En el práctico entran las pruebas <b>1, 2, 3, 5, 6 y 7</b>, más la prueba de un tramo (ficha 8), que el examinador pregunta dentro de la puesta en servicio. La 4, detección de defectos, es «SOLO CERTIFICACIÓN».</li>
 <li>Las pruebas que hagas <b>sin fallos se te guardan</b>, siempre que no gastes 3 convocatorias ni pasen más de 3 meses entre una y otra.</li>
 <li>No se evalúa si conoces cada aparato, sino si sigues bien el procedimiento e interpretas bien los datos. <b>Si no conoces un equipo, puedes preguntar</b> al examinador y te lo explica. Él también te puede hacer preguntas mientras trabajas.</li>
 <li>En el taller habrá: un armario <b>A-6 o A-10</b> y otro <b>A-25 o A-50</b> con compresor de aire, toma Peterson y llaves de abonado, vivienda y aparato; 2 contadores G-4 en panel; dos calderas y un calentador; una cocina móvil con horno; columnas de agua de 600 y 1.500 mm cda; detector de fugas, analizador, explosímetro y cronómetro.</li>
@@ -86,6 +87,7 @@ th{background:var(--card2);font-size:.75rem;text-transform:uppercase;letter-spac
   <a href="#armario"><span class="n">5</span><span>Puesta en servicio del conjunto de regulación<small>VIS, VAS y caudal nulo</small></span></a>
   <a href="#contador"><span class="n">6</span><span>Cambio de contador y parte<small>Comprobar si marca</small></span></a>
   <a href="#explosimetro"><span class="n">7</span><span>Explosímetro<small>O₂ y % LIE</small></span></a>
+  <a href="#tramo"><span class="n">8</span><span>Prueba de un tramo<small>Presión, tiempo y método</small></span></a>
 </div>
 
 <!-- ============ 1 FUGAS ============ -->
@@ -380,6 +382,61 @@ El examinador te da unos valores de <b>O₂</b>, <b>% LIE</b> y <b>concentració
 <li>No saber interpretar el O₂: por debajo del 19 % no se puede entrar.</li>
 <li>No saber interpretar el LIE: con más del 50 % no se entra; entre el 20 y el 50 % solo para ponerlo en seguridad.</li>
 <li>No mantener el detector encendido durante la actuación.</li></ul></div>
+</section>
+
+
+<!-- ============ 8 TRAMO ============ -->
+<section class="ficha" id="tramo">
+<h2><span class="n">8</span>Prueba de estanquidad de un tramo (acometida o tallo)</h2>
+<p class="fuente">El examinador te señala un tramo y te pregunta la <b>presión</b>, el <b>tiempo</b> y el <b>método</b> de la prueba. En el acta va dentro de la puesta en servicio: «presión y tiempo de prueba inadecuados en algún tramo» y «posicionar incorrectamente el manómetro». Fuente: Tema 7, apartados 3 y 5, y Tema 9, apartado 6.</p>
+
+<div class="clave"><b>La clave para elegir el método: ¿el tramo tiene gas o no?</b>
+<ul style="margin:6px 0 0;padding-left:18px">
+<li><b>Tramo sin gas</b> (acometida interior nueva, de la llave de acometida a la llave de entrada del armario): se prueba con <b>aire o gas inerte</b>, a la <b>presión de prueba</b> de la tabla, con <b>manómetro</b> durante el tiempo indicado.</li>
+<li><b>Tramo en carga con gas</b> (por ejemplo, el <b>tallo</b> cuando la llave de acometida está dentro del armario, o las uniones del conjunto de regulación y los contadores): se comprueba a la <b>presión de servicio</b> con <b>agua jabonosa o detector de gas</b>. No se le mete presión de prueba.</li>
+<li>Si el manómetro baja en una prueba, las fugas se <b>localizan</b> con agua jabonosa o detector. Nunca con llama.</li>
+</ul></div>
+
+<h3>Tabla de presiones y tiempos (caudal de 150 m³(n)/h o menos)</h3>
+<div class="tw"><table>
+<tr><th>MOP del tramo</th><th>Presión de prueba</th><th>Tiempo</th><th>Con qué se mide</th></tr>
+<tr><td><b>2 &lt; MOP ≤ 5 bar</b></td><td><b>7 bar</b></td><td><b>60 min</b> (30 min en instalaciones individuales de menos de 20 m)</td><td>Manómetro de 0 a 10 bar, clase 1, Ø 100, o digital</td></tr>
+<tr><td><b>0,4 &lt; MOP ≤ 2 bar</b></td><td><b>3,5 bar</b></td><td><b>30 min</b></td><td>Manómetro de 0 a 6 bar, clase 1, Ø 100, o digital</td></tr>
+<tr><td><b>0,05 &lt; MOP ≤ 0,4 bar</b></td><td><b>1 bar</b></td><td><b>30 min</b> (15 min si el tramo mide menos de 15 m)</td><td>Manómetro de 0 a 1,6 bar, o digital</td></tr>
+<tr><td><b>MOP ≤ 0,05 bar</b> (≤ 50 mbar)</td><td><b>0,1 bar</b> (100 mbar ≈ 1.000 mm cda)</td><td><b>15 min</b> (10 min si el tramo mide menos de 10 m)</td><td>Columna de agua en U o digital</td></tr>
+</table></div>
+<p class="fuente">Para caudales de más de 150 m³(n)/h la prueba dura 6 h, y 24 h si pasa de 600 m³(n)/h, siempre con registro de presión y temperatura. Los elementos que se puedan estropear (cartuchos de filtro, electroválvulas, manómetros…) se desmontan para la prueba. Luego se comprueban montados a la presión máxima de operación.</p>
+
+<h3>Pasos (acometida interior o tallo sin gas)</h3>
+<ol class="pasos" data-f="tramo">
+<li><label><input type="checkbox">Averigua la <b>MOP</b> del tramo (te la da el examinador o la ves en la placa del armario) y di la <b>presión y el tiempo</b> de la tabla.</label></li>
+<li><label><input type="checkbox">Cierra las llaves que <b>delimitan el tramo</b>: la de acometida y la de entrada al conjunto. Deja <b>abiertas las intermedias</b>.</label></li>
+<li><label><input type="checkbox">Pon el <b>manómetro del rango adecuado</b> en la <b>toma Peterson</b>, siempre <b>antes de la llave de entrada</b> al conjunto, es decir, en el tramo que estás probando.</label></li>
+<li><label><input type="checkbox">Carga la <b>presión de prueba</b> con <b>aire o gas inerte</b> (en el examen, con el compresor), deja que se <b>estabilice</b> y empieza a contar.</label></li>
+<li><label><input type="checkbox">Espera el <b>tiempo</b> de la tabla con el cronómetro. Es correcto si la presión <b>no baja</b>.</label></li>
+<li><label><input type="checkbox">Si baja, <b>localiza la fuga</b> con agua jabonosa o detector. No continúes y comunícalo.</label></li>
+<li><label><input type="checkbox">Despresuriza. Después, comprueba la <b>llave de acometida</b>: presuriza a la presión de suministro, cierra, baja un <b>20 %</b> por debajo de la de servicio y espera <b>5 min</b> sin que suba.</label></li>
+<li><label><input type="checkbox">Con gas, repasa las uniones a la presión de servicio con <b>agua jabonosa o detector</b>.</label></li>
+</ol>
+<div class="prog noprint"><div class="barra"><i id="pb-tramo" style="width:0"></i></div><span id="pt-tramo">0 de 0</span></div>
+<button class="btn sec reset" onclick="limpiar('tramo')">Desmarcar todo</button>
+
+<div class="hoja"><b class="t">Respuestas modelo a lo que te puede preguntar</b>
+<div class="tw"><table>
+<tr><th>Tramo que te señalan</th><th>Respuesta</th></tr>
+<tr><td>Acometida interior o tallo, red a <b>5 bar</b> (lo normal en el taller del examen)</td><td>Con aire o gas inerte a <b>7 bar</b> durante <b>60 min</b>, con manómetro de 0 a 10 bar clase 1 en la toma Peterson antes de la llave de entrada. Correcto si no baja. Si baja, localizo con agua jabonosa o detector.</td></tr>
+<tr><td>Acometida interior, red a <b>0,4 bar</b></td><td>A <b>1 bar</b> durante <b>30 min</b> (15 min si mide menos de 15 m), con manómetro de 0 a 1,6 bar.</td></tr>
+<tr><td>Tallo <b>en carga</b> (la llave de acometida está dentro del armario)</td><td>No se le mete presión de prueba: está con gas desde la puesta en servicio de la red. Se comprueba a la <b>presión de servicio</b> con <b>agua jabonosa o detector</b>.</td></tr>
+<tr><td>Instalación en <b>MOP hasta 50 mbar</b></td><td>A <b>0,1 bar</b> (100 mbar) durante <b>15 min</b> (10 min si mide menos de 10 m), con columna de agua.</td></tr>
+<tr><td>Reapertura o inspección periódica (instalación con gas)</td><td>Como mínimo a la <b>presión de operación</b>, con manómetro o columna de agua, detector, o mirando el giro del contador durante 5 min. Las fugas se localizan con agua jabonosa o detector.</td></tr>
+</table></div></div>
+
+<div class="fallos"><b class="t">Lo que el examinador apunta como fallo</b><ul>
+<li>Usar una presión o un tiempo de prueba inadecuados en algún tramo.</li>
+<li>Poner el manómetro mal respecto al tramo que se prueba (por ejemplo, después de la llave de entrada).</li>
+<li>No hacer la prueba en algún tramo.</li>
+<li>No comprobar la llave de acometida con la bajada del 20 % y los 5 minutos.</li>
+<li>Usar llama para buscar fugas.</li></ul></div>
 </section>
 
 <p class="aviso">Fuentes: PG-IR-01 y PG-IR-02 edición 09 (julio de 2024) y especificaciones Sedigas Rev. 02 (2025). Las casillas que marques se guardan en este navegador.</p>
