@@ -2,6 +2,7 @@
    Funciona sin servidor: abre index.html o publícalo en GitHub Pages. */
 const App = (() => {
   const P = window.PREGUNTAS || [];
+  const PR = window.PROPIOS || []; // casos propios, aparte del banco de examen
   const EXAMEN = { 'PAD-1': 6, 'PAD-2': 6, 'OD': 3, 'AU': 5 }; // reparto real Premium: 20 casos, aprueba con 16
   const KEY = 'sedigas_destreza_v1';
   const $app = document.getElementById('app');
@@ -53,6 +54,15 @@ const App = (() => {
         ${tarjeta("App.practica('todas')", '', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>', 'Todas mezcladas', P.length + ' casos')}
         ${tarjeta("App.practica('fallos')", 'c-rosa', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>', 'Repasar mis fallos', fallos ? fallos + ' casos que fallaste la última vez' : 'Aún no hay fallos', fallos ? '' : 'disabled')}
       </div>
+      <h2>Casos propios · hechos por Claude</h2>
+      <p class="sub" style="margin-top:-6px">Dibujos nuevos basados en las especificaciones de 2025. Van aparte: no entran en el simulacro, en «Todas mezcladas» ni en tus fallos de examen.</p>
+      <div class="grid">
+        ${tarjeta("App.practica('propios')", 'c-violeta', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>', 'Todos los casos propios', PR.length + ' casos')}
+        ${tarjeta("App.practica('propios:PAD-1')", '', 'P1', 'Propios · PAD-1', PR.filter(q => q.bloque === 'PAD-1').length + ' casos')}
+        ${tarjeta("App.practica('propios:PAD-2')", 'c-violeta', 'P2', 'Propios · PAD-2', PR.filter(q => q.bloque === 'PAD-2').length + ' casos')}
+        ${tarjeta("App.practica('propios:OD-AU')", 'c-rosa', 'AU', 'Propios · OD y AU', PR.filter(q => q.bloque === 'OD' || q.bloque === 'AU').length + ' casos')}
+        ${tarjeta("App.lista('propios')", 'c-gris', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3 6 1.5 1.5L7 5M3 12l1.5 1.5L7 11M3 18l1.5 1.5L7 17"/></svg>', 'Casos propios con solución', 'Para repasar con calma')}
+      </div>
       <h2>Estudio y consulta</h2>
       <div class="grid">
         <a class="card c-naranja" href="guia/"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M8 7h8M8 11h6"/></svg></span><b>Guía de estudio</b><small>Chuleta de cotas, novedades 2025 y casos tipo con dibujo</small></a>
@@ -72,6 +82,7 @@ const App = (() => {
   }
 
   function practica(f) {
+    if (f && f.startsWith('propios')) { const b = f.split(':')[1]; const qs = b ? PR.filter(q => b === 'OD-AU' ? (q.bloque === 'OD' || q.bloque === 'AU') : q.bloque === b) : PR; if (!qs.length) return home(); ses = { modo: 'practica', qs: mezclar(qs), i: 0, resp: {}, aciertos: 0 }; return pregunta(); }
     let qs = f === 'todas' ? P : f === 'nuevas' ? P.filter(q => q.nueva) : f === 'fallos' ? P.filter(q => est[q.id] && est[q.id].ultima === 'mal') : P.filter(q => q.bloque === f);
     if (!qs.length) return home();
     ses = { modo: 'practica', qs: mezclar(qs), i: 0, resp: {}, aciertos: 0 };
@@ -114,7 +125,7 @@ const App = (() => {
       <div class="q ${q.img ? '' : 'sinimg'}">
         ${q.img ? `<div class="foto" onclick="App.zoom('${q.img}')"><img src="${q.img}" alt="Dibujo del caso"></div>` : ''}
         <div>
-          <div class="meta"><span class="tag">${esc(q.etiqueta)}</span>${q.nueva ? '<span class="tag nueva">Nueva</span>' : ''}<span class="num">${ses.i + 1} / ${n}${ses.modo === 'examen' ? ' · simulacro' : ''}</span></div>
+          <div class="meta"><span class="tag">${esc(q.etiqueta)}</span>${q.nueva ? '<span class="tag nueva">Nueva</span>' : ''}${q.propio ? '<span class="tag propio">Caso propio</span>' : ''}<span class="num">${ses.i + 1} / ${n}${ses.modo === 'examen' ? ' · simulacro' : ''}</span></div>
           <p class="enunciado">${esc(q.pregunta)}</p>
           ${ops}
           ${!abierta(q) && ses.modo === 'examen' ? lineas : ''}
@@ -182,6 +193,12 @@ const App = (() => {
 
   function lista(filtro) {
     filtro = filtro || 'todas';
+    if (filtro === 'propios') {
+      $app.innerHTML = `<h1>Casos propios con su solución</h1><p class="sub">Dibujos y soluciones hechos por Claude a partir de las especificaciones de 2025. No son preguntas de examen reales.</p>
+      <ul class="lista">${PR.map(q => `<li><img src="${q.img}" alt="" onclick="App.zoom('${q.img}')"><div><span class="tag">${esc(q.etiqueta)}</span> <span class="tag propio">Caso propio</span> <b>${esc(q.pregunta)}</b>${q.correcta ? `<div class="r ok">${esc(q.correcta)}</div>` : ''}<div>${esc(q.solucion)}</div></div></li>`).join('')}</ul>
+      <div class="acciones"><button class="btn sec" onclick="App.home()">Inicio</button></div>`;
+      return scrollTo(0, 0);
+    }
     const qs = filtro === 'todas' ? P : filtro === 'nuevas' ? P.filter(q => q.nueva) : P.filter(q => q.bloque === filtro);
     const chips = ['todas', 'PAD-1', 'PAD-2', 'OD', 'AU', 'nuevas'].map(f => `<button class="chip ${f === filtro ? 'on' : ''}" onclick="App.lista('${f}')">${f === 'todas' ? 'Todas' : f === 'nuevas' ? 'Nuevas' : f}</button>`).join('');
     $app.innerHTML = `<h1>Todas las preguntas</h1><div class="filtros">${chips}</div>

@@ -56,3 +56,7 @@ Edita `preguntas.js`. Cada pregunta es un bloque como este:
 ## Fichas del examen práctico
 
 En `practico/` hay fichas paso a paso (con casillas que se guardan en el navegador) para la comprobación del armario de regulación, el análisis de combustión de una caldera y la cocina con horno y goma de butano. Se enlazan desde «Consulta» en la página de inicio y se pueden imprimir.
+
+## Casos propios
+
+En `casos-propios.js` y la carpeta `propios/` hay casos de destreza visual con dibujos hechos por Claude a partir de las especificaciones Sedigas Rev. 02 (2025). Se practican desde su propio apartado en la portada y no se mezclan con el banco de preguntas de examen (`preguntas.js`), ni con el simulacro ni con los fallos.
