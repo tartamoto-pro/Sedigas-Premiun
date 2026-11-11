@@ -37,161 +37,337 @@ th{background:var(--card2);font-size:.75rem;text-transform:uppercase;letter-spac
 .reset{margin-top:12px}
 @media (max-width:600px){.ficha{padding:16px 14px;border-radius:18px}.ficha h2{font-size:1.2rem}ol.pasos>li{padding-left:48px}ol.pasos>li:before{left:11px}nav.sec{padding:8px 14px}}
 @media print{header.top,nav.sec,.reset,.noprint,.prog{display:none}body{background:#fff}main{max-width:none;padding:0}.ficha{border:0;box-shadow:none;padding:0;margin:0 0 10px;break-before:page}.ficha:first-of-type{break-before:auto}ol.pasos>li{break-inside:avoid;background:#fff!important;padding-right:30px}ol.pasos>li label{opacity:1!important}ol.pasos>li:before{content:counter(p)!important;background:#fff!important;color:#000!important;border:1.5px solid #333}ol.pasos>li:after{content:"☐";position:absolute;right:10px;top:10px;font-size:16px}table,tr,.ojo,.clave{break-inside:avoid}.ficha h3{break-after:avoid}}
+.fallos{background:var(--rojo2);border:1px solid color-mix(in srgb,var(--rojo) 28%,transparent);border-radius:14px;padding:12px 16px;margin:14px 0 4px}
+.fallos b.t{display:block;color:var(--rojo);margin-bottom:4px}
+.fallos ul{margin:0;padding-left:18px}.fallos li{margin:3px 0}
+.hoja{background:var(--azul2);border:1px solid color-mix(in srgb,var(--azul) 25%,transparent);border-radius:14px;padding:12px 16px;margin:12px 0}
+.hoja b.t{display:block;color:var(--azul);margin-bottom:6px}
+.hoja table{background:var(--card)}
+.indice{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin:14px 0}
+.indice a{display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--borde);border-radius:14px;padding:10px 12px;text-decoration:none;color:var(--tinta);font-weight:600;font-size:.92rem;box-shadow:var(--sombra)}
+.indice a .n{flex:none;width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#ff8a3d,#2457e6);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+.indice a small{display:block;font-weight:400;color:var(--gris);font-size:.78rem}
+@media print{.fallos,.hoja{break-inside:avoid}.indice{display:none}}
 </style>
 </head>
 <body>
 <header class="top">
-  <a class="brand" href="../" style="text-decoration:none">Destreza visual <span>Examen práctico</span></a>
+  <a class="brand" href="../">Destreza visual <span>Examen práctico</span></a>
   <button class="btn sec noprint" onclick="print()" style="padding:7px 14px">Imprimir</button>
 </header>
 <nav class="sec">
-  <a href="#armario">1 · Armario de regulación</a>
-  <a href="#combustion">2 · Combustión de caldera</a>
-  <a href="#cocina">3 · Cocina con horno y goma de butano</a>
+  <a href="#fugas">1 · Fugas</a>
+  <a href="#combustion">2 · Combustión</a>
+  <a href="#cocina">3 · Cocina</a>
+  <a href="#defectos">4 · Defectos</a>
+  <a href="#armario">5 · Regulación</a>
+  <a href="#contador">6 · Contador y parte</a>
+  <a href="#explosimetro">7 · Explosímetro</a>
 </nav>
 <main>
 <h1>Fichas del examen práctico</h1>
-<p class="sub">Procedimientos paso a paso sacados de las especificaciones Sedigas Rev. 02 (octubre de 2025). Toca cada paso para marcarlo como hecho mientras practicas.</p>
-<div class="ojo"><b>Importante:</b> en la renovación no hay prueba de «detección de defectos». La lista oficial de pruebas y de fallos que suspenden está en el <b>PG-IR-02</b> de Sedigas, que todavía no hemos revisado. Faltan dos pruebas por añadir.</div>
+<p class="sub">Las pruebas de Premium según el PG-IR-02 (hoja de examen FPG-IR-02-03-B y acta del examinador FPG-IR-02-5-5), con los valores de las especificaciones Sedigas Rev. 02 (2025). Toca cada paso para marcarlo como hecho.</p>
 
-<!-- ============ FICHA 1 ============ -->
-<section class="ficha" id="armario">
-<h2><span class="n">1</span>Comprobación del armario (conjunto) de regulación</h2>
-<p class="fuente">Fuente: Tema 7, apartado 3 (puesta en marcha del conjunto de regulación); Tema 3 y Tema 9 (estado del armario).</p>
+<div class="ojo"><b>Cómo se aprueba:</b> el examinador va marcando en su acta cada fallo que cometes, y para superar el práctico <b>no puedes tener ningún defecto en ninguna prueba</b>. Cada prueba se valora 0 (bien ejecutada) o 1 (mal ejecutada). Además rellenas la hoja de examen, así que <b>apunta presiones, tiempos y valores</b>: dejar campos en blanco o mal rellenados también cuenta como fallo.</div>
 
-<h3>Material</h3>
-<p>Manómetro de columna de agua con fondo de escala adecuado, pera insufladora, agua jabonosa o detector de gas, herramientas y precintos. Para la acometida interior, manómetro de 0–1,6 bar o de 0–6 bar, según la presión. <b>Nunca</b> botellas de aire comprimido con manorreductor: pueden dañar el regulador.</p>
+<div class="indice noprint">
+  <a href="#fugas"><span class="n">1</span><span>Estanquidad y localización de fugas<small>Detector y columna de agua</small></span></a>
+  <a href="#combustion"><span class="n">2</span><span>Combustión, tiro y CO ambiente<small>Ticket del analizador</small></span></a>
+  <a href="#cocina"><span class="n">3</span><span>Cocina con horno<small>Llamas, termopar y goma</small></span></a>
+  <a href="#defectos"><span class="n">4</span><span>Detección de defectos<small>Solo certificación inicial</small></span></a>
+  <a href="#armario"><span class="n">5</span><span>Puesta en servicio del conjunto de regulación<small>VIS, VAS y caudal nulo</small></span></a>
+  <a href="#contador"><span class="n">6</span><span>Cambio de contador y parte<small>Comprobar si marca</small></span></a>
+  <a href="#explosimetro"><span class="n">7</span><span>Explosímetro<small>O₂ y % LIE</small></span></a>
+</div>
 
-<h3>Antes de empezar: revisión visual</h3>
-<ul>
-<li>Puerta y cerradura correctas (falta de puerta o cerradura incorrecta = CS-8). Sin grietas en las paredes interiores.</li>
-<li>Ventilación del armario y estado de conservación (corrosión, protecciones).</li>
-<li>Placa de características y conformidad con la UNE 60404-1 (hasta 5 bar) o la UNE 60410 (hasta 0,4 bar). Si no cumple, se suspende la puesta en marcha.</li>
-<li>Identifica los elementos: llave de entrada, toma Peterson, filtro, VIS de máxima y/o mínima, regulador con VAS, toma de presión de débil calibre y llave de salida.</li>
-</ul>
+<!-- ============ 1 FUGAS ============ -->
+<section class="ficha" id="fugas">
+<h2><span class="n">1</span>Comprobación de estanquidad y localización de fugas</h2>
+<p class="fuente">Hoja de examen, apartado 1. Fuentes: OD Parte 4 (reapertura), Tema 7 y Tema 4 (detectores).</p>
+<div class="hoja"><b class="t">Lo que te piden en la hoja</b>Indicar <b>si hay fuga o no</b>; si la hay, <b>dónde</b> y qué harías. Hay que hacer un <b>pequeño croquis</b>. Hay dos recuadros: <b>con detector de fugas</b> y <b>con columna de agua</b>.</div>
 
-<h3>Pasos</h3>
-<div class="prog noprint"><div class="barra"><i id="pb-armario" style="width:0"></i></div><span id="pt-armario">0 de 0</span></div>
-<ol class="pasos" data-f="armario">
-<li><label><input type="checkbox">Conecta el <b>manómetro de columna de agua</b> en la toma de presión de salida del regulador (o en la zona de salida).</label></li>
-<li><label><input type="checkbox">Comprueba que la <b>VIS de máxima está disparada</b>. Si no lo está, dispárala: llave de entrada cerrada, llave de salida (o de contador) cerrada y presurizar aguas abajo con la pera. Si la VAS está activa, tápala un momento.</label></li>
-<li><label><input type="checkbox"><b>Estanqueidad de la acometida interior</b> (si la hay): manómetro en la toma Peterson, antes de la llave de entrada. Carga la presión de prueba, espera a que se estabilice y mantén el tiempo de la tabla sin que baje.</label></li>
-<li><label><input type="checkbox"><b>Estanqueidad de la llave de acometida</b>: despresuriza, abre la llave para llegar a la presión de suministro, ciérrala, baja un 20 % por debajo de la de servicio y espera 5 min. <b>Si la presión sube, la llave no es estanca</b> y no se sigue.</label></li>
-<li><label><input type="checkbox"><b>Purgado</b> del tramo anterior (en media presión): con las llaves de entrada y salida cerradas, retira el cartucho del filtro, pon el útil de obturación y la manguera hacia zona segura, y abre y cierra varias veces la llave de entrada. Limpia y repón el filtro.</label></li>
-<li><label><input type="checkbox"><b>Rearme</b>: despresuriza lentamente aguas abajo, rearma la VIS de máxima y abre <b>despacio</b> la llave de entrada. La VIS de mínima incorporada se rearma en la misma operación.</label></li>
-<li><label><input type="checkbox"><b>Disparo de la VAS</b> (si está activa): presuriza despacio con la pera. Debe abrir a la presión de la placa. <b>Mínimo 3 veces.</b></label></li>
-<li><label><input type="checkbox"><b>Disparo de la VIS de máxima</b>: presuriza despacio (con la VAS tapada). Debe disparar entre los valores de la placa. <b>Mínimo 3 veces</b>, y déjala rearmada.</label></li>
-<li><label><input type="checkbox"><b>Disparo de la VIS de mínima</b>: cierra la llave de entrada y despresuriza poco a poco por la purga hasta que dispare. Al abrir la llave, el regulador <b>no debe rearmarse</b> solo. <b>Mínimo 3 veces.</b>
-<ul><li>En los armarios A-6, A-10 y A-10-U, la VIS de mínima va fuera, tras el contador, y se rearma sola. Con el manómetro en la toma de débil calibre, cierra la llave de contador y abre la toma: debe saltar hacia <b>10–12 mbar</b>. Con la toma abierta, abre despacio la llave de contador: <b>no debe rearmarse</b>. Cierra la toma: se rearma sola.</li></ul></label></li>
-<li><label><input type="checkbox"><b>Apertura y cierre del regulador</b>: provoca un pequeño consumo por la purga y la presión debe <b>bajar</b> (abre). Cierra despacio: la presión sube y, a los <b>5 min</b>, debe quedar estable entre la presión nominal y <b>un 30 % más</b>.</label></li>
-<li><label><input type="checkbox"><b>Final</b>: quita el manómetro y cierra la toma. Comprueba con agua jabonosa o detector todo el conjunto, desde la entrada hasta la llave de salida o de contador. <b>Precinta</b> los órganos de tarado del regulador, las VIS y la VAS que hayas desprecintado.</label></li>
+<h3>A · Prueba con columna de agua (instalación en MOP hasta 50 mbar)</h3>
+<ol class="pasos" data-f="fugas">
+<li><label><input type="checkbox">Coloca el <b>manómetro de columna de agua</b> en la toma de débil calibre. Si no hay toma, puedes usar la conexión de la cocina (con una T, para que la prueba incluya el flexible y el aparato) o un puente con toma en lugar del contador. Antes de desmontar el contador, pon el <b>puente antichispa</b> si no tiene soporte metálico.</label></li>
+<li><label><input type="checkbox">Deja las <b>llaves de aparato abiertas</b> y los <b>mandos cerrados</b>. Las llaves intermedias, abiertas.</label></li>
+<li><label><input type="checkbox"><b>Abre la llave de cliente</b>, lee la presión en el manómetro y <b>vuelve a cerrarla</b>.</label></li>
+<li><label><input type="checkbox">Controla la presión <b>10 minutos</b> si la instalación mide 10 m o menos, o <b>15 minutos</b> si mide más. Si la presión <b>se mantiene</b>, es estanca. Apunta en la hoja la presión y el tiempo.</label></li>
+<li><label><input type="checkbox">Si <b>baja</b>, hay fuga: localízala con el detector o con agua jabonosa (paso B). Si no la localizas o no se puede reparar, <b>cierra, precinta y bloquea</b> la llave de cliente.</label></li>
+<li><label><input type="checkbox">Al acabar: despresuriza, quita el manómetro, abre la llave y comprueba con <b>agua jabonosa</b> el punto donde estuvo el manómetro. Purga y comprueba en la cocina que la combustión es correcta.</label></li>
 </ol>
-<button class="btn sec reset" onclick="limpiar('armario')">Desmarcar todo</button>
 
-<h3>Valores que tienes que saber</h3>
-<div class="tw"><table>
-<tr><th>Concepto</th><th>Valor</th></tr>
-<tr><td>Presiones de salida habituales</td><td>Gas natural: 210 mm cda (≈ 21 mbar) y 550 mm cda (≈ 55 mbar). GLP: 1.500 mm cda</td></tr>
-<tr><td>Cierre a caudal nulo</td><td>Estable a los 5 min, entre la presión nominal y la nominal + 30 %</td></tr>
-<tr><td>Comprobaciones de disparo (VAS, VIS)</td><td>3 veces como mínimo cada una</td></tr>
-<tr><td>Disparo de la VIS de mínima (A-6, A-10)</td><td>Hacia 10–12 mbar</td></tr>
-<tr><td>Prueba de la acometida interior, MOP 0,05–0,4 bar</td><td>1 bar · 30 min (15 min si mide menos de 15 m) · manómetro 0–1,6 bar</td></tr>
-<tr><td>Prueba de la acometida interior, MOP 0,4–2 bar</td><td>3,5 bar · 30 min · manómetro 0–6 bar, clase 1</td></tr>
-<tr><td>Prueba de la acometida interior, MOP 2–5 bar</td><td>7 bar · 60 min · manómetro 0–10 bar, clase 1</td></tr>
-<tr><td>Estanqueidad de la llave de acometida</td><td>Bajar un 20 % por debajo de la de servicio; 5 min sin que suba</td></tr>
-</table></div>
-<p class="fuente">Tiempos de la tabla para caudales de hasta 150 m³(n)/h.</p>
+<h3>B · Localización con detector de gas o agua jabonosa</h3>
+<ol class="pasos" data-f="fugas2">
+<li><label><input type="checkbox">Comprueba que el detector es del <b>gas adecuado</b> (no uses uno de gas natural para butano) y que no ha pasado su vida útil. Enciéndelo en aire limpio.</label></li>
+<li><label><input type="checkbox">Pasa la boquilla <b>despacio</b> y <b>pegada a cada unión</b>: racores, llaves, contador, regulador, conexiones de aparatos. Ir rápido o lejos de la unión es fallo.<ul><li>El gas natural es más ligero que el aire y sube: acerca la boquilla <b>por encima</b> de la unión. El butano y el propano son más pesados y bajan: acércala <b>por debajo</b>.</li></ul></label></li>
+<li><label><input type="checkbox">Con <b>agua jabonosa</b>: aplícala bien con el pincel en toda la unión y <b>espera</b> unos segundos a ver si salen burbujas.</label></li>
+<li><label><input type="checkbox">Revisa también el <b>interior del aparato</b> que te indiquen y las <b>conexiones con pincel y agua jabonosa</b> o con el detector.</label></li>
+<li><label><input type="checkbox">Marca el punto de la fuga en el <b>croquis</b> y escribe la actuación: reparar si es fácil (juntas, apriete, engrase de llave de macho) o <b>cerrar, precintar y bloquear</b> la llave que aísle esa parte.</label></li>
+</ol>
+<div class="prog noprint"><div class="barra"><i id="pb-fugas" style="width:0"></i></div><span id="pt-fugas">0 de 0</span></div>
+<button class="btn sec reset" onclick="limpiar('fugas');limpiar('fugas2')">Desmarcar todo</button>
+
+<div class="fallos"><b class="t">Lo que el examinador apunta como fallo</b><ul>
+<li>No detectar la fuga o no localizar dónde está.</li>
+<li>Pasar el detector demasiado rápido o con la boquilla mal colocada.</li>
+<li>Conectar mal el manómetro o la columna de agua.</li>
+<li>Aplicar mal el agua jabonosa o no esperar lo suficiente.</li>
+<li>No comprobar la estanquidad del aparato, o no repasar las conexiones con pincel y agua jabonosa o con el detector.</li>
+<li>No hacer la prueba.</li></ul></div>
 </section>
 
-<!-- ============ FICHA 2 ============ -->
+<!-- ============ 2 COMBUSTIÓN ============ -->
 <section class="ficha" id="combustion">
-<h2><span class="n">2</span>Análisis de combustión de una caldera</h2>
-<p class="fuente">Fuente: Tema 12 (anexo A), Tema 7 (apartado 7, aparatos) y Tema 9 (anomalías AP y AS).</p>
-
-<h3>Material y condiciones</h3>
-<ul>
-<li>Analizador de combustión conforme a la UNE-EN 50379, con medida directa de CO y O₂. Calibrado hace <b>18 meses o menos</b>, con incertidumbre de ±5 % como máximo.</li>
-<li>Puertas y ventanas del local <b>cerradas</b>. Campana <b>apagada</b>, salvo cuando se comprueba su interferencia; entonces va a la máxima potencia.</li>
-<li>Aparato de 70 kW o menos: tiene que tener <b>toma de muestras accesible</b> sin desmontar la carcasa. Si no la tiene: en IP es AS-4; en puesta en marcha hay que cambiar el conducto por uno con toma.</li>
-</ul>
+<h2><span class="n">2</span>Análisis de combustión, tiro y CO ambiente</h2>
+<p class="fuente">Hoja de examen, apartado 2. Fuentes: Tema 12 (anexo A), Tema 7 y Tema 9.</p>
+<div class="hoja"><b class="t">Lo que te piden en la hoja (lleva aprendidas las respuestas)</b>
+Pegas el ticket del analizador, rellenas los valores de referencia e indicas si los del ticket son correctos. La hoja dice: <b>«Siempre realizar prueba de tiro»</b>.
+<div class="tw"><table>
+<tr><th>Campo de la hoja</th><th>Respuesta</th></tr>
+<tr><td>Tª de humos</td><td>Calderas: <b>80 °C o más</b>. Calentadores: en torno a <b>110 °C o más</b>. Las de condensación quedan excluidas.</td></tr>
+<tr><td>Oxígeno (O₂)</td><td>Entre <b>5 y 12 %</b></td></tr>
+<tr><td>Exceso de aire (λ)</td><td>Entre <b>1,5 y 3</b></td></tr>
+<tr><td>CO₂</td><td>Por debajo del <b>10 %</b></td></tr>
+<tr><td>CO corregido · criterio IP (PAD-2)</td><td>Sin anomalía: <b>menos de 500 ppm</b> · secundaria: <b>500–1.000 ppm</b> (AS-6) · principal: <b>más de 1.000 ppm</b> (AP-2)</td></tr>
+<tr><td>CO corregido · criterio puesta en marcha (PAD-1)</td><td>Correcto por debajo de <b>500 ppm</b>. Con 500 o más, no se pone en marcha.</td></tr>
+<tr><td>Tiempo mínimo de espera antes de iniciar la prueba</td><td><b>2 minutos</b> en régimen estable (o hasta que module)</td></tr>
+<tr><td>Tiempo mínimo de realización de la prueba</td><td><b>2 minutos</b> con valores estables. Si oscilan, 1 minuto más y anotas el más próximo al máximo.</td></tr>
+<tr><td>¿Procede medir tiro? ¿Por qué?</td><td><b>Sí, en aparatos tipo B de tiro natural</b>: hay que ver si evacua bien y no hay revoco. En aparatos estancos (tipo C) no procede.</td></tr>
+<tr><td>CO ambiente · condiciones del local</td><td><b>Puertas y ventanas cerradas</b>, campana apagada y todos los aparatos a la vez a máxima potencia.</td></tr>
+<tr><td>CO ambiente · tiempo y posición de la sonda</td><td><b>5 minutos</b> como mínimo, a <b>1 m</b> del aparato y a <b>1,80 m</b> de altura.</td></tr>
+<tr><td>CO ambiente · valores</td><td>Sin anomalía: <b>menos de 15 ppm</b> · secundaria: <b>15–50 ppm</b> (AS-1) · principal: <b>más de 50 ppm</b> (AP-1)</td></tr>
+</table></div></div>
 
 <h3>Pasos</h3>
-<div class="prog noprint"><div class="barra"><i id="pb-combustion" style="width:0"></i></div><span id="pt-combustion">0 de 0</span></div>
 <ol class="pasos" data-f="combustion">
-<li><label><input type="checkbox">Pon la caldera a <b>máxima potencia en régimen estacionario</b>, sin que module. Si tiene función de potencia máxima (deshollinador), úsala.
-<ul><li><b>Mixta</b> con más potencia en ACS: abre al máximo el grifo de agua caliente más cercano y pon el termostato de ACS al máximo.</li><li><b>Solo calefacción</b> o con más potencia en calefacción: termostato de agua al máximo y termostato de ambiente bien por encima, para que no corte.</li></ul></label></li>
-<li><label><input type="checkbox">Espera <b>2 minutos</b> de funcionamiento, o lo necesario para el régimen estacionario. En puesta en servicio, vigila la presión de quemador para asegurarte de que no baja de potencia.</label></li>
-<li><label><input type="checkbox">Introduce la sonda en la <b>toma de muestras</b>, <b>perpendicular</b> al conducto y con la punta en el <b>centro de la vena de humos</b>.
-<ul><li>Tipo B con cortatiros (en IP): por una abertura cerca del collarín, o en el cortatiros.</li><li>Tipo C concéntrico: asegura la estanquidad entre la admisión de aire y la evacuación.</li></ul></label></li>
-<li><label><input type="checkbox">Deja la sonda <b>al menos 2 minutos</b>. Si el CO se estabiliza, anota ese valor. Si oscila, observa durante <b>1 minuto</b> y anota el valor más cercano al <b>máximo</b>.</label></li>
-<li><label><input type="checkbox">Anota también el <b>O₂</b> (y el CO₂). Si el O₂ pasa del <b>10 %</b> (o el CO₂ baja del 6 %), revisa la colocación de la sonda o una posible <b>inversión de tiro</b> y repite. Si es inversión de tiro, mide en la parte inferior del cortatiros. En calderas de condensación vale lo que diga el fabricante.</label></li>
-<li><label><input type="checkbox"><b>CO ambiente</b> (aparatos tipo B y tipo C de conductos separados, en local que no sea zona exterior): todos los aparatos a la vez a máxima potencia, espera <b>5 minutos</b> y mide a <b>1 m</b> de los aparatos y a <b>1,80 m</b> de altura.</label></li>
-<li><label><input type="checkbox"><b>Tiro y revoco</b> (tipo B de tiro natural, en local que no sea zona exterior): con puertas y ventanas cerradas y, si hay extractor, funcionando al máximo. Comprueba que el tiro es suficiente y que no hay revoco. Si mides CO₂ ambiente, hazlo a la vez que el CO ambiente.</label></li>
-<li><label><input type="checkbox"><b>Decide y anota</b> según la tabla. En puesta en marcha, si no se cumple, el aparato <b>no se pone en marcha</b> y su llave queda cerrada, bloqueada y precintada.</label></li>
+<li><label><input type="checkbox">Usa un analizador conforme a la UNE-EN 50379, calibrado hace 18 meses o menos. Ponlo en marcha en aire limpio <b>antes</b> de encender el aparato.</label></li>
+<li><label><input type="checkbox">Pon la caldera a <b>máxima potencia</b>, sin que module. Si es mixta, abre el grifo de agua caliente al máximo. Si es solo de calefacción, sube los termostatos al máximo. Si tiene función deshollinador, úsala.</label></li>
+<li><label><input type="checkbox"><b>Espera 2 minutos</b> a que trabaje en régimen estable. Meter la sonda a la vez que enciendes el aparato es fallo.</label></li>
+<li><label><input type="checkbox">Mete la sonda en la toma de muestras, <b>perpendicular</b> y en el <b>centro de la vena de humos</b>. En aparatos con cortatiros, nunca por encima del cortatiros.</label></li>
+<li><label><input type="checkbox">Mantén la medición <b>2 minutos</b> con valores estables. Imprime el ticket.</label></li>
+<li><label><input type="checkbox">Si sale <b>O₂ alto y temperatura de humos baja</b>, sospecha <b>inversión de tiro</b> o sonda mal colocada: recoloca la sonda y repite (en caso de inversión, mide en la parte inferior del cortatiros).</label></li>
+<li><label><input type="checkbox"><b>Mide el tiro y el revoco</b> si es tipo B de tiro natural, con puertas y ventanas cerradas y el extractor, si hay, al máximo.</label></li>
+<li><label><input type="checkbox"><b>CO ambiente</b>: todos los aparatos a máxima potencia, <b>5 minutos</b>, analizador a 1 m del aparato y a 1,80 m de altura.</label></li>
+<li><label><input type="checkbox">Rellena la hoja: valores del ticket, <b>SÍ/NO</b> correcto en cada uno y la valoración (sin anomalía, secundaria o principal).</label></li>
 </ol>
+<div class="prog noprint"><div class="barra"><i id="pb-combustion" style="width:0"></i></div><span id="pt-combustion">0 de 0</span></div>
 <button class="btn sec reset" onclick="limpiar('combustion')">Desmarcar todo</button>
 
-<h3>Valores límite</h3>
-<div class="tw"><table>
-<tr><th>Medida</th><th>Puesta en marcha</th><th>Inspección periódica (IP)</th></tr>
-<tr><td>CO corregido en humos</td><td>No se pone en marcha con <b>500 ppm o más</b></td><td>500–1.000 ppm: <b>AS-6</b> (secundaria) · más de 1.000: <b>AP-2</b> (principal)</td></tr>
-<tr><td>CO ambiente</td><td>No se pone en marcha con <b>15 ppm o más</b></td><td>Menos de 15: correcto · 15–50: <b>AS-1</b> · más de 50: <b>AP-1</b></td></tr>
-<tr><td>CO₂ ambiente (revoco)</td><td>No se pone en marcha con <b>2.500 ppm o más</b></td><td>2.500–5.000: revoco moderado · más de 5.000: grave</td></tr>
-<tr><td>Interferencia de la campana</td><td>—</td><td>CO ambiente 15–50 ppm: <b>AS-2</b> · más de 50 o revoco continuado: <b>AP-4</b></td></tr>
-</table></div>
-
-<h3>Valores de referencia del ticket</h3>
-<div class="clave">O₂ en humos entre 5 y 12 % (lo ideal, 8–10 %) · CO₂ por debajo del 10 % · exceso de aire (λ) entre 1,5 y 3, mejor cerca de 2 · temperatura de humos: calderas 80 °C o más, calentadores en torno a 110 °C o más, condensación normalmente por debajo de 60 °C. Si la temperatura sale más baja de lo normal y el O₂ más alto, piensa en una <b>inversión de tiro</b>.</div>
+<div class="fallos"><b class="t">Lo que el examinador apunta como fallo</b><ul>
+<li>No poner el aparato a máxima potencia, o no esperar los 2 minutos a régimen estable.</li>
+<li>Meter la sonda a la vez que enciendes el aparato, o ponerla por encima del cortatiros.</li>
+<li>No esperar los 2 minutos de medición con valores estables.</li>
+<li>No medir el tiro y el revoco en tiro natural, o medirlos mal.</li>
+<li>No saber los valores de Tª de humos, O₂, CO₂ y λ, o dar por buena una combustión con un CO fuera de especificación.</li>
+<li>No detectar una inversión de tiro (Tª de humos anormalmente baja con O₂ alto).</li>
+<li>En CO ambiente: colocar mal el analizador, no poner el aparato al máximo, no esperar 5 minutos o no medir.</li>
+<li>No saber que de 15 a 50 ppm es anomalía secundaria y más de 50 ppm es principal.</li>
+</ul></div>
 </section>
 
-<!-- ============ FICHA 3 ============ -->
+<!-- ============ 3 COCINA ============ -->
 <section class="ficha" id="cocina">
 <h2><span class="n">3</span>Cocina con horno y su goma de butano</h2>
-<p class="fuente">Fuente: Tema 5 (conexión de aparatos, flexible de elastómero), Tema 7 (comprobaciones de aparatos) y Tema 9 (anomalías IPa, ISa y AS).</p>
-<div class="clave">En cocinas, encimeras y hornos (aparatos tipo A) se comprueba el <b>montaje correcto</b> y la <b>estanquidad de la conexión</b>. <b>No</b> se hace análisis de combustión ni medida de CO ambiente.</div>
-
-<h3>Pasos</h3>
-<div class="prog noprint"><div class="barra"><i id="pb-cocina" style="width:0"></i></div><span id="pt-cocina">0 de 0</span></div>
+<p class="fuente">Hoja de examen, apartado 3. Fuentes: Tema 5, Tema 7 y Tema 9.</p>
+<div class="hoja"><b class="t">Lo que te piden en la hoja</b>En un dibujo con los <b>4 quemadores</b>, indicar si la llama de cada uno es correcta o no (posición de mínimo, aspecto y estabilidad). También <b>horno y grill</b>, <b>dispositivo de seguridad</b>, el <b>tiempo de prueba del dispositivo</b> y si la <b>conexión del aparato</b> es aceptable.</div>
 <ol class="pasos" data-f="cocina">
-<li><label><input type="checkbox"><b>Aparato y local</b>: el aparato es adecuado para el gas que se suministra (butano/GLP) y tiene el marcado que exige la ley. Comprueba que no está en un dormitorio ni en un baño o aseo y que la ventilación del local es correcta.</label></li>
-<li><label><input type="checkbox"><b>Tipo de goma</b>: tubo de elastómero según la <b>UNE 53539</b> (o la UNE-EN 16436 clase 1, solo para GLP). Solo vale para aparatos <b>móviles</b> conectados a envases de GLP.</label></li>
-<li><label><input type="checkbox"><b>Identificación y caducidad</b>: lleva marcado y la <b>fecha de caducidad</b> legible, y no está caducada.</label></li>
-<li><label><input type="checkbox"><b>Longitud</b>: la mínima posible y <b>nunca más de 1,50 m</b>.</label></li>
-<li><label><input type="checkbox"><b>Uniones</b>: boquillas según la <b>UNE 60714</b>, del mismo diámetro que el tubo, y <b>abrazaderas metálicas</b> en los dos extremos. Tira suavemente con la mano para comprobar que no se suelta.</label></li>
-<li><label><input type="checkbox"><b>Estado y recorrido</b>: sin grietas ni fisuras. <b>No toca partes calientes</b> y no pasa por detrás del horno, salvo que el horno tenga aislamiento trasero y el fabricante indique que no se calienta más de 30 °C.</label></li>
-<li><label><input type="checkbox"><b>Estanquidad de la conexión</b>: con la llave del aparato (o la del regulador de la botella) <b>abierta</b> y los <b>mandos cerrados</b>, revisa todas las uniones con <b>agua jabonosa o detector</b>: regulador, boquillas y abrazaderas. Si usas manómetro, a una presión que no baje de la de servicio ni pase de <b>110 mbar</b>. <b>Nunca con llama.</b></label></li>
-<li><label><input type="checkbox"><b>Quemadores superiores</b>: enciende cada uno y comprueba que la llama es correcta y estable (azul, sin puntas amarillas ni desprendimiento). Gira rápido cada mando de <b>máximo a mínimo</b>: no se debe apagar ninguna.</label></li>
-<li><label><input type="checkbox"><b>Horno</b>: enciéndelo y comprueba el encendido y la llama.</label></li>
-<li><label><input type="checkbox"><b>Dispositivos de seguridad</b> por extinción de llama (termopar): comprueba que funcionan, es decir, que al apagarse la llama se corta el gas, siguiendo el manual del fabricante.</label></li>
-<li><label><input type="checkbox"><b>Resultado</b>: si todo está bien, queda en servicio. Si algo falla, la llave del aparato queda <b>cerrada, bloqueada y precintada</b> y se anota la anomalía.</label></li>
+<li><label><input type="checkbox"><b>Conexión</b>: goma de elastómero UNE 53539 (o UNE-EN 16436 clase 1), <b>no caducada</b>, con marcado, de <b>1,50 m como máximo</b>, con boquillas y <b>abrazaderas</b> en los dos extremos. Que <b>no toque partes calientes</b> del horno ni pase por detrás si no está aislado.</label></li>
+<li><label><input type="checkbox"><b>Estanquidad</b> de la conexión: llave abierta y mandos cerrados, con agua jabonosa o detector en regulador, boquillas y abrazaderas.</label></li>
+<li><label><input type="checkbox">Enciende <b>cada quemador</b> y mira la llama: azul, estable, sin puntas amarillas ni desprendimiento.</label></li>
+<li><label><input type="checkbox">Comprueba la combustión de cada quemador <b>con el resto encendidos a su consumo máximo</b>.</label></li>
+<li><label><input type="checkbox"><b>Mínimos</b>: pasa cada mando de máximo a mínimo. No se debe apagar ni quedar excesivamente baja o alta.</label></li>
+<li><label><input type="checkbox"><b>Horno y grill</b>: enciende y comprueba la llama.</label></li>
+<li><label><input type="checkbox"><b>Dispositivo de seguridad</b> (termopar) en cada fuego que lo tenga y en el horno. Mide los tiempos con el reloj:<ul><li><b>Encendido</b>: el tiempo que tienes que mantener pulsado el mando hasta que la llama se queda sola (normalmente <b>10 s como máximo</b>).</li><li><b>Corte</b>: apaga la llama soplando o cerrando un momento y cuenta hasta que oyes el <b>clic</b> de la válvula (normalmente <b>60 s como máximo</b>).</li></ul></label></li>
+<li><label><input type="checkbox">Rellena la hoja quemador a quemador y escribe si la conexión es <b>aceptable o no</b> y por qué.</label></li>
 </ol>
+<div class="prog noprint"><div class="barra"><i id="pb-cocina" style="width:0"></i></div><span id="pt-cocina">0 de 0</span></div>
 <button class="btn sec reset" onclick="limpiar('cocina')">Desmarcar todo</button>
+<div class="ojo">Los tiempos del termopar (10 s y 60 s) son los habituales de la norma de cocinas UNE-EN 30-1-1. <b>No aparecen en las especificaciones Sedigas</b>, así que confírmalos con tu formador.</div>
 
-<h3>Cómo se clasifican los fallos</h3>
 <div class="tw"><table>
-<tr><th>Lo que encuentras</th><th>Anomalía</th></tr>
-<tr><td>Fuga de gas</td><td><b>IPa-1</b> · principal</td></tr>
-<tr><td>Goma con grietas, fisuras o daños</td><td><b>IPa-3</b> · principal</td></tr>
-<tr><td>Goma tocando las paredes calientes del horno</td><td><b>IPa-4</b> · principal (no lo es si hay aislante que impide el contacto)</td></tr>
-<tr><td>Cocina en dormitorio, baño o aseo</td><td><b>IPa-2</b> · principal</td></tr>
-<tr><td>Goma caducada, sin identificación, sin fecha o de más de 1,50 m</td><td><b>ISa-3</b> · secundaria</td></tr>
-<tr><td>Unión defectuosa (boquillas, abrazaderas, riesgo de que se suelte)</td><td><b>ISa-3</b> · secundaria</td></tr>
-<tr><td>Termopar o seguridad de llama que no funciona</td><td><b>AS-3</b> · secundaria</td></tr>
-<tr><td>Se apaga algún fuego al pasar de máximo a mínimo</td><td><b>AS-7</b> · secundaria</td></tr>
-<tr><td>Quemador o mando que no funciona (no sale gas, roto, bloqueado)</td><td><b>AS-8</b> · secundaria</td></tr>
+<tr><th>Si encuentras…</th><th>Anomalía (IP)</th></tr>
+<tr><td>Goma dañada, con grietas o tocando el horno</td><td><b>IPa-3 / IPa-4</b> · principal</td></tr>
+<tr><td>Goma caducada, sin fecha o de más de 1,50 m; uniones defectuosas</td><td><b>ISa-3</b> · secundaria</td></tr>
+<tr><td>Termopar que no funciona</td><td><b>AS-3</b> · secundaria</td></tr>
+<tr><td>Se apaga al pasar de máximo a mínimo</td><td><b>AS-7</b> · secundaria</td></tr>
+<tr><td>Quemador o mando que no funciona</td><td><b>AS-8</b> · secundaria</td></tr>
 </table></div>
+
+<div class="fallos"><b class="t">Lo que el examinador apunta como fallo</b><ul>
+<li>No detectar que el flexible está mal montado.</li>
+<li>No detectar una conexión flexible dañada o tocando las partes calientes del horno.</li>
+<li>No detectar una conexión flexible caducada o demasiado larga.</li>
+<li>No detectar una combustión o una llama incorrecta en algún quemador.</li>
+<li>No detectar un mínimo que se apaga o que queda demasiado bajo o alto.</li>
+<li>No comprobar cada quemador con el resto encendidos al máximo.</li>
+<li>No comprobar, o comprobar mal, los dispositivos de seguridad de la cocina y el horno.</li></ul></div>
 </section>
 
-<p class="aviso">Las casillas que marques se guardan en este navegador. Para el examen manda siempre lo que digan las especificaciones vigentes y las instrucciones del examinador.</p>
-<div class="acciones noprint"><a class="btn sec" href="../" style="text-decoration:none">Volver al inicio</a></div>
+<!-- ============ 4 DEFECTOS ============ -->
+<section class="ficha" id="defectos">
+<h2><span class="n">4</span>Detección de defectos</h2>
+<p class="fuente">Hoja de examen, apartado 4.</p>
+<div class="clave">Según te indicaron, <b>en la recertificación no se hace</b>. La hoja la trae para la certificación inicial. Por si acaso, esto es lo que se pide.</div>
+<p>Se trata de indicar por escrito <b>todos los defectos</b> y la actuación que harías en cada caso, revisando:</p>
+<ul>
+<li>conductos de evacuación de productos de la combustión,</li>
+<li>ventilaciones del local,</li>
+<li>conexiones de los aparatos,</li>
+<li>tuberías: instalación y ubicación,</li>
+<li>conjunto de regulación,</li>
+<li>ubicación del contador.</li>
+</ul>
+<p>Es lo mismo que practicas en la destreza visual, pero en una instalación real. La <a href="../guia/#chuleta-de-cotas-y-valores">chuleta de cotas</a> de la guía te sirve.</p>
+<div class="fallos"><b class="t">Lo que el examinador apunta como fallo</b><ul>
+<li>No indicar algún defecto de cualquiera de los puntos anteriores.</li>
+<li>Rellenar mal el formato del examen.</li>
+<li>No explicar bien la actuación de cada caso.</li></ul></div>
+</section>
+
+<!-- ============ 5 ARMARIO ============ -->
+<section class="ficha" id="armario">
+<h2><span class="n">5</span>Puesta en servicio del conjunto de regulación y de la instalación receptora</h2>
+<p class="fuente">Hoja de examen, apartado 5. Fuentes: Tema 7, apartado 3 y apartados 6.3.2 y 6.3.4.</p>
+<div class="hoja"><b class="t">Lo que te piden en la hoja: SÍ/NO correcto y los valores</b>
+<div class="tw"><table>
+<tr><th>Punto de la hoja</th><th>Qué haces y qué apuntas</th></tr>
+<tr><td>Válvula de acometida (estanquidad)</td><td>Cierras la llave y bajas la presión aguas abajo: un <b>20 %</b> si la MOP está entre 0,4 y 5 bar, o hasta <b>30–40 mm cda</b> si es de 0,05 bar o menos. Esperas <b>5 min</b>: si la presión sube, la llave no es estanca.</td></tr>
+<tr><td>Estanquidad del tallo</td><td>Agua jabonosa o detector en el tallo (eje) de la llave.</td></tr>
+<tr><td>Purgado</td><td>Purgas hacia una zona segura hasta que salga gas.</td></tr>
+<tr><td>Estanquidad del conjunto de regulación (interior del armario)</td><td>Agua jabonosa o detector en todas las uniones, desde la entrada hasta la llave de salida.</td></tr>
+<tr><td>Presión de entrada al conjunto</td><td>La que leas con el manómetro en la toma Peterson. Apúntala con sus unidades.</td></tr>
+<tr><td>Presión de salida del conjunto</td><td>Normalmente <b>21–22 mbar</b> (≈ 210–220 mm cda) o <b>55 mbar</b>, según el regulador. Compárala con la placa.</td></tr>
+<tr><td>Disparo de la VIS de máxima</td><td>Que dispare dentro del valor de la placa. Prueba 3 veces.</td></tr>
+<tr><td>Apertura de la VAS</td><td>Que abra a la presión de la placa, si está activa. Prueba 3 veces.</td></tr>
+<tr><td>Disparo de la VIS de mínima</td><td>Que dispare al bajar la presión y que <b>no se rearme sola</b> al abrir. Prueba 3 veces.</td></tr>
+<tr><td>Caudal nulo del regulador e indicar la presión</td><td>A los <b>5 min</b> debe quedar estable entre la presión nominal y <b>un 30 % más</b>. Apunta el valor.</td></tr>
+</table></div></div>
+
+<h3>Pasos</h3>
+<ol class="pasos" data-f="armario">
+<li><label><input type="checkbox"><b>Revisión visual</b>: puerta, cerradura, ventilación, placa del regulador y elementos (llave de entrada, toma Peterson, filtro, VIS, regulador, VAS, toma de salida, llave de salida).</label></li>
+<li><label><input type="checkbox">Coloca el <b>manómetro</b> en la toma que corresponda. Colocarlo mal respecto al tramo que quieres probar es fallo.</label></li>
+<li><label><input type="checkbox"><b>Estanquidad de la válvula de acometida</b>: bajada del 20 % (MOP entre 0,4 y 5 bar) o hasta 30–40 mm cda (MOP de 0,05 bar o menos), y 5 min sin que suba.</label></li>
+<li><label><input type="checkbox"><b>Purga</b> del tramo y rearme: rearma la VIS de máxima y abre <b>despacio</b> la llave de entrada.</label></li>
+<li><label><input type="checkbox"><b>VAS</b> (si está activa): presuriza despacio con la pera. Debe abrir a la presión de la placa. Mínimo 3 veces.</label></li>
+<li><label><input type="checkbox"><b>VIS de máxima</b>: con la VAS tapada, presuriza despacio hasta que dispare. Mínimo 3 veces y déjala rearmada.</label></li>
+<li><label><input type="checkbox"><b>VIS de mínima</b> del armario o del regulador de abonado: despresuriza poco a poco hasta que dispare. Al abrir, <b>no debe rearmarse sola</b>. Mínimo 3 veces.</label></li>
+<li><label><input type="checkbox"><b>Caudal nulo</b>: provoca un pequeño consumo y luego ciérralo. A los 5 min, la presión debe quedar estable entre la nominal y la nominal + 30 %.</label></li>
+<li><label><input type="checkbox"><b>Estanquidad del armario</b> con agua jabonosa o detector: todas las uniones y el tallo de las llaves.</label></li>
+<li><label><input type="checkbox"><b>Instalación receptora</b>: espera a que se <b>rearmen los reguladores de abonado</b> antes de empezar la prueba de estanquidad conjunta. Prueba todos los tramos con la <b>presión y el tiempo</b> que tocan y apúntalos en la hoja.</label></li>
+<li><label><input type="checkbox"><b>Purga</b> la instalación y <b>precinta</b> el contador y los órganos de tarado (regulador, VIS y VAS).</label></li>
+</ol>
+<div class="prog noprint"><div class="barra"><i id="pb-armario" style="width:0"></i></div><span id="pt-armario">0 de 0</span></div>
+<button class="btn sec reset" onclick="limpiar('armario')">Desmarcar todo</button>
+
+<h3>Presiones y tiempos de prueba que hay que saber</h3>
+<div class="tw"><table>
+<tr><th>Tramo</th><th>Prueba</th></tr>
+<tr><td>Instalación en MOP hasta 50 mbar (reapertura)</td><td>Presión de servicio con columna de agua · <b>10 min</b> hasta 10 m de longitud, <b>15 min</b> si es más larga</td></tr>
+<tr><td>Instalación común con la llave de acometida (reapertura de finca)</td><td><b>15 min</b> sin que baje. Volver a presurizar si baja de 150 mm cda (MOP hasta 50 mbar) o de 500 mm cda (MOP de 50 a 400 mbar).</td></tr>
+<tr><td>Acometida interior, MOP de 0,05 a 0,4 bar</td><td>1 bar · 30 min (15 min si mide menos de 15 m)</td></tr>
+<tr><td>Acometida interior, MOP de 0,4 a 2 bar</td><td>3,5 bar · 30 min</td></tr>
+<tr><td>Acometida interior, MOP de 2 a 5 bar</td><td>7 bar · 60 min</td></tr>
+</table></div>
+
+<div class="fallos"><b class="t">Lo que el examinador apunta como fallo</b><ul>
+<li>No comprobar la estanquidad de la válvula de acometida con la bajada del 20 % o hasta 30–40 mm cda.</li>
+<li>No comprobar bien la VIS de máxima, el caudal nulo, la VIS de mínima o la VAS.</li>
+<li>No comprobar la estanquidad del armario con agua jabonosa o detector.</li>
+<li>No esperar al rearme de los reguladores de abonado antes de la prueba conjunta.</li>
+<li>No probar algún tramo, o hacerlo con la presión o el tiempo equivocados.</li>
+<li>Poner mal el manómetro respecto al tramo que se prueba.</li>
+<li>No purgar.</li>
+<li>No precintar el contador y los órganos de tarado.</li></ul></div>
+</section>
+
+<!-- ============ 6 CONTADOR ============ -->
+<section class="ficha" id="contador">
+<h2><span class="n">6</span>Cambio de contador, comprobar si marca y parte de trabajo</h2>
+<p class="fuente">Hoja de examen, apartado 6. Fuente: OD Parte 3 (operaciones en contadores).</p>
+
+<h3>A · Cambio de contador</h3>
+<ol class="pasos" data-f="contador">
+<li><label><input type="checkbox"><b>Cierra la llave</b> de contador o de abonado, con la palanca perpendicular a la tubería.</label></li>
+<li><label><input type="checkbox">Pon el <b>puente antichispa</b> entre la entrada y la salida, metal con metal, <b>antes de desmontar</b>.</label></li>
+<li><label><input type="checkbox">Desmonta el contador viejo. <b>Apunta su marca, número, propiedad y lectura.</b></label></li>
+<li><label><input type="checkbox">Monta el nuevo con <b>juntas nuevas</b> en las tuercas o bridas.</label></li>
+<li><label><input type="checkbox">Abre y <b>purga</b> (por la toma de salida, por el enlace de salida o por un aparato). Quita el puente antichispa con cuidado.</label></li>
+<li><label><input type="checkbox"><b>Comprueba la falta de consumo</b>: manómetro de columna de agua (0–975 mm cda) a la salida del contador, comprueba la estanquidad interna de la llave, presuriza a la presión de servicio y espera <b>5 min</b> sin que baje. Si hay consumo, deja la instalación cerrada, precintada y bloqueada.</label></li>
+<li><label><input type="checkbox"><b>Estanquidad de las uniones</b> del contador nuevo con <b>detector o agua jabonosa</b>.</label></li>
+<li><label><input type="checkbox"><b>Precinta</b> los enlaces de entrada y salida, la llave y los adaptadores.</label></li>
+</ol>
+
+<h3>B · Comprobar si marca</h3>
+<ol class="pasos" data-f="marca">
+<li><label><input type="checkbox">Pide al cliente que encienda un aparato, a ser posible el <b>calentador</b>, que es el que más consume.</label></li>
+<li><label><input type="checkbox">Mira que se muevan los <b>números de los litros</b>. Si no se mueven, se cambia el contador.</label></li>
+<li><label><input type="checkbox">Si el cliente dice que no marca, se cambia <b>sin más comprobaciones</b> y se anota «el cliente indica que el contador no marca».</label></li>
+</ol>
+<div class="prog noprint"><div class="barra"><i id="pb-contador" style="width:0"></i></div><span id="pt-contador">0 de 0</span></div>
+<button class="btn sec reset" onclick="limpiar('contador');limpiar('marca')">Desmarcar todo</button>
+
+<div class="hoja"><b class="t">El parte de trabajo de la hoja (apartado 6)</b>
+<div class="tw"><table>
+<tr><th>Campo</th><th>Qué pones</th></tr>
+<tr><td>Contador existente (real)</td><td>Marca y número, propiedad (alquiler o del cliente) y lectura</td></tr>
+<tr><td>Contador colocado</td><td>Marca y número, propiedad y lectura</td></tr>
+<tr><td>Motivo del cambio</td><td>Por ejemplo, avería, no marca, fuga u obsoleto</td></tr>
+<tr><td>Anomalía del contador retirado</td><td>Avería, fuga, obsoleto u otros</td></tr>
+<tr><td>¿Contador retirado propiedad del cliente?</td><td>Sí o no. Si es suyo, se queda con él («queda en poder del cliente») o firma la renuncia.</td></tr>
+<tr><td>Resultado de la actuación</td><td>Correcto, cierre total o cierre parcial (<b>indica qué parte queda precintada</b>)</td></tr>
+<tr><td>Usuario y firma</td><td>Nombre del cliente y <b>su firma</b>: pídele que firme si está presente</td></tr>
+</table></div></div>
+
+<div class="fallos"><b class="t">Lo que el examinador apunta como fallo</b><ul>
+<li>No cerrar la llave antes de desmontar.</li>
+<li>No poner el puente antichispa.</li>
+<li>No poner juntas nuevas.</li>
+<li>No comprobar la estanquidad de la conexión y del contador colocado.</li>
+<li>Precintar mal.</li>
+<li>No saber comprobar si el contador marca.</li>
+<li>Rellenar mal los datos del contador retirado o del colocado.</li>
+<li>No indicar qué parte ha quedado precintada.</li>
+<li>No decir al cliente presente que tiene que firmar el parte.</li></ul></div>
+</section>
+
+<!-- ============ 7 EXPLOSÍMETRO ============ -->
+<section class="ficha" id="explosimetro">
+<h2><span class="n">7</span>Uso del explosímetro (atmósferas explosivas)</h2>
+<p class="fuente">Prueba 10 de la tabla del PG-IR-02, solo para Premium y Premium Plus. Fuente: AT Parte 4 (prevención de riesgos).</p>
+<ol class="pasos" data-f="explo">
+<li><label><input type="checkbox">Enciende el explosímetro en <b>aire limpio</b>, fuera del recinto, y espera a que se ajuste a cero.</label></li>
+<li><label><input type="checkbox">Mide <b>antes de abrir o entrar</b>: concentración de <b>oxígeno</b> y <b>% del LIE</b>, primero desde la puerta o la tapa.</label></li>
+<li><label><input type="checkbox">Interpreta los valores con la tabla de abajo y dilo en voz alta al examinador.</label></li>
+<li><label><input type="checkbox">Mantén el detector <b>encendido durante toda la actuación</b>. Apagarlo es fallo.</label></li>
+</ol>
+<div class="prog noprint"><div class="barra"><i id="pb-explo" style="width:0"></i></div><span id="pt-explo">0 de 0</span></div>
+<button class="btn sec reset" onclick="limpiar('explo')">Desmarcar todo</button>
+<div class="tw"><table>
+<tr><th>Lectura</th><th>Qué haces</th></tr>
+<tr><td>O₂ <b>por debajo del 19 %</b></td><td><b>No se entra</b> sin equipo de respiración. Primero ventilar.</td></tr>
+<tr><td>Gas <b>por debajo del 20 % del LIE</b></td><td>Se puede entrar, sin fumar ni hacer chispas, hasta corregir la causa.</td></tr>
+<tr><td>Gas <b>entre el 20 y el 50 % del LIE</b></td><td>Solo se entra para <b>ponerlo en seguridad</b>: ventilar o cerrar llaves.</td></tr>
+<tr><td>Gas <b>en el 50 % del LIE o más</b></td><td><b>No se entra.</b> Ventilación forzada desde fuera, acordonar la zona, avisar al CCAU y valorar el corte de suministro o la evacuación.</td></tr>
+</table></div>
+<div class="clave">El LIE es la concentración mínima a la que el gas puede explotar: alrededor del <b>4–5 %</b> para el gas natural y del <b>1–2 %</b> para el GLP. El explosímetro marca el porcentaje de ese límite: 100 % LIE significa mezcla explosiva.</div>
+<div class="fallos"><b class="t">Lo que el examinador apunta como fallo</b><ul>
+<li>No saber interpretar el O₂: por debajo del 19 % no se puede entrar.</li>
+<li>No saber interpretar el LIE: con más del 50 % no se entra; entre el 20 y el 50 % solo para ponerlo en seguridad.</li>
+<li>No mantener el detector encendido durante la actuación.</li></ul></div>
+</section>
+
+<p class="aviso">Fuentes: PG-IR-02 edición 06 (abril de 2020) y especificaciones Sedigas Rev. 02 (2025). Si tu convocatoria trae una edición más nueva del PG-IR-02, manda esa. Las casillas que marques se guardan en este navegador.</p>
+<div class="acciones noprint"><a class="btn sec" href="../">Volver al inicio</a></div>
 </main>
 <script>
 const hd=document.querySelector('header.top');const setH=()=>document.documentElement.style.setProperty('--hh',hd.offsetHeight+'px');setH();addEventListener('resize',setH);
-const K='sedigas_practico_v1';let st={};try{st=JSON.parse(localStorage.getItem(K))||{}}catch(e){}
+const K='sedigas_practico_v2';let st={};try{st=JSON.parse(localStorage.getItem(K))||{}}catch(e){}
 const save=()=>{try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}};
-document.querySelectorAll('ol.pasos').forEach(ol=>{const f=ol.dataset.f;ol.querySelectorAll(':scope>li').forEach((li,i)=>{const cb=li.querySelector('input');const id=f+i;cb.checked=!!st[id];li.classList.toggle('hecho',cb.checked);cb.addEventListener('change',()=>{st[id]=cb.checked;li.classList.toggle('hecho',cb.checked);save();barra(f)})});barra(f)});
-function barra(f){const l=document.querySelectorAll('ol[data-f="'+f+'"]>li'),h=[...l].filter(x=>x.classList.contains('hecho')).length;document.getElementById('pb-'+f).style.width=(100*h/l.length)+'%';document.getElementById('pt-'+f).textContent=h+' de '+l.length}
+const grupo={fugas:['fugas','fugas2'],fugas2:['fugas','fugas2'],contador:['contador','marca'],marca:['contador','marca']};
+function barra(f){const fs=grupo[f]||[f];const ids=fs[0];const l=fs.flatMap(x=>[...document.querySelectorAll('ol[data-f="'+x+'"]>li')]);const h=l.filter(x=>x.classList.contains('hecho')).length;const pb=document.getElementById('pb-'+ids),pt=document.getElementById('pt-'+ids);if(pb){pb.style.width=(100*h/l.length)+'%';pt.textContent=h+' de '+l.length}}
 function limpiar(f){document.querySelectorAll('ol[data-f="'+f+'"] input').forEach((cb,i)=>{cb.checked=false;cb.closest('li').classList.remove('hecho');delete st[f+i]});save();barra(f)}
+document.querySelectorAll('ol.pasos').forEach(ol=>{const f=ol.dataset.f;ol.querySelectorAll(':scope>li').forEach((li,i)=>{const cb=li.querySelector('input');const id=f+i;cb.checked=!!st[id];li.classList.toggle('hecho',cb.checked);cb.addEventListener('change',()=>{st[id]=cb.checked;li.classList.toggle('hecho',cb.checked);save();barra(f)})});barra(f)});
 </script>
 </body>
 </html>
