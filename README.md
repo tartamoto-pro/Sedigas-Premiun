@@ -59,4 +59,4 @@ En `practico/` hay fichas paso a paso (con casillas que se guardan en el navegad
 
 ## Casos propios
 
-En `casos-propios.js` y la carpeta `propios/` hay casos de destreza visual con dibujos hechos por Claude a partir de las especificaciones Sedigas Rev. 02 (2025). Se practican desde su propio apartado en la portada y no se mezclan con el banco de preguntas de examen (`preguntas.js`), ni con el simulacro ni con los fallos.
+En `casos-propios.js` y la carpeta `propios/` hay casos de destreza visual con dibujos propios a partir de las especificaciones Sedigas Rev. 02 (2025). Se practican desde su propio apartado en la portada y no se mezclan con el banco de preguntas de examen (`preguntas.js`), ni con el simulacro ni con los fallos.

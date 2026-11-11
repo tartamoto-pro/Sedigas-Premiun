@@ -54,7 +54,7 @@ const App = (() => {
         ${tarjeta("App.practica('todas')", '', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>', 'Todas mezcladas', P.length + ' casos')}
         ${tarjeta("App.practica('fallos')", 'c-rosa', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>', 'Repasar mis fallos', fallos ? fallos + ' casos que fallaste la última vez' : 'Aún no hay fallos', fallos ? '' : 'disabled')}
       </div>
-      <h2>Casos propios · hechos por Claude</h2>
+      <h2>Casos propios</h2>
       <p class="sub" style="margin-top:-6px">Dibujos nuevos basados en las especificaciones de 2025. Van aparte: no entran en el simulacro, en «Todas mezcladas» ni en tus fallos de examen.</p>
       <div class="grid">
         ${tarjeta("App.practica('propios')", 'c-violeta', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>', 'Todos los casos propios', PR.length + ' casos')}
@@ -194,7 +194,7 @@ const App = (() => {
   function lista(filtro) {
     filtro = filtro || 'todas';
     if (filtro === 'propios') {
-      $app.innerHTML = `<h1>Casos propios con su solución</h1><p class="sub">Dibujos y soluciones hechos por Claude a partir de las especificaciones de 2025. No son preguntas de examen reales.</p>
+      $app.innerHTML = `<h1>Casos propios con su solución</h1><p class="sub">Dibujos y soluciones propios a partir de las especificaciones de 2025. No son preguntas de examen reales.</p>
       <ul class="lista">${PR.map(q => `<li><img src="${q.img}" alt="" onclick="App.zoom('${q.img}')"><div><span class="tag">${esc(q.etiqueta)}</span> <span class="tag propio">Caso propio</span> <b>${esc(q.pregunta)}</b>${q.correcta ? `<div class="r ok">${esc(q.correcta)}</div>` : ''}<div>${esc(q.solucion)}</div></div></li>`).join('')}</ul>
       <div class="acciones"><button class="btn sec" onclick="App.home()">Inicio</button></div>`;
       return scrollTo(0, 0);

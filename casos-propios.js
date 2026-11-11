@@ -1,4 +1,4 @@
-// Casos propios: dibujos y soluciones hechos por Claude a partir de las especificaciones Sedigas Rev. 02 (2025).
+// Casos propios: dibujos y soluciones propios a partir de las especificaciones Sedigas Rev. 02 (2025).
 // Van aparte del banco de preguntas de examen (preguntas.js).
 window.PROPIOS = [
  {
