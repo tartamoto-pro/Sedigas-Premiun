@@ -151,8 +151,8 @@ window.PROPIOS = [
   "etiqueta": "PAD-1",
   "img": "propios/n10.svg",
   "tipo": "CI",
-  "pregunta": "Valore la salida de los productos de la combustión que discurre bajo el balcón.",
-  "solucion": "Correcto. Cuando la salida queda bajo un balcón o terraza (a menos de 30 cm de su techo), el extremo debe quedar a 10 cm como máximo del borde exterior, sin sobrepasarlo. Aquí queda a 5 cm del borde y no lo sobrepasa.",
+  "pregunta": "Valore la salida de los productos de la combustión que discurre bajo el balcón de este edificio ya construido.",
+  "solucion": "Correcto. Cuando el eje del tubo queda a 30 cm o menos del techo del balcón o terraza, el tubo se prolonga hasta que su extremo quede a 10 cm como máximo del borde. Aquí queda a 5 cm. Esta solución solo se admite en edificios ya construidos, como es el caso.",
   "nueva": false,
   "opciones": [
    "Correcto",
@@ -168,7 +168,7 @@ window.PROPIOS = [
   "img": "propios/n11.svg",
   "tipo": "CI",
   "pregunta": "Valore la protección de la tubería de gas que discurre vista por el garaje.",
-  "solucion": "Incorrecto. En garajes la tubería debe protegerse con una vaina de acero (o de un material de resistencia mecánica similar) hasta 1,80 m del suelo como mínimo. Una vaina de PVC no protege frente a golpes de vehículos.",
+  "solucion": "Incorrecto. En zonas de circulación o estacionamiento de vehículos la tubería necesita protección mecánica: una vaina de acero de 1,5 mm de espesor como mínimo o de otro material de resistencia mecánica similar. El PVC solo vale para vainas de ventilación, no de protección mecánica.",
   "nueva": false,
   "opciones": [
    "Correcto",
@@ -183,8 +183,8 @@ window.PROPIOS = [
   "etiqueta": "PAD-1",
   "img": "propios/n12.svg",
   "tipo": "OP",
-  "pregunta": "Indique la distancia mínima de cada cota del dibujo: A (al forjado), B (a la pared lateral), C (a la bajante o tubo de desagüe) y D (del deflector al alero o cornisa).",
-  "solucion": "A ≥ 10 cm al forjado · B ≥ 40 cm a la pared lateral · C ≥ 20 cm a la bajante, tubo de desagüe o resalte · D ≥ 40 cm del deflector a aleros y cornisas.",
+  "pregunta": "Indique la distancia mínima de cada cota del dibujo: A (del extremo del conducto al muro que atraviesa), B (a la pared lateral), C (al tubo de desagüe o resalte) y D (del deflector al alero o cornisa).",
+  "solucion": "A ≥ 10 cm del extremo del conducto (sin contar el deflector) al muro que atraviesa · B ≥ 40 cm a la pared lateral · C ≥ 20 cm al tubo de desagüe o a cualquier otro resalte · D ≥ 40 cm a aleros y cornisas (Tema 5, apartado 5.1.2).",
   "nueva": false,
   "propio": true
  },

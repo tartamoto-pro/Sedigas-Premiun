@@ -92,7 +92,7 @@ window.PREGUNTAS = [
   "img": "img/007.jpg",
   "tipo": "CI",
   "pregunta": "Valore las condiciones del patio de ventilación en edificio ya construido de 2,8 m² en planta.",
-  "solucion": "Aporte de aire directo insuficiente: en patios de menos de 3 m² debe ser de al menos 300 cm² (hay 200 cm²). Si está techado, superficie libre mínima de 2 m².",
+  "solucion": "Aporte de aire directo insuficiente: en patios de menos de 3 m² debe ser de al menos 300 cm² (hay 200 cm²). Si este patio está techado, superficie lateral libre de al menos 1 m² (Tema 5, figura 17); los 2 m² libres son para patios de 3 m² o más.",
   "nueva": false,
   "opciones": [
    "Correcto",
@@ -257,7 +257,7 @@ window.PREGUNTAS = [
   "img": "img/018.jpg",
   "tipo": "CI",
   "pregunta": "Valore la siguiente instalación.",
-  "solucion": "Si la salida está a menos de 30 cm del techo de una terraza, balcón o galería, el extremo del tubo debe quedar a 10 cm como máximo del límite exterior (aquí sobresale 20 cm).",
+  "solucion": "Si la salida está a menos de 30 cm del techo de una terraza, balcón o galería, el extremo del tubo debe quedar a 10 cm como máximo del límite exterior (aquí sobresale 20 cm). Además, esta solución solo se admite en edificios ya construidos.",
   "nueva": false,
   "opciones": [
    "Correcto",
@@ -287,7 +287,7 @@ window.PREGUNTAS = [
   "img": "img/020.jpg",
   "tipo": "OP",
   "pregunta": "Rellene las 4 cotas mínimas (recuadros) que se han de respetar para este tipo de salidas de SPC (aparatos tipo B).",
-  "solucion": "≥ 10 cm al forjado · ≥ 40 cm a la pared lateral · ≥ 20 cm al tubo de desagüe o resalte · ≥ 40 cm del deflector a aleros y cornisas.",
+  "solucion": "≥ 10 cm del extremo del conducto al muro que atraviesa · ≥ 40 cm a la pared lateral · ≥ 20 cm al tubo de desagüe o resalte · ≥ 40 cm del deflector a aleros y cornisas (Tema 5, apartado 5.1.2).",
   "nueva": false
  },
  {
@@ -342,7 +342,7 @@ window.PREGUNTAS = [
   "img": "img/024.jpg",
   "tipo": "CI",
   "pregunta": "Valore las condiciones de zona exterior.",
-  "solucion": "Para considerarse zona exterior la abertura debe ser de más de 1,5 m² y la parte superior debe estar a menos de 0,50 m del techo.",
+  "solucion": "Para considerarse zona exterior la abertura debe ser de 1,5 m² como mínimo y su borde superior debe estar a 0,50 m o menos del techo.",
   "nueva": false,
   "opciones": [
    "Correcto",
@@ -778,7 +778,7 @@ window.PREGUNTAS = [
   "img": "img/051.jpg",
   "tipo": "AN",
   "pregunta": "Determine si las condiciones de zona exterior son correctas o tienen alguna anomalía y, en caso de ser así, seleccione de qué tipo.",
-  "solucion": "Abertura de más de 1,5 m² y parte superior a menos de 50 cm: cumple.",
+  "solucion": "Abertura de 1,5 m² o más y borde superior a 50 cm o menos del techo: cumple.",
   "nueva": false,
   "opciones": [
    "Sin defecto",
