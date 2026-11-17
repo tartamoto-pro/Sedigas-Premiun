@@ -1,8 +1,8 @@
 {
  "id": "/Sedigas-Premiun/",
- "name": "Destreza visual · Sedigas Premium",
+ "name": "Sedigas · Premium y GNL",
  "short_name": "Sedigas",
- "description": "Recertificación Sedigas Premium: destreza visual, guía de estudio y fichas del examen práctico.",
+ "description": "Recertificación Sedigas Premium y certificación de Técnico de Plantas Satélite de GNL.",
  "lang": "es",
  "start_url": "./",
  "scope": "./",

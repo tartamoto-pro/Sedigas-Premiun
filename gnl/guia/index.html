@@ -1,0 +1,2749 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guía de estudio · Plantas Satélite de GNL</title>
+<link rel="stylesheet" href="../styles.css"><style>
+nav{position:sticky;top:var(--hh,52px);z-index:4;background:var(--hdr);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--borde);padding:10px 20px;display:flex;gap:8px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:var(--tinta);text-decoration:none;font-size:13.5px;font-weight:550;padding:6px 14px;border:1px solid var(--borde);border-radius:99px;background:var(--card);transition:all .12s}
+nav a:hover{border-color:var(--azul);color:var(--azul)}
+main{max-width:1060px}
+main>h1{font-size:2.2rem;margin-top:.3em}
+h2{font-size:1.45rem;text-transform:none;letter-spacing:-.02em;color:var(--tinta);font-weight:800;margin:2.4em 0 .7em;padding-top:4px;scroll-margin-top:120px;display:flex;align-items:center;gap:10px}
+h2:before{content:"";width:6px;height:24px;border-radius:3px;background:linear-gradient(#ff8a3d,#2457e6);flex:none}
+h3{font-size:1.05rem;color:var(--azul);margin-top:24px}
+.by{color:var(--gris);margin-top:0}
+main>p,main>ul,main>ol{max-width:75ch}
+.tw,main>table{display:block;overflow-x:auto}
+table{border-collapse:separate;border-spacing:0;width:100%;margin:10px 0 18px;font-size:14px;background:var(--card);border:1px solid var(--borde);border-radius:14px;overflow:hidden;box-shadow:var(--sombra)}
+th,td{border-bottom:1px solid var(--borde);padding:9px 12px;vertical-align:top;text-align:left}
+tr:last-child td{border-bottom:0}
+th{background:var(--card2);font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--gris)}
+td img{width:150px;max-width:40vw;height:auto;display:block;cursor:zoom-in;background:#fff;border:1px solid var(--borde)}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:12px 0}
+.case{border:1px solid var(--borde);border-radius:18px;padding:14px;background:var(--card);box-shadow:var(--sombra);transition:transform .15s,box-shadow .15s}
+.case:hover{transform:translateY(-2px);box-shadow:var(--sombra2)}
+.case .t{margin:0 0 8px}
+.case img{display:block;width:100%;height:240px;object-fit:contain;background:#fff;border:1px solid var(--borde);margin-bottom:10px;cursor:zoom-in}
+.case p{margin:0;font-size:.95rem}
+.case.hide-ans p:not(.t){filter:blur(6px);cursor:pointer;user-select:none}
+p.pic img{max-width:100%;max-height:340px;cursor:zoom-in;background:#fff}
+#zoom{position:fixed;inset:0;background:rgba(8,10,16,.88);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:50;cursor:zoom-out}
+#zoom img{max-width:96vw;max-height:94vh;background:#fff}
+.toggle{background:var(--azul);color:#fff;border:0;border-radius:99px;padding:7px 14px;font-size:13.5px;font-weight:650;cursor:pointer;flex:none}
+@media (prefers-color-scheme:dark){.toggle{color:#0c0f17}}
+@media (max-width:600px){main>h1{font-size:1.6rem}h2{font-size:1.2rem}nav{padding:8px 14px}.toggle{font-size:12.5px;padding:6px 11px}.cases{grid-template-columns:1fr}.case img{height:220px}td img{width:110px}}
+@media print{header,nav,.toggle{display:none}body{background:#fff}main{max-width:none;padding:0}h2{break-before:page}.case{break-inside:avoid;box-shadow:none}.case.hide-ans p{filter:none}}
+</style>
+<style>.vis td:nth-child(2n){transition:filter .15s}.vis.hide td:nth-child(2n){filter:blur(6px);cursor:pointer}main h1{margin-bottom:.2em}</style><link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sedigas">
+<link rel="apple-touch-icon" href="../../icon-180.png">
+<link rel="icon" type="image/png" href="../../favicon.png">
+</head>
+<body><header class="top"><a class="brand" href="../" style="text-decoration:none">Plantas Satélite GNL <span>Guía de estudio</span></a><button class="toggle" id="modo">Ocultar nombres</button></header>
+<nav><a href="#como-usar-esta-guia">Cómo usar esta guía</a><a href="#como-es-el-examen">Cómo es el examen</a><a href="#chuleta-de-cifras">Chuleta de cifras</a><a href="#tema-1-las-plantas-satelite-y-el-gnl">T1</a><a href="#tema-2-reglamentacion-y-normativa">T2</a><a href="#tema-3-definiciones">T3</a><a href="#tema-4-composicion-y-funcionamiento">T4</a><a href="#tema-5-montaje-pruebas-y-puesta-en-servicio">T5</a><a href="#tema-6-documentacion">T6</a><a href="#tema-7-operacion">T7</a><a href="#tema-8-mantenimiento-preventivo-y-revisiones-periodicas">T8</a><a href="#tema-9-incidencias-y-actuaciones-correctivas">T9</a><a href="#tema-10-seguridad-y-emergencias">T10</a><a href="#tema-11-transporte-de-gnl">T11</a><a href="#tema-12-medioambiente">T12</a><a href="#tema-13-no-conformidades">T13</a><a href="#fotos-con-sus-nombres">Fotos con sus nombres</a></nav><main><h1>Guía de estudio · Técnico de Plantas Satélite de GNL</h1><p class="by">Especificaciones técnicas de Sedigas (rev. 2019; tema 13 de 2013) y bancos de preguntas de enero de 2021; formato del examen según PG-D-01 y PG-D-02 (mayo 2024).</p>
+<h2 id="como-usar-esta-guia">Cómo usar esta guía</h2>
+<p>Cada tema tiene su esquema y un resumen con lo que más probabilidad tiene de caer: cifras, secuencias y «quién hace qué». Está sacado de las especificaciones técnicas de Sedigas para Técnico de Plantas Satélite de GNL (revisiones de febrero de 2019; tema 13 de junio de 2013). Cómo es el examen, en el apartado siguiente. Las 97 preguntas de los bancos oficiales y los simulacros están en la portada de la web; las fotos con sus nombres, al final de esta guía.</p>
+<table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Contenido</th>
+<th>Peso para estudiar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Qué es una PS, propiedades del GNL, presión y temperatura en depósitos, llenado 85 % / 95 %</td>
+<td>Alto</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ITC-ICG 04, UNE 60210-2018, distancias, RD 840/2015</td>
+<td>Medio (mucha cifra de normativa)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Glosario (CNA, CRA, DRE, MOP, VES, PPR…)</td>
+<td>Medio</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Equipos y circuitos: descarga, depósito, regasificación, VCF, odorización</td>
+<td><strong>Muy alto</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Materiales, montaje y pruebas</td>
+<td>Bajo–medio</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Documentación de proyecto y puesta en servicio</td>
+<td>Bajo</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Puesta en frío, puesta en servicio, <strong>descarga paso a paso</strong>, inertizado, DRE</td>
+<td><strong>Muy alto</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Mantenimiento, revisiones 5 y 15 años, Hoja de Control, vacío</td>
+<td>Alto</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Incidencias y qué hacer (PPR, VES, nivel, vacío)</td>
+<td>Alto</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Niveles de seguridad, emergencias, riego, BLEVE, EPI, asfixia</td>
+<td><strong>Muy alto</strong></td>
+</tr>
+<tr>
+<td>11</td>
+<td>ADR (UN 1972, 223, 2.1), carta de porte, cisternas</td>
+<td>Medio</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Medioambiente, venteos</td>
+<td>Bajo</td>
+</tr>
+<tr>
+<td>13</td>
+<td>No conformidades críticas, principales y secundarias</td>
+<td>Alto</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Datos que cambian según el tema</strong> (el temario se contradice; apúntate las dos versiones):</p>
+<ul>
+<li>Boil-off garantizado de un depósito de PS: <strong>0,12 %</strong> al día en el tema 1 y <strong>0,2 %</strong> en el tema 4.</li>
+<li>Regar un derrame de GNL sin fuego: el tema 10 lo permite si es <strong>pequeño</strong>; el tema 13 lo pone como <strong>no conformidad crítica (4-C-4)</strong>.</li>
+<li>Banco frente a temario: descarga con RD de 1,5 a 3 h en el banco (el temario dice media 1,5 h y máximo 2 h), y número de mantenimientos al año: «la reglamentación no lo indica» (el «2 al año» es solo práctica habitual).</li>
+</ul>
+<h2 id="como-es-el-examen">Cómo es el examen</h2>
+<p>Son dos exámenes, un test teórico y uno de destreza visual, y hay que aprobar los dos con un <strong>7 sobre 10</strong> (antes era un 8; cambió el 23-05-2024). Fuentes: PG-D-01 (ed. 8) y PG-D-02 (ed. 6) de Sedigas, mayo de 2024.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Test teórico</th>
+<th>Destreza visual y ejercicios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preguntas</td>
+<td><strong>Tipo A: 50 · Tipo B: 34</strong> (paso de B a A: 40)</td>
+<td><strong>6</strong> preguntas o ejercicios (paso de B a A: 1)</td>
+</tr>
+<tr>
+<td>Formato</td>
+<td>4 respuestas, una sola buena; marcar dos cuenta como fallo</td>
+<td>Fotos, esquemas o dibujos; cada pregunta puede pedir una o varias respuestas</td>
+</tr>
+<tr>
+<td>Tiempo</td>
+<td><strong>A: 2 h · B: 1 h 30</strong></td>
+<td><strong>1 h</strong></td>
+</tr>
+<tr>
+<td>Nota</td>
+<td>(aciertos − 0,25 × fallos) × 10 / preguntas; <strong>en blanco no resta</strong></td>
+<td>1 punto por pregunta; si es parcial, proporcional a las respuestas correctas</td>
+</tr>
+<tr>
+<td>Aprobado</td>
+<td>7</td>
+<td>7 (paso de B a A: 7,5)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Fallar resta un cuarto de acierto.</strong> Con 4 opciones, contestar al azar casi ni suma ni resta, pero en cuanto descartas una opción compensa contestar. Deja en blanco solo lo que no sepas en absoluto. Entre 6,5 y 7,5 el examinador corrige dos veces.</li>
+<li><strong>Las fotos del visual pueden no estar en las especificaciones.</strong> Hay que saber reconocer los equipos, no solo memorizar las diapositivas.</li>
+<li><strong>Recertificación:</strong> solo se hace el <strong>test teórico</strong>.</li>
+<li><strong>Convocatorias:</strong> máximo 3, con no más de 3 meses entre una y otra. Se guarda el examen aprobado y solo se repite el suspendido.</li>
+<li><strong>Tipo A</strong>: gestión global, mantenimiento, puesta en marcha y descargas (todo el temario). <strong>Tipo B</strong>: mantenimiento y descargas (solo parte de los temas; sin los temas 2, 5 y 6). El banco «Tipo B» son las preguntas del tipo B.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Tipo A</th>
+<th>Tipo B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 · Las PS y el GNL</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2 · Reglamentación</td>
+<td>4</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4 · Composición y funcionamiento</td>
+<td>10</td>
+<td>9</td>
+</tr>
+<tr>
+<td>5 · Montaje y pruebas</td>
+<td>2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6 · Documentación</td>
+<td>2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7 · Operación</td>
+<td>6</td>
+<td>2</td>
+</tr>
+<tr>
+<td>8 · Mantenimiento preventivo</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>9 · Incidencias</td>
+<td>5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>10 · Seguridad y emergencias</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>11 · Transporte</td>
+<td>5</td>
+<td>5</td>
+</tr>
+<tr>
+<td>12 · Medioambiente</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>50</strong></td>
+<td><strong>34</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Del tema 3 (definiciones) no hay preguntas propias, y el 13 (no conformidades) no aparece en el reparto del test.</p>
+<h2 id="chuleta-de-cifras">Chuleta de cifras</h2>
+<p>Los valores que más se repiten en el temario, en una sola tabla para repasar antes del examen.</p>
+<table>
+<thead>
+<tr>
+<th>Qué</th>
+<th>Valor</th>
+<th>Tema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temperatura del GNL a presión atmosférica</td>
+<td>−161,5 °C (≈ −162)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Densidad del GNL</td>
+<td>≈ 0,45 t/m³</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Gas por m³ de GNL</td>
+<td>580–600 Nm³</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Presión de los depósitos de PS</td>
+<td>Máx. 5 bar; habitual 3–4,5 bar</td>
+<td>1, 4</td>
+</tr>
+<tr>
+<td>Llenado máximo cisterna / depósito</td>
+<td>85 % / 95 %</td>
+<td>1, 4</td>
+</tr>
+<tr>
+<td>VES de la cisterna</td>
+<td>7 bar (dos) y 9 bar (una)</td>
+<td>11</td>
+</tr>
+<tr>
+<td>VES del depósito</td>
+<td>2 + 2 con válvula de 3 vías; 1.ª al 100 % de la P máx, 2.ª ≤ 130 %</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Temperatura de diseño criogénica</td>
+<td>−196 °C</td>
+<td>2, 4, 5</td>
+</tr>
+<tr>
+<td>VCF</td>
+<td>Cierra a −10 °C; aguanta −60 °C; rearme manual y presencial</td>
+<td>2, 4</td>
+</tr>
+<tr>
+<td>Vacío aceptable</td>
+<td>&lt; 0,6 mbar abs (0,45 Torr); 1 Torr = 1,3332 mbar</td>
+<td>2, 8</td>
+</tr>
+<tr>
+<td>Odorización</td>
+<td>Detectable al 1/5 (20 %) del LII; THT 18–22 mg/Nm³</td>
+<td>2, 4</td>
+</tr>
+<tr>
+<td>Límites de inflamabilidad del gas</td>
+<td>4,4 %–17 % en aire</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Explosímetro en descarga con bomba</td>
+<td>Medir cada 15 min; &gt; 10 % LIE: parar motor y desconectar batería</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Diferencia de presión para descargar con RD</td>
+<td>Cisterna 1–2 bar por encima del depósito</td>
+<td>4, 7</td>
+</tr>
+<tr>
+<td>Cisterna tras la descarga</td>
+<td>Se queda a 1 bar</td>
+<td>4, 7</td>
+</tr>
+<tr>
+<td>Duración de la descarga con RD</td>
+<td>Media 1,5 h; máx. 2 h</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Cisterna grande</td>
+<td>56,5 m³; 46–48 m³ útiles; \~21 t; PMA 40 t</td>
+<td>4, 11</td>
+</tr>
+<tr>
+<td>Personas en la descarga</td>
+<td>Mínimo 2</td>
+<td>2, 7</td>
+</tr>
+<tr>
+<td>Zona sin ajenos ni chispas</td>
+<td>15 m</td>
+<td>7, 10</td>
+</tr>
+<tr>
+<td>Tierra</td>
+<td>&lt; 20 Ω</td>
+<td>2, 4</td>
+</tr>
+<tr>
+<td>Extintores</td>
+<td>10 kg de polvo por cada 1.000 kg de GNL; máx. 300 kg por depósito</td>
+<td>2, 4</td>
+</tr>
+<tr>
+<td>Riego</td>
+<td>&gt; 450 m³ y &lt; 15 m entre depósitos: 3 l/min·m², reserva 30 min</td>
+<td>2, 4</td>
+</tr>
+<tr>
+<td>Cubeto</td>
+<td>Obligatorio &gt; 2 m³; máx. 270 m³ con varios depósitos; 1,5 m a la pared; 2 m entre depósitos; 4 m entre cubetos</td>
+<td>2, 4</td>
+</tr>
+<tr>
+<td>Válvulas de salida telemandadas</td>
+<td>Plantas &gt; 270 m³</td>
+<td>2, 4</td>
+</tr>
+<tr>
+<td>Campo de la ITC-04 y UNE 60210</td>
+<td>≤ 1.500 m³ y &gt; 1 bar</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Prueba de estanquidad del depósito</td>
+<td>1,1 × P máx, 24 h</td>
+<td>2, 5</td>
+</tr>
+<tr>
+<td>Prueba de tuberías</td>
+<td>1,43 × Pms (7,5 bar con N₂ para 5 bar)</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Puesta en frío</td>
+<td>N₂ líquido &gt; 10 % de capacidad; 12 h antes del GNL</td>
+<td>2, 7</td>
+</tr>
+<tr>
+<td>Inertizado</td>
+<td>≥ 86 % N₂ / ≤ 14 % gas; dejar a 0,1 bar</td>
+<td>7</td>
+</tr>
+<tr>
+<td>Sin GNL</td>
+<td>Más de 1 año → inertizar</td>
+<td>2, 7</td>
+</tr>
+<tr>
+<td>Revisiones</td>
+<td>Cada 5 años (OC si P × V &gt; 300); prueba neumática 1,1 × P cada 15 años (OC)</td>
+<td>2, 8</td>
+</tr>
+<tr>
+<td>Equipos a presión cat. III–IV</td>
+<td>Nivel A 2 años, B 4 años, C 12 años</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Mantenimiento preventivo</td>
+<td>2 visitas al año; 2 personas</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Comunicación a la Comunidad Autónoma</td>
+<td>Antes de 15 días (hábiles) tras la puesta en marcha</td>
+<td>2, 6</td>
+</tr>
+<tr>
+<td>RD 840/2015</td>
+<td>50–200 t: PEI; &gt; 200 t: Informe de Seguridad y PEE</td>
+<td>2, 10</td>
+</tr>
+<tr>
+<td>CRA y DRE</td>
+<td>CRA = 0,9 × CNA; DRE = CRA / CMD; reserva recomendada 3–4 días</td>
+<td>3, 7</td>
+</tr>
+<tr>
+<td>ADR del GNL</td>
+<td>UN 1972 · clase 2 · 3F · etiqueta 2.1 · peligro 223</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Oxígeno</td>
+<td>21 % normal; 14 % mala coordinación; 8 % coma en 40 s</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Quemadura por frío</td>
+<td>Desde −20 °C; tratar con agua fría, nunca caliente</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tema-1-las-plantas-satelite-y-el-gnl">Tema 1 · Las plantas satélite y el GNL</h2>
+<p>Una planta satélite (PS) almacena, regasifica, regula y odoriza GNL que llega en cisterna por carretera, para dar gas a consumos sin red canalizada. Se llaman «satélite» porque dependen de un almacenamiento mucho mayor (las terminales portuarias).</p>
+<h3 id="esquema">Esquema</h3>
+<ol>
+<li>Qué es y de dónde viene<ol>
+<li>Origen: EE. UU., años 60, a partir de las plantas de <em>peak shaving</em> (licúan gas en verano y lo regasifican en invierno; en España no hay)</li>
+<li>En España se abastecen de las terminales de Barcelona, Sagunto, Cartagena, Huelva, Ferrol-Mugardos y Bilbao</li>
+</ol>
+</li>
+<li>Para qué sirven: industrias lejos de la red, nuevas distribuciones (gasificar pueblos o polígonos antes de llevar la red), suministros temporales por averías, gasineras de GNL y llenado de GNC</li>
+<li>Analogía con el GLP: el GLP se guarda a temperatura ambiente en acero al carbono; el GNL necesita aceros especiales y depósitos muy aislados</li>
+<li>Por qué se usan: técnica sencilla y probada, costes bajos, circuitos simples y lineales; el GNL y el gas se mueven solo por diferencia de presión</li>
+<li>Los 5 grupos funcionales<ol>
+<li>Almacenamiento (depósitos criogénicos)</li>
+<li>Descarga de cisternas (regasificadores, flexibles, válvulas)</li>
+<li>Regasificación (aporte de calor)</li>
+<li>Seguridad, regulación y odorización</li>
+<li>Control y registro de parámetros</li>
+<li>Complementarias: contraincendios, obra civil (cubeto, vallado, viales), eléctrica y otras de seguridad</li>
+</ol>
+</li>
+<li>Clasificación: por categorías según la capacidad total de almacenamiento en m³ geométricos (UNE 60210, ver tema 2), y además se da la capacidad de regasificación en Nm³/h. Las de distribución son más completas: circuitos dobles, grupo electrógeno, seguridad perimetral y centro de control (CCD)</li>
+<li>Cadena del GNL: pozo → gasoducto → licuefacción → depósito en origen → metanero → terminal de regasificación (depósitos de hasta 250.000 m³ a presión casi atmosférica; se regasifica con agua de mar) → gasoducto o cisterna → PS</li>
+<li>Características del GNL: composición, aspecto, olor, toxicidad</li>
+<li>GNL no confinado: derrames y nubes</li>
+<li>GNL confinado: ebullición y comportamiento en terminal, cisterna y depósito de PS; llenado máximo</li>
+</ol>
+<h3 id="cifras-que-hay-que-saber">Cifras que hay que saber</h3>
+<table>
+<thead>
+<tr>
+<th>Dato</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temperatura del GNL (transporte marítimo)</td>
+<td>≈ −162 °C</td>
+</tr>
+<tr>
+<td>Densidad del GNL</td>
+<td>≈ 0,45 t/m³ (mitad que el agua y que el petróleo)</td>
+</tr>
+<tr>
+<td>Gas por m³ de GNL</td>
+<td>580–600 Nm³</td>
+</tr>
+<tr>
+<td>Metano puro a 1,0132 bar abs</td>
+<td>−161,5 °C</td>
+</tr>
+<tr>
+<td>Metano a 5 bar ef</td>
+<td>−134 °C</td>
+</tr>
+<tr>
+<td>Punto crítico del metano</td>
+<td>−82,6 °C y 45,95 bar abs (por encima de esa temperatura no puede ser líquido)</td>
+</tr>
+<tr>
+<td>Calor de vaporización del metano</td>
+<td>122 kcal/kg a −161,5 °C; 106 kcal/kg a −134 °C y \~5 bar</td>
+</tr>
+<tr>
+<td>Presión máxima de trabajo de la mayoría de PS</td>
+<td>≈ 5 bar ef</td>
+</tr>
+<tr>
+<td>Primer transporte comercial</td>
+<td>1964, Arzew (Argelia) → Canvey Island y Le Havre</td>
+</tr>
+</tbody>
+</table>
+<h3 id="propiedades-del-gnl">Propiedades del GNL</h3>
+<ul>
+<li><strong>Aspecto</strong>: líquido transparente. Al evaporarse congela la humedad del aire y forma una nube blanca visible mientras la mezcla está por debajo de 0 °C.</li>
+<li><strong>Olor</strong>: ninguno, porque en la licuefacción se quitan los compuestos con azufre. Por eso toda PS lleva odorizador, y se odoriza en fase gas, después de regasificar y antes de la salida de planta (en líquido el odorizante se congelaría).</li>
+<li><strong>Toxicidad</strong>: no es tóxico, pero sí asfixiante si se entra en la nube (depende del oxígeno que quede).</li>
+<li><strong>Derrame</strong>: primero hierve con fuerza tomando calor del suelo y luego se estabiliza. Evapora más en áridos (48 kg/m²·h) y hormigón ligero (65) que en hormigón normal (13).</li>
+<li><strong>Nube</strong>: al principio el gas frío pesa más que el aire y va pegado al suelo. Se vuelve más ligero y sube a unos −113 °C (metano puro) o −80 °C (GNL).</li>
+</ul>
+<h3 id="comportamiento-en-depositos">Comportamiento en depósitos</h3>
+<p>En un recipiente abierto el GNL hierve a temperatura constante; en uno cerrado el vapor sube la presión y la temperatura de ebullición sube con ella, como en una olla a presión.</p>
+<table>
+<thead>
+<tr>
+<th>Dónde</th>
+<th>Presión de servicio</th>
+<th>Boil-off garantizado</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Depósito de terminal</td>
+<td>50–250 mbar</td>
+<td>0,05 % al día</td>
+<td>Compresores retiran el boil-off y la temperatura se mantiene (\~−159 °C a 0,21 bar)</td>
+</tr>
+<tr>
+<td>Depósito de PS</td>
+<td>3–5 bar</td>
+<td>0,12 % al día (100 m³ → 70 m³ de gas/día)</td>
+<td>Sin consumo sube la presión hasta disparar las válvulas de seguridad (5 bar); con mucho consumo baja la presión</td>
+</tr>
+<tr>
+<td>Cisterna</td>
+<td>Sale a 0,3–0,4 bar y llega a 0,8–1,6 bar</td>
+<td>—</td>
+<td>Calentamiento irreversible; si se para, a los días dispara la válvula de 7 bar ef (≈ −128,5 °C)</td>
+</tr>
+</tbody>
+</table>
+<p>Tabla de equilibrio del metano para leer con el manómetro (bar relativos → °C): 0 → −161,5 · 0,2 → −159 · 1,2 → −151 · 2,2 → −145 · 3,6 → −139 · 4,8 → −135 · 5,4 → −133.</p>
+<h3 id="llenado-maximo">Llenado máximo</h3>
+<ul>
+<li><strong>Cisterna: 85 %</strong> del volumen geométrico. El ADR exige que, cuando dispare la válvula de seguridad, no pase del 95 %. Comprobación: de 0,9 bar a 7 bar el GNL se dilata ×1,115 → 85 % × 1,115 = 94,8 %.</li>
+<li><strong>Depósito de PS: rebose al 95 %</strong> (ITC-MIE-AP15). De 2,24 bar a 5 bar se dilata ×1,049 → 95 % × 1,049 = 99,6 % &lt; 100 %.</li>
+<li>La razón: el GNL se dilata al calentarse. Si llenara todo el depósito, como el líquido no se comprime, el depósito reventaría.</li>
+<li>Al descargar, la mezcla queda a una temperatura intermedia entre la del depósito y la de la cisterna (que suele llegar más fría).</li>
+</ul>
+<h2 id="tema-2-reglamentacion-y-normativa">Tema 2 · Reglamentación y normativa</h2>
+<p>Las PS se rigen por el Reglamento de combustibles gaseosos (RD 919/2006), su <strong>ITC-ICG 04</strong> y la norma <strong>UNE 60210</strong> (versión vigente en el temario: 2018). Añaden reglas de equipos a presión, accidentes graves (RD 840/2015) y baja tensión.</p>
+<h3 id="esquema_1">Esquema</h3>
+<ol>
+<li>ITC-ICG 04: objeto, campo, clasificación, diseño, documentación y puesta en servicio, mantenimiento y revisiones, retirada</li>
+<li>UNE 60210-2018: diseño (descarga, almacenamiento, regasificación, VCF, tuberías, control, eléctrica, PCI, regulación, odorización), emplazamiento (cubetos, distancias), pruebas en obra, explotación</li>
+<li>Otras: RD 840/2015, equipos a presión (RD 2060/2008 + ITC MIE AP15), REBT (ITC-BT-29), licencias y seguridad y salud</li>
+<li>Solo PS de distribución: Ley de Hidrocarburos 34/1998, licencia de actividad, declaración de impacto ambiental</li>
+</ol>
+<h3 id="itc-icg-04-en-corto">ITC-ICG 04 en corto</h3>
+<ul>
+<li><strong>Campo</strong>: PS hasta <strong>1.500 m³</strong> geométricos y presión de operación <strong>&gt; 1 bar</strong>. No aplica a ampliaciones &lt; 10 % sin cambio de categoría.</li>
+<li><strong>Montaje</strong>: por un <strong>especialista crioénico</strong> (empresa de equipos a presión experta en criogenia) que además sea instaladora de gas.</li>
+<li><strong>Autorización administrativa previa</strong>: solo las PS que abastecen redes de distribución. Las de uso propio no la necesitan, pero <strong>todas</strong> necesitan proyecto.</li>
+<li><strong>Proyecto</strong> (técnico competente): objeto, ubicación, propiedad, normativa, descripción y cálculos, obra civil, montaje, pruebas, presupuesto, pliegos, planos, instrucciones de uso y mantenimiento + seguridad y emergencia.</li>
+<li><strong>Pruebas previas</strong>: las de la UNE 60210, hechas por constructor y Director de Obra y controladas por un <strong>Organismo de Control (OC)</strong>, que emite el Certificado de Inspección.</li>
+<li><strong>Puesta en servicio</strong>: el suministrador revisa la documentación antes de la 1.ª descarga.</li>
+<li><strong>Comunicación a la Comunidad Autónoma</strong>: antes de <strong>15 días</strong> tras la puesta en marcha (proyecto si no se presentó, certificado de Dirección de Obra, certificado del OC, documentación de recipientes a presión, fecha de puesta en servicio).</li>
+<li><strong>Mantenimiento</strong>: responsabilidad del titular. Contrato con especialista criogénico con servicio de asistencia permanente y <strong>Libro de mantenimiento</strong> por planta.</li>
+<li><strong>Revisiones periódicas</strong>: cada <strong>5 años</strong> y cada <strong>15 años</strong>. Si <strong>P × V &gt; 300</strong> las hace obligatoriamente un OC; si no, también el mantenedor o el especialista criogénico.</li>
+<li><strong>Retirada</strong>: hay que <strong>inertizar si no recibe GNL en un año</strong> y siempre antes de desmontar (lo hace el mantenedor, supervisado por un OC). El desmontaje es responsabilidad del titular.</li>
+</ul>
+<h3 id="une-60210-2018-diseno">UNE 60210-2018: diseño</h3>
+<table>
+<thead>
+<tr>
+<th>Instalación</th>
+<th>Lo obligatorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Descarga</td>
+<td>Por bomba o por diferencia de presión; regasificador más bajo que la salida de la cisterna; flexibles criogénicos conectados de forma permanente; enlaces tipo Enagás; <strong>retención en la línea común de carga</strong></td>
+</tr>
+<tr>
+<td>Almacenamiento</td>
+<td><strong>Retención en la línea inferior de llenado</strong>; regasificador PPR; materiales según UNE-EN ISO 16903; puede llevar economizador</td>
+</tr>
+<tr>
+<td>Regasificación</td>
+<td><strong>VES en cada regasificador</strong> + válvulas de entrada y salida; circuito abierto solo con cubiertas; ya <strong>no se admite baño maría</strong></td>
+</tr>
+<tr>
+<td>VCF (corte por frío)</td>
+<td>Tras la regasificación; aguanta hasta <strong>−60 °C</strong>; actúa a <strong>−10 °C</strong>; <strong>rearme manual y presencial</strong>; en vaporización forzada, otra VCF criogénica en fase líquida antes de los regasificadores</td>
+</tr>
+<tr>
+<td>Tuberías</td>
+<td>Materiales hasta <strong>−196 °C</strong> antes de la VCF; alivio de presión en tramos entre dos válvulas criogénicas; uniones desmontables <strong>siempre con bridas</strong>; soldadores homologados</td>
+</tr>
+<tr>
+<td>Control (presencial)</td>
+<td>Manómetro, nivel, válvula de punto alto en depósitos; registro de presión y temperatura de salida</td>
+</tr>
+<tr>
+<td>Control (no presencial)</td>
+<td>Además, telealarma con histórico: presión, nivel continuo, temperatura de emisión, fallo eléctrico, avería de vaporización, gas en sala de calderas o grupo, actuación de VCF, intrusión</td>
+</tr>
+<tr>
+<td>Eléctrica</td>
+<td>Zonas según UNE-EN 60079-10-1; REBT; <strong>tierra &lt; 20 Ω</strong> en todas las partes metálicas</td>
+</tr>
+<tr>
+<td>Contraincendios</td>
+<td>Extintores de polvo: <strong>10 kg por cada 1.000 kg de GNL</strong>, mínimo dos extintores, máximo 300 kg por depósito. Si la planta pasa de <strong>450 m³</strong> y los depósitos están a menos de <strong>15 m</strong>: riego por agua de <strong>3 l/min·m²</strong> con reserva para <strong>30 min</strong></td>
+</tr>
+<tr>
+<td>Regulación</td>
+<td>UNE 60312 si alimenta una red; UNE 60670-3 o 60620-5 si es un único usuario</td>
+</tr>
+<tr>
+<td>Odorización</td>
+<td>Antes de la salida; olor detectable al <strong>20 % del límite inferior de inflamabilidad</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="une-60210-2018-emplazamiento">UNE 60210-2018: emplazamiento</h3>
+<ul>
+<li><strong>Cerca metálica</strong> con <strong>dos puertas contrapuestas</strong> (se puede quitar dentro de un recinto industrial), buen acceso, alumbrado en la zona de descarga y carteles de peligro.</li>
+<li><strong>Cubeto obligatorio para depósitos &gt; 2 m³</strong>. Contiene todo lo criogénico hasta la VCF incluida.</li>
+<li>Con varios depósitos dentro: máximo <strong>270 m³</strong>.</li>
+<li>Cubetos no adyacentes separados <strong>4 m</strong>.</li>
+<li>Pared del cubeto a depósito: <strong>1,5 m</strong>. Entre generatrices de depósitos del mismo cubeto: <strong>2 m</strong>.</li>
+<li>Plantas &gt; <strong>270 m³</strong>: válvulas criogénicas telemandadas en todas las salidas de depósito.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>a1</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>H</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capacidad (m³)</td>
+<td>≤ 2</td>
+<td>2–5</td>
+<td>5–10</td>
+<td>10–20</td>
+<td>20–40</td>
+<td>40–80</td>
+<td>80–160</td>
+<td>160–400</td>
+<td>400–1.500</td>
+</tr>
+<tr>
+<td>Aberturas de inmuebles, sótanos, alcantarillas (m)</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>9</td>
+<td>12</td>
+<td>15</td>
+<td>20</td>
+<td>20</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Motores, interruptores no ATEX, inflamables ajenos (m)</td>
+<td>2</td>
+<td>5</td>
+<td>7</td>
+<td>9</td>
+<td>12</td>
+<td>15</td>
+<td>15</td>
+<td>15</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Líneas aéreas de cable desnudo (m)</td>
+<td>10</td>
+<td>10</td>
+<td>12</td>
+<td>15</td>
+<td>15</td>
+<td>15</td>
+<td>15</td>
+<td>15</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Límite de propiedad, vías, carreteras, ferrocarril (m)</td>
+<td>2</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>12</td>
+<td>15</td>
+<td>25</td>
+<td>30</td>
+<td>35</td>
+</tr>
+<tr>
+<td>Edificios de pública concurrencia, docentes, hospitales (m)</td>
+<td>9</td>
+<td>9</td>
+<td>12</td>
+<td>14</td>
+<td>20</td>
+<td>24</td>
+<td>34</td>
+<td>44</td>
+<td>55</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>La zona de conexión fija de mangueras de descarga guarda las distancias de la <strong>categoría A</strong> (o a1 si la planta es ≤ 2 m³).</li>
+<li>Con un <strong>muro o pantalla</strong> (solo uno, sin aberturas) se puede reducir hasta un <strong>50 %</strong>, pero solo en tres filas: aberturas de inmuebles, motores/no ATEX y límite de propiedad/vías. Nunca en líneas eléctricas ni en pública concurrencia.</li>
+</ul>
+<h3 id="une-60210-2018-pruebas-y-explotacion">UNE 60210-2018: pruebas y explotación</h3>
+<ul>
+<li><strong>Pruebas en obra</strong>: estanquidad del depósito <strong>24 h a 1,1 × P máx. de servicio</strong> con gas inerte; o, si es aislado al vacío, control de <strong>vacío &lt; 0,6 mbar durante 1 h</strong> a P máx. (con GNL o N₂ líquido); control y precintado de VES.</li>
+<li><strong>Puesta en frío</strong>: antes de la 1.ª carga, con <strong>nitrógeno líquido</strong> (&gt; 10 % de la capacidad y al menos <strong>12 h</strong> antes de la 1.ª descarga de GNL), vigilando que el vacío quede por debajo de <strong>0,6 mbar abs</strong>.</li>
+<li><strong>Descarga</strong>: procedimiento escrito; <strong>mínimo 2 personas</strong> todo el tiempo; la cisterna debe poder irse sin maniobras; motor parado, freno y marcha corta, eléctrico desconectado, toma de tierra, herramientas antichispa; comprobar antes la capacidad libre; vigilar presión y nivel.</li>
+<li><strong>Revisión de 5 años</strong>: vacío, comprobar y precintar VES del depósito, condiciones reglamentarias, toma de tierra. <strong>Cada 15 años</strong>: prueba neumática a <strong>1,1 × P máx.</strong></li>
+</ul>
+<h3 id="otras-normas">Otras normas</h3>
+<table>
+<thead>
+<tr>
+<th>Norma</th>
+<th>Qué impone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RD 840/2015 (accidentes graves; GNL = categoría P5b)</td>
+<td><strong>50–200 t</strong>: notificar a la Comunidad Autónoma y tener <strong>Plan de Emergencia Interior (PEI)</strong>. <strong>&gt; 200 t</strong>: además <strong>Informe de Seguridad</strong> con <strong>Plan de Emergencia Exterior</strong></td>
+</tr>
+<tr>
+<td>Equipos a presión (RD 769/1999 y RD 2060/2008)</td>
+<td>Son equipos a presión: depósitos, PPR, regasificador de descarga, regasificadores, recalentadores, depósito de odorizante. La ITC EP-4 <strong>no</strong> aplica al GNL; sigue vigente la <strong>ITC MIE AP15</strong> (VES, llenado máximo…)</td>
+</tr>
+<tr>
+<td>REBT (RD 842/2002)</td>
+<td><strong>ITC-BT-29</strong>: locales con riesgo de incendio y explosión</td>
+</tr>
+<tr>
+<td>UNE-EN 13645</td>
+<td>Referencia de la UNE 60210; plantas de 5 a 200 t (≈ 11 a 500 m³)</td>
+</tr>
+<tr>
+<td>UNE-EN 1473</td>
+<td>Grandes terminales; solo bibliografía</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cambios-de-version-por-si-preguntan">Cambios de versión (por si preguntan)</h3>
+<ul>
+<li><strong>2011</strong>: capacidad máxima de 1.000 a <strong>1.500 m³</strong>; fuera los baño maría; plantas presenciales y no presenciales; riego desde <strong>450 m³</strong> (antes 400); válvulas telemandadas desde <strong>270 m³</strong> (antes 400); distancias de descarga de categoría C a <strong>categoría A</strong>; N₂ &gt; 10 % y 12 h; nuevo apartado de planes de emergencia.</li>
+<li><strong>2015</strong>: las categorías pasan a A–H con escalado más fino en pequeños y bajan un 10–20 % las distancias a pública concurrencia.</li>
+<li><strong>2018</strong>: nueva categoría <strong>a1 (≤ 2 m³)</strong>; Anexo A de muros y pantallas; admite plantas móviles, provisionales y de emergencia.</li>
+</ul>
+<h2 id="tema-3-definiciones">Tema 3 · Definiciones</h2>
+<p>El vocabulario mezcla tres mundos: distribución de gas, gases criogénicos y transporte de mercancías peligrosas. Estos son los términos con más probabilidad de pregunta, agrupados por zona de la planta.</p>
+<h3 id="esquema_2">Esquema</h3>
+<ol>
+<li>Genéricos (planta, GNL, boil-off, capacidades)</li>
+<li>Carga de cisternas · 3. Transporte · 4. Descarga · 5. Almacenamiento · 6. Regasificación y frío · 7. Regulación y odorización · 8. Eléctrica · 9. Obra civil · 10. Operación y mantenimiento · 11. Agentes y contratos · 12. Seguridad · 13. Documentación</li>
+</ol>
+<h3 id="genericos-y-capacidades">Genéricos y capacidades</h3>
+<table>
+<thead>
+<tr>
+<th>Término</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PS de distribución / industrial</td>
+<td>De una distribuidora para una red / para una industria, sea cual sea el dueño</td>
+</tr>
+<tr>
+<td>PS de operación no presencial</td>
+<td>Todo el control se hace a distancia (lista b del apartado 4.6 de la UNE 60210)</td>
+</tr>
+<tr>
+<td>Boil-off (gas de vaporización)</td>
+<td>Gas de la vaporización natural, cerca del equilibrio</td>
+</tr>
+<tr>
+<td>Flash (vaporización súbita)</td>
+<td>Evaporación repentina, fuera del equilibrio</td>
+</tr>
+<tr>
+<td>Gas inerte</td>
+<td>No reacciona a 15 °C y 1,01325 bar abs</td>
+</tr>
+<tr>
+<td>Líquido criogénico (ITC EP-4)</td>
+<td>Ebulle a presión atmosférica por debajo de <strong>−40 °C</strong></td>
+</tr>
+<tr>
+<td>Criogénico (UNE 60210)</td>
+<td>Diseñado para <strong>−196 °C</strong> o menos</td>
+</tr>
+<tr>
+<td><strong>CNA</strong> (capacidad nominal)</td>
+<td>Suma de volúmenes geométricos de los depósitos</td>
+</tr>
+<tr>
+<td><strong>CRA</strong> (capacidad real)</td>
+<td>CNA menos 5 % de fase gas obligatoria y 5 % de líquido de reserva fría = <strong>90 % de la CNA</strong></td>
+</tr>
+<tr>
+<td><strong>CMD</strong></td>
+<td>Consumo máximo diario de GNL (m³) en días punta seguidos</td>
+</tr>
+<tr>
+<td><strong>DRE</strong> (días de reserva)</td>
+<td><strong>DRE = CRA / CMD = 0,90 × CNA / CMD</strong></td>
+</tr>
+<tr>
+<td>PS (presión máxima admisible)</td>
+<td>La de diseño del fabricante</td>
+</tr>
+<tr>
+<td><strong>MOP</strong></td>
+<td>Máxima de operación continua; <strong>a ella se tara la primera válvula de seguridad</strong>; MOP ≤ PS</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo de DRE: 2 depósitos de 60 m³ (CNA 120) y CMD de 12 m³ → 0,9 × 120 / 12 = <strong>9 días</strong>.</p>
+<h3 id="transporte">Transporte</h3>
+<table>
+<thead>
+<tr>
+<th>Término</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADR</td>
+<td>Acuerdo europeo de mercancías peligrosas por carretera (Ginebra, 1957)</td>
+</tr>
+<tr>
+<td>Expedidor</td>
+<td>Por cuya cuenta se envía la mercancía; figura en la carta de porte</td>
+</tr>
+<tr>
+<td>Cargador / llenador</td>
+<td>Quien llena la cisterna. En el Protocolo PD-12, cargador = titular de la terminal y descargador = titular de la PS</td>
+</tr>
+<tr>
+<td>Destinatario / transportista</td>
+<td>Quien recibe / quien hace el transporte</td>
+</tr>
+<tr>
+<td>Ayudante del conductor</td>
+<td>Le asiste en carga, descarga y emergencias</td>
+</tr>
+<tr>
+<td>Rompeolas</td>
+<td>Placas perforadas dentro de la cisterna que frenan el oleaje del líquido</td>
+</tr>
+<tr>
+<td>Carta de porte</td>
+<td>Documento con mercancía, clasificación, cantidad, expedidor y destinatario</td>
+</tr>
+<tr>
+<td>Albarán de entrega</td>
+<td>Lo emite el cargador: datos, calidad del GNL (densidad, PCS, PCI) y balance por peso</td>
+</tr>
+<tr>
+<td>Cisternas</td>
+<td>Aisladas con <strong>poliuretano</strong> o con <strong>vacío + perlita</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="descarga-y-almacenamiento">Descarga y almacenamiento</h3>
+<table>
+<thead>
+<tr>
+<th>Término</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regasificador de descarga</td>
+<td>Vaporiza parte del GNL de la cisterna para subir la presión de su fase gas y empujar el líquido</td>
+</tr>
+<tr>
+<td>Enlaces con la cisterna</td>
+<td>Conexiones roscadas normalizadas en España (tipo Enagás)</td>
+</tr>
+<tr>
+<td>Manguera criogénica</td>
+<td>Inoxidable corrugado con una o dos capas de trenzado inox</td>
+</tr>
+<tr>
+<td>Protocolo de explosimetría</td>
+<td>Mediciones periódicas con explosímetro cuando se descarga con <strong>bomba de la cisterna</strong>, porque el motor de la tractora va en marcha</td>
+</tr>
+<tr>
+<td>Espacio intermedio</td>
+<td>Entre depósito interior y exterior, con <strong>perlita y vacío</strong></td>
+</tr>
+<tr>
+<td>Perlita</td>
+<td>Silicato expandido, polvo poroso de conductividad muy baja</td>
+</tr>
+<tr>
+<td>Toma de vacío / detector de vacío</td>
+<td>Para conectar la bomba de vacío / para conectar el medidor electrónico</td>
+</tr>
+<tr>
+<td>Seguridad de pérdida de vacío</td>
+<td>Protege el depósito exterior si entra gas al espacio intermedio</td>
+</tr>
+<tr>
+<td>VES</td>
+<td>Válvula de seguridad: abre cuando la presión vence al muelle. Tipos: depósito (apertura total en fase gas), de línea (pequeña), tras bombas (proporcional, líquido)</td>
+</tr>
+<tr>
+<td>Regasificador PPR</td>
+<td>Puesta en presión: vaporiza GNL para recuperar la presión que baja al consumir</td>
+</tr>
+<tr>
+<td>Economizador</td>
+<td>Regulador de presión de entrada: si la presión del depósito pasa del reglaje, manda el gas de la fase gas a consumo</td>
+</tr>
+<tr>
+<td>Nivel continuo</td>
+<td>Se expresa en <strong>% del volumen geométrico</strong></td>
+</tr>
+<tr>
+<td>Llenado máximo</td>
+<td><strong>95 %</strong> del volumen geométrico a la presión máxima de servicio</td>
+</tr>
+<tr>
+<td>Nivel de punto alto</td>
+<td>Tubo buzo con el extremo al <strong>95 %</strong>: si sale líquido, para la descarga</td>
+</tr>
+<tr>
+<td>Puesta en frío</td>
+<td>Enfriamiento lento con N₂ líquido y gas antes de la 1.ª descarga</td>
+</tr>
+<tr>
+<td>Adaptador GNL/N₂</td>
+<td>Reducción <strong>DN 80 × DN 40</strong> entre la línea de descarga y la manguera de N₂</td>
+</tr>
+</tbody>
+</table>
+<h3 id="regasificacion-regulacion-y-electrica">Regasificación, regulación y eléctrica</h3>
+<table>
+<thead>
+<tr>
+<th>Término</th>
+<th>Qué es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regasificador atmosférico</td>
+<td>Tubos verticales de aluminio aleteado al aire libre</td>
+</tr>
+<tr>
+<td>Regasificador de agua caliente o vapor</td>
+<td>Intercambiador líquido-líquido o líquido-vapor</td>
+</tr>
+<tr>
+<td>VCF / válvula de seguridad de frío</td>
+<td>A la salida de regasificadores; cierra sola si el gas sale demasiado frío</td>
+</tr>
+<tr>
+<td>Paro de emergencia</td>
+<td>Para la planta o parte de ella con una acción rápida</td>
+</tr>
+<tr>
+<td>THT</td>
+<td>Tetrahidrotiofeno (C₄H₈S), el odorizante del gas en España</td>
+</tr>
+<tr>
+<td>Contador en PS</td>
+<td>Opcional, tras la regulación; da pulsos para odorización proporcional</td>
+</tr>
+<tr>
+<td>Antideflagrante</td>
+<td>La envolvente confina una explosión interior</td>
+</tr>
+<tr>
+<td>Seguridad intrínseca</td>
+<td>La energía de chispa es tan baja que no puede encender (instrumentación)</td>
+</tr>
+<tr>
+<td>Puesta a tierra</td>
+<td>Unión directa sin fusibles; evita arcos entre cisterna y planta</td>
+</tr>
+<tr>
+<td>Conexión de tierra de cisterna</td>
+<td>Pinza + cable enrollable + interruptor antideflagrante</td>
+</tr>
+</tbody>
+</table>
+<h3 id="equipos-agentes-y-seguridad">Equipos, agentes y seguridad</h3>
+<ul>
+<li><strong>Explosímetro</strong>: mide en <strong>% del límite inferior de inflamabilidad (LII)</strong>. El <strong>detector de gas</strong> da % de gas; el <strong>odorímetro</strong>, ppm de THT.</li>
+<li><strong>Titular</strong>: propietario o beneficiario. <strong>Usuario</strong>: quien consume el gas. <strong>Utilizador</strong> (ITC EP-4): quien usa el producto almacenado.</li>
+<li><strong>Especialista criogénico</strong>: persona o empresa experta en trabajos criogénicos. <strong>Organismo de Control</strong>: entidad autorizada (Ley 21/1992).</li>
+<li><strong>Contrato de mantenimiento</strong>: entre especialista criogénico y propietario (o intermediario, p. ej. la comercializadora); preventivo programado y correctivo.</li>
+<li><strong>Peligro</strong>: capacidad de causar daño. <strong>Riesgo</strong>: probabilidad de que ocurra. <strong>Efecto dominó</strong>: un accidente provoca otros en equipos cercanos.</li>
+<li><strong>PEI</strong>: plan que cubre solo la propia planta. <strong>PEE</strong>: incluye zona exterior y servicios externos (Protección Civil, bomberos, ayuntamiento).</li>
+<li><strong>Cubeto</strong>: base parcialmente permeable al agua de lluvia y muros que retienen el derrame. <strong>Vallado</strong>: mínimo dos puertas contrapuestas.</li>
+<li><strong>Deflagración</strong>: combustión con frente de llama que crece y genera onda de presión.</li>
+<li>Espumas y polvos para incendios de GNL: deben cumplir la <strong>UNE-EN 12065</strong>.</li>
+</ul>
+<h2 id="tema-4-composicion-y-funcionamiento">Tema 4 · Composición y funcionamiento</h2>
+<p>Es el tema más largo y el más técnico: qué hace cada equipo y cómo funciona. Si hay que priorizar, lo clave es la descarga con regasificador, los cinco circuitos del depósito, las VES (100 % y 130 %) y la VCF (−10 °C).</p>
+<h3 id="esquema_3">Esquema</h3>
+<ol>
+<li>Descarga de cisternas: con bomba o con regasificador de descarga (RD); flexibles, enlaces, válvulas, VES de línea, tierra, bombas</li>
+<li>Almacenamiento: depósito, capacidades, presiones, aislamiento y los 5 circuitos (consumo, llenado, PPR, seguridad, control)</li>
+<li>Regasificación: atmosféricos, de agua caliente, calderas, bombas en línea, recalentadores</li>
+<li>Seguridad de avance del frío (VCF)</li>
+<li>Regulación de salida · 6. Odorización · 7. Control · 8. Contraincendios · 9. Eléctrica · 10. Seguridad perimetral · 11. Obra civil</li>
+</ol>
+<h3 id="descarga-bomba-frente-a-regasificador">Descarga: bomba frente a regasificador</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Con regasificador de descarga (RD)</th>
+<th>Con bomba de la cisterna</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cisterna</td>
+<td>Envolvente única inox + <strong>poliuretano</strong>, sin bomba</td>
+<td>Doble envolvente con <strong>perlita y vacío</strong></td>
+</tr>
+<tr>
+<td>Tipo de descarga</td>
+<td><strong>Total</strong> (un cliente, viaje punto a punto)</td>
+<td><strong>Parcial</strong> (reparto a varios clientes pequeños)</td>
+</tr>
+<tr>
+<td>Cómo empuja</td>
+<td>Presuriza la fase gas de la cisterna 1–2 bar por encima del depósito</td>
+<td>La bomba impulsa a más presión que el depósito</td>
+</tr>
+<tr>
+<td>Mangueras</td>
+<td>3: líquido al RD (DN 40–50), gas del RD (DN 50+) y descarga (<strong>DN 80</strong>)</td>
+<td>1 de descarga (<strong>2"</strong>) + 1 de purga (1")</td>
+</tr>
+<tr>
+<td>Motor de la tractora</td>
+<td>Parado</td>
+<td><strong>En marcha</strong> (la bomba va con su electricidad) → <strong>protocolo de explosimetría</strong></td>
+</tr>
+<tr>
+<td>Duración</td>
+<td>Media <strong>1,5 h</strong>; máximo <strong>2 h</strong> de entrada a salida</td>
+<td>Variable, más corta</td>
+</tr>
+</tbody>
+</table>
+<p>El RD debe estar <strong>más bajo</strong> que las bocas de la cisterna, porque el GNL baja por vasos comunicantes. Suele ser atmosférico en V, de aluminio, P máx ≥ 10 bar y diseño a −196 °C. Los de baño de agua han caído en desuso.</p>
+<h3 id="secuencia-de-descarga-con-rd">Secuencia de descarga con RD</h3>
+<p>La cisterna llega a 0,8–1,6 bar y el depósito está a 3–5 bar.</p>
+<ol>
+<li><strong>Equilibrar presiones</strong>: abrir G1 (gas cisterna), VDG, by-pass VB (1") y VG. El depósito cede gas a la cisterna hasta igualar. Ahorra tiempo de descarga.</li>
+<li>Cerrar VB y VG.</li>
+<li><strong>Presurizar la cisterna</strong>: abrir VDL, VDG, L1 y G1. El GNL baja al RD, se gasifica (1 l → 580–600 l de gas) y sube la presión de la cisterna.</li>
+<li>Cuando la cisterna supera al depósito en <strong>1–2 bar</strong>, abrir L2, VD (3") y VL: empieza el trasvase.</li>
+<li><strong>Controlar la presión del depósito</strong> repartiendo la entrada entre VL (abajo) y VG (arriba, en ducha: el GNL frío condensa gas y baja la presión). Controlar la de la cisterna con L1 o VDL.</li>
+<li>Vigilar el nivel. Si hay duda, abrir la <strong>válvula de punto alto (Vpa, 95 %)</strong> y parar cuando salga líquido.</li>
+<li>Cerrar, purgar mangueras y <strong>dejar la cisterna a 1 bar</strong> para el regreso.</li>
+</ol>
+<p>Trucos con varios depósitos: despresurizar antes el depósito a llenar hacia emisión, o usar otro depósito presurizado para empujar la cisterna. En plantas grandes (5–16 bar) se puede usar un depósito nodriza a 16–20 bar.</p>
+<h3 id="elementos-de-la-descarga">Elementos de la descarga</h3>
+<ul>
+<li><strong>Antirretorno obligatorio</strong> en la línea común de carga (evita vaciar el depósito si rompe un flexible). Normalmente lo hace la propia <strong>VL, que es mixta manual + antirretorno</strong>; si no, hace falta una VAR aparte.</li>
+<li><strong>Mangueras</strong>: inox corrugado con malla inox, conexión <strong>permanente</strong> por brida al lado planta y enlace soldado al lado cisterna.</li>
+<li><strong>Enlaces tipo Enagás</strong> (diseñados en 1970): rosca hembra en la manguera y macho en la cisterna, con tapón. También hay acoples rápidos o secos.</li>
+<li><strong>Válvulas criogénicas</strong>: de cuello largo, volante y asiento.</li>
+<li><strong>VES de línea (Vs)</strong>: en todo tramo entre dos válvulas que pueda atrapar GNL; atrapado podría pasar de <strong>500 bar</strong>. Van en la punta de un tubo vertical largo para que el hielo no bloquee el muelle.</li>
+<li><strong>Tierra de la cisterna</strong>: pinza + cable enrollable + interruptor antideflagrante (con certificado ATEX). <strong>Primero se conecta la pinza y después se cierra el interruptor</strong>, nunca al revés.</li>
+<li><strong>Bombas fijas en planta</strong> (si las hay): homologadas para zona con gas y con paro de emergencia. Son centrífugas, hasta \~4 bar y 30–1.000 l/min (1,8–60 m³/h).</li>
+</ul>
+<h3 id="el-deposito">El depósito</h3>
+<table>
+<thead>
+<tr>
+<th>Dato</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Construcción</td>
+<td>Doble envolvente: <strong>interior acero aleado (inox)</strong>, <strong>exterior acero al carbono</strong>; espacio intermedio con <strong>vacío + perlita</strong></td>
+</tr>
+<tr>
+<td>Capacidades</td>
+<td>De pocos m³ a <strong>250–300 m³</strong> (el límite lo pone el transporte del depósito)</td>
+</tr>
+<tr>
+<td>Pequeños (5–60 m³)</td>
+<td>Consumos pequeños, llenado con bomba</td>
+</tr>
+<tr>
+<td>≥ 60 m³</td>
+<td>Industriales y distribución con descarga total</td>
+</tr>
+<tr>
+<td>Cisterna grande</td>
+<td>54–56,5 m³ geométricos; descarga <strong>46–48 m³ (19–21 t)</strong>. Un solo depósito de 60 m³ con mucho consumo da problemas logísticos</td>
+</tr>
+<tr>
+<td>Presión máx. de servicio</td>
+<td><strong>5 bar</strong>; habitual <strong>3–4,5 bar</strong> (hay de 8–16 y 20–30 bar para usos especiales)</td>
+</tr>
+<tr>
+<td>Temperatura del GNL</td>
+<td>−160 a −135 °C (0–5 bar)</td>
+</tr>
+<tr>
+<td>Temperatura de diseño</td>
+<td><strong>−196 °C</strong> (la del N₂ líquido de la puesta en frío)</td>
+</tr>
+<tr>
+<td>Boil-off garantizado</td>
+<td>En este tema se dice <strong>0,2 % al día</strong> (100 m³ → 116 Nm³/día); el tema 1 da 0,12 %</td>
+</tr>
+</tbody>
+</table>
+<p>El vacío evita la <strong>convección</strong>, la perlita frena la <strong>radiación</strong> y la <strong>transmisión</strong> queda solo por soportes y tubos.</p>
+<table>
+<thead>
+<tr>
+<th>Material</th>
+<th>k (W/m·K)</th>
+<th>Dónde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aluminio</td>
+<td>209</td>
+<td>Regasificadores atmosféricos</td>
+</tr>
+<tr>
+<td>Acero al carbono</td>
+<td>68–98</td>
+<td>Depósito exterior</td>
+</tr>
+<tr>
+<td>Acero inoxidable</td>
+<td>14–16</td>
+<td>Depósito interior</td>
+</tr>
+<tr>
+<td>Hielo</td>
+<td>2,3</td>
+<td>Regasificador helado (por eso rinde menos)</td>
+</tr>
+<tr>
+<td>Poliuretano</td>
+<td>0,018–0,025</td>
+<td>Cisternas</td>
+</tr>
+<tr>
+<td>Perlita sola</td>
+<td>0,04–0,06</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Perlita + vacío</strong></td>
+<td><strong>0,003</strong></td>
+<td>Depósitos de PS</td>
+</tr>
+</tbody>
+</table>
+<h3 id="los-5-circuitos-del-deposito">Los 5 circuitos del depósito</h3>
+<table>
+<thead>
+<tr>
+<th>Circuito</th>
+<th>Elementos</th>
+<th>Cómo funciona</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A · Consumo</strong></td>
+<td>VC (salida GNL), Ve (economizadora manual), Re (economizador automático)</td>
+<td>La presión de la fase gas empuja el GNL. El <strong>economizador</strong> es un regulador de presión de entrada: si la presión pasa del tarado (p. ej. 4 bar) manda gas de la fase gas a consumo. Con salida por abajo, para que salga gas por Ve hay que <strong>cerrar VC</strong> (la columna de líquido pesa más). Salida por tubo buzo superior: permite despresurizar la línea con VA</td>
+</tr>
+<tr>
+<td><strong>B · Llenado</strong></td>
+<td>VL (abajo) y VG (arriba, ducha)</td>
+<td>VL llena y sube la presión; VG rocia GNL frío que condensa gas (580–600 a 1) y la baja</td>
+</tr>
+<tr>
+<td><strong>C · PPR</strong></td>
+<td>RP (regulador de presión), filtro, PPR, VEP, VSP</td>
+<td>Al consumir baja el nivel y la presión. El RP abre por baja presión, el GNL entra al PPR, se gasifica (1 l → \~150 l a 4 bar abs) y repone presión. <strong>Se ve helado y se oye fluir.</strong> Al cerrar, el gas empuja el líquido de vuelta y se deshiela. Alternativa: válvula todo/nada neumática. El PPR no va justo debajo del depósito (le gotearía condensación y se helaría más)</td>
+</tr>
+<tr>
+<td><strong>D · Seguridad</strong></td>
+<td>VS1, VS2 con válvula de 3 vías (V3), VA (venteo manual), Ra (apagallamas), Vs, Sv, Bv</td>
+<td>Ver abajo</td>
+</tr>
+<tr>
+<td><strong>E · Control</strong></td>
+<td>PI (manómetro), PT (transmisor 4–20 mA), LI/LT (nivel por presión diferencial, manifold de 3 válvulas), Vpa, Mv</td>
+<td>Ver abajo</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Seguridad del depósito</strong></p>
+<ul>
+<li><strong>2 + 2 VES</strong> con <strong>válvula de tres vías</strong>: siempre hay dos en servicio y se puede reparar o tarar la otra pareja.</li>
+<li>Tarado (ITC MIE AP15): <strong>1.ª VES al 100 % de la presión máxima de servicio</strong> (sin pasar del 110 % en condiciones desfavorables); <strong>2.ª VES como máximo al 130 %</strong>.</li>
+<li>Venteos de VES y VA a un <strong>colector vertical común</strong> acabado en codo cortado a bisel con rejilla (<strong>apagallamas</strong>).</li>
+<li><strong>Seguridad de pérdida de vacío (Sv)</strong>: disco con junta tórica sujeto por la presión atmosférica. Si entra gas al espacio intermedio, se levanta y ventea (puede salir <strong>perlita</strong> en polvo). Protege el depósito exterior.</li>
+<li><strong>Conexión de bomba de vacío (Bv)</strong>: sellada y precintada; solo la toca quien rehace el vacío.</li>
+</ul>
+<p><strong>Control del depósito</strong></p>
+<ul>
+<li>El nivel mide la <strong>presión diferencial</strong> entre fondo y fase gas. Como el GNL pesa poco, la señal es baja y en depósitos viejos poco fiable. Los transmisores actuales corrigen la forma cilíndrica y el 95 %: leen % del 1 al 100 proporcional al volumen.</li>
+<li><strong>Vpa (punto alto)</strong>: válvula de 1/8"–1/4" con tubo buzo al <strong>95 %</strong>. Algunos depósitos traen varios (95-90-85 %). Si dudas del nivel, déjala algo abierta durante la carga y para cuando salga líquido.</li>
+</ul>
+<h3 id="regasificacion">Regasificación</h3>
+<ul>
+<li>A 3–5 bar el GNL regasifica entre −140 y −135 °C. Para cálculo se usan <strong>200 kcal/kg</strong> en total (calor de vaporización + 0,5 kcal/kg·°C para calentar el gas).</li>
+<li><strong>Atmosféricos</strong>: tubos verticales de aluminio aleteado (hasta \~40 bar; más presión con inox recubierto). Para caudales bajos (&lt; 1.000–2.000 Nm³/h) y consumos intermitentes (ciclo día/noche). El hielo aísla: con caudal alto avanza y el gas sale más frío; sin caudal se deshiela. Rinden más con viento y poca humedad. Llevan <strong>líneas de reserva que se alternan</strong> (válvulas neumáticas). Malos en climas con días seguidos bajo cero.</li>
+<li>Los fabricantes dan el caudal en <strong>nitrógeno</strong> (ej. 500 Nm³/h, 8 h, salida 25 °C bajo la ambiente, aire a 20 °C, 70 % HR, sin viento). Factor para <strong>metano: 0,75</strong>.</li>
+<li><strong>Agua caliente</strong>: intercambiador de carcasa y tubos (TEMA C, BEU) o serpentín en cuba. <strong>Circuito abierto solo si está cubierto.</strong> Para caudales altos y constantes. Pueden ir en <strong>serie</strong> tras los atmosféricos (como recalentador) o en <strong>paralelo</strong> (atmosféricos en verano).</li>
+<li><strong>Calderas</strong>: dimensionar con <strong>275 kcal PCI/kg (≈ 220 kcal PCI/Nm³)</strong>: 122 kcal/kg de vaporización + 0,5 kcal/kg·°C + 10 % pérdidas, rendimiento 85 %. En cascada con reserva, bombas con cambio automático, gas desde aguas abajo de la regulación. La sala se suele hacer según <strong>UNE 60601</strong> (el RITE no aplica a uso industrial).</li>
+<li><strong>Seguridad del regasificador</strong> (UNE 60210): VES criogénica que no deje pasar del <strong>110 %</strong> de la P máx de servicio, tarada como máximo a la presión de diseño, con apagallamas; válvulas de bloqueo en el circuito de gas y en el de calor.</li>
+<li><strong>Bombas en línea</strong> antes de regasificadores: cuando se necesita alta presión (turbinas). <strong>Recalentadores</strong>: eléctricos (caudal pequeño) o de agua caliente.</li>
+</ul>
+<h3 id="vcf-seguridad-de-avance-del-frio">VCF: seguridad de avance del frío</h3>
+<p>Protege lo que va después en acero al carbono (regulación, odorización) y la red (acero o polietileno) si llega gas demasiado frío, por rotura con mucho caudal o por fallo de la regasificación.</p>
+<ul>
+<li>Entre regasificadores y regulación. <strong>Cierra si el gas llega a menos de −10 °C</strong> (o menos de lo que diga el fabricante). Aguanta hasta <strong>−60 °C</strong>.</li>
+<li><strong>Rearme manual y presencial.</strong></li>
+<li><strong>Falla en posición cerrada</strong> (sin electricidad o sin aire).</li>
+<li>Solo para corte por frío o emergencia, nunca para otra función.</li>
+<li>Con vaporización forzada, otra VCF criogénica en fase líquida a la salida del depósito.</li>
+</ul>
+<h3 id="regulacion-y-odorizacion">Regulación y odorización</h3>
+<ul>
+<li><strong>Regulación</strong>: UNE 60312 para red de distribución; UNE 60670-3 o 60620-5 para un único usuario (sin medición obligatoria). Entre 5 y 16 bar: UNE 60620-3 (industria) o 60312 (distribución). Desde filtro + regulador simple hasta doble línea o ERM definitiva.</li>
+<li><strong>Odorización</strong>: fuga detectable a <strong>1/5 del LII</strong>. THT a <strong>18–22 mg/Nm³</strong>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>De contacto</th>
+<th>Por dosificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dónde</td>
+<td>PS industriales</td>
+<td>PS de distribución (muchos usuarios)</td>
+</tr>
+<tr>
+<td>Cómo</td>
+<td>Un <strong>diafragma calibrado</strong> desvía parte del gas, que pasa por encima del THT y se satura</td>
+<td><strong>Bombas dosificadoras</strong> (2, una de reserva) según pulsos de un contador o señal 4–20 mA</td>
+</tr>
+<tr>
+<td>Pegas</td>
+<td>Proporcionalidad aproximada; hay que <strong>sobreodorizar</strong>; en frío el THT evapora menos</td>
+<td>Más control (obligatorio en redes)</td>
+</tr>
+<tr>
+<td>Posición</td>
+<td>Normalmente tras la regulación y dentro del cubeto. Si la ERM está fuera del cubeto, el odorizador va antes de la regulación (calcular el diafragma a 4–4,5 bar)</td>
+<td>Antes de la regulación; el contador después, a presión constante</td>
+</tr>
+</tbody>
+</table>
+<h3 id="control-pci-electrica-seguridad-y-obra-civil">Control, PCI, eléctrica, seguridad y obra civil</h3>
+<ul>
+<li><strong>Presencial</strong> = personal competente cerca (recinto industrial). <strong>No presencial</strong> = zonas aisladas, redes de distribución. Listas mínimas en el tema 2. La instrumentación debe ser independiente del funcionamiento; si falta un control sin redundancia, se sustituye por <strong>visitas periódicas</strong>.</li>
+<li><strong>Eléctrica</strong>: por norma sería <strong>Zona 2</strong>, pero como las PS están desatendidas y una fuga puede durar, el <strong>cubeto se considera Zona 1</strong> y la periferia Zona 2. Instrumentación con <strong>seguridad intrínseca</strong>; alumbrado y potencia <strong>antideflagrantes</strong>. ITC-BT-29 y BT-30.</li>
+<li><strong>Tierra</strong>: red exclusiva (ITC-BT-18), malla de Cu desnudo de 35 o 50 mm² con picas, <strong>&lt; 20 Ω</strong>.</li>
+<li><strong>Seguridad perimetral</strong> (plantas aisladas): vallado con defensa superior, detección en valla, telecontrol de puertas, cámaras y focos.</li>
+<li><strong>Cubeto</strong>: volumen ≥ depósito si hay uno; si hay varios, el del <strong>mayor</strong> (con protecciones) o la <strong>suma</strong> (sin ellas). Uniones soldadas dentro; si una brida o rosca queda por encima del muro a <strong>menos de 5 m</strong> de la pared, hace falta pantalla.</li>
+</ul>
+<h2 id="tema-5-montaje-pruebas-y-puesta-en-servicio">Tema 5 · Montaje, pruebas y puesta en servicio</h2>
+<p>El montaje no es tarea del operador, pero tiene que saber controlarlo en ampliaciones y reparaciones. Lo hace una empresa instaladora de equipos a presión y de gas con <strong>especialista criogénico</strong>.</p>
+<h3 id="esquema_4">Esquema</h3>
+<ol>
+<li>Dos zonas: criogénica (inox, bronce, latón, aluminio) y no criogénica (acero al carbono). <strong>La frontera es la VCF</strong>, que ya no tiene que ser criogénica</li>
+<li>Tuberías y accesorios · 3. Soportes · 4. Montaje mecánico · 5. Pruebas en obra · 6. Puesta en frío y 1.ª descarga · 7. Cerca, accesos, alumbrado y cartel</li>
+</ol>
+<h3 id="lo-que-hay-que-saber">Lo que hay que saber</h3>
+<ul>
+<li><strong>Varios depósitos</strong>: el nivel del 95 % de todos debe quedar <strong>a la misma cota</strong>; si no, el GNL pasa de uno a otro. Ojo en ampliaciones con depósitos distintos.</li>
+<li><strong>Zona criogénica</strong> (antes de la VCF): todo apto para <strong>−196 °C</strong> (UNE-EN 1160).</li>
+<li>Tubo inox austenítico <strong>AISI 304/304L/316/316L</strong>, Schedule 10S o 40S (ANSI B 36.19).</li>
+<li>Accesorios inox para soldar (B 16.9) o socket weld (B 16.11); bridas PN16 o ANSI 150.</li>
+<li><strong>Solo uniones soldadas</strong> (a tope o SW); roscas solo en tomas de ¼", ½" o como mucho ¾".</li>
+<li><strong>Soportes inox</strong> para no crear pares galvánicos; juntas según UNE-EN 12308.</li>
+<li><strong>Zona no criogénica</strong>: acero al carbono (UNE 60670 / 60620), apto para la temperatura más baja posible antes de que cierre la VCF.</li>
+<li><strong>Soportes</strong>: de apoyo y guía, <strong>nunca fijación rígida</strong>, sin puentes de frío. Los diámetros son pequeños (DN 20–80) y basta con codos; en plantas grandes, <strong>liras de dilatación</strong>.</li>
+<li><strong>Montaje</strong>: soldadores capacitados; uniones desmontables con <strong>bridas</strong>; purgas y venteos previstos. Alivio de presión entre dos válvulas, separado de la zona fría por <strong>10 cm</strong> de tubo (<strong>25 cm</strong> si hay líquido permanente), tarado por debajo de la P máx de la tubería.</li>
+</ul>
+<h3 id="pruebas-en-obra">Pruebas en obra</h3>
+<table>
+<thead>
+<tr>
+<th>Prueba</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Soldaduras criogénicas</td>
+<td>Radiografía o líquidos penetrantes, numeradas en plano; certifica una OCA</td>
+</tr>
+<tr>
+<td>Depósito</td>
+<td>Estanquidad a <strong>1,1 × P máx de servicio, 24 h</strong>, preferible neumática con inerte seco. Si es aislado al vacío: medir vacío <strong>1 h</strong>; si es <strong>&lt; 0,6 mbar</strong> vale</td>
+</tr>
+<tr>
+<td>Tuberías (RD 2060/2008)</td>
+<td><strong>1,43 × Pms</strong>. Para 5 bar: <strong>7,5 bar con N₂ de botellas</strong>, 24 h con registro gráfico (la humedad formaría hielo al enfriar)</td>
+</tr>
+<tr>
+<td>Seguridades</td>
+<td>Comprobación y <strong>precintado de VES</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="puesta-en-frio-y-1a-descarga">Puesta en frío y 1.ª descarga</h3>
+<ul>
+<li>Enfriamiento controlado con <strong>N₂ líquido</strong> con rampa adecuada al depósito.</li>
+<li>Inspeccionar circuitos (sobre todo uniones) <strong>antes de vaciar el N₂</strong>.</li>
+<li>Medir el vacío todo el proceso: <strong>&lt; 0,6 mbar abs</strong> con el depósito a P máx.</li>
+<li>Antes del 1.ª GNL, asegurarse de que se ha sacado todo el N₂ y lo demás usado en pruebas.</li>
+</ul>
+<h3 id="otras-condiciones">Otras condiciones</h3>
+<p>Cerca metálica con <strong>dos salidas contrapuestas</strong> y puertas que <strong>abren hacia fuera</strong> (no hace falta en recinto cerrado). Acceso fácil a cisterna, mantenimiento y bomberos; aparcar para salir rápido sin maniobras. Buen alumbrado en descarga y cartel visible con tipo de instalación, peligros y medidas.</p>
+<h2 id="tema-6-documentacion">Tema 6 · Documentación</h2>
+<p>El operador casi no genera la documentación inicial, pero debe conocerla y tenerla agrupada y accesible. La que sí genera es la de mantenimiento y revisiones.</p>
+<h3 id="esquema_5">Esquema</h3>
+<ol>
+<li>Base legal: ITC-ICG 04 (apartado 5) y artículo 5 del RD 919/2006</li>
+<li>Proyecto · 3. Tramitación · 4. Documentos antes de la puesta en servicio · 5. Aparatos a presión · 6. Documentos después de la puesta en servicio</li>
+</ol>
+<h3 id="proyecto-y-tramitacion">Proyecto y tramitación</h3>
+<ul>
+<li><strong>Proyecto</strong> (técnico competente): el contenido de la ITC-04 más el <strong>Plan de Seguridad y Salud</strong> y la documentación de accidentes graves (RD 840/2015). Si lo piden la OCA o la Consejería: proyecto eléctrico de zona clasificada y <strong>Documento de Protección contra Explosiones</strong> (RD 681/2003).</li>
+<li><strong>Sin autorización administrativa</strong> (uso propio): se tramita en Industria como cualquier proyecto; no hace falta presentarlo antes de la puesta en servicio.</li>
+<li><strong>De distribución</strong>: el proyecto va con la solicitud de autorización.</li>
+<li>Todo pasa por un <strong>Organismo de Control</strong>, que valida las pruebas y emite el <strong>Certificado de Inspección favorable</strong>: es el que desbloquea el suministro y la carga de cisternas.</li>
+<li>Tras la puesta en servicio, el titular tiene <strong>15 días hábiles</strong> para presentar la documentación final.</li>
+</ul>
+<h3 id="documentos-antes-de-la-puesta-en-servicio">Documentos antes de la puesta en servicio</h3>
+<table>
+<thead>
+<tr>
+<th>Técnicos</th>
+<th>Técnico-administrativos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Proyecto</td>
+<td>Certificado de Dirección de Obra firmado y visado</td>
+</tr>
+<tr>
+<td>Plan de Emergencia interior/exterior (si toca)</td>
+<td>Anexos de modificación del proyecto</td>
+</tr>
+<tr>
+<td>Manual de Operación</td>
+<td>Certificados de fabricación, pruebas de presión y estanquidad, soldadores y soldaduras criogénicas</td>
+</tr>
+<tr>
+<td>Manual de Mantenimiento</td>
+<td>Certificados CE de equipos a presión y de pruebas de VES</td>
+</tr>
+<tr>
+<td></td>
+<td>Boletines eléctricos, <strong>medición de tierra</strong> y <strong>medición de vacío</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Con todo ello el OC emite el <strong>Certificado de Inspección</strong> para la Comunidad Autónoma, el titular, el constructor y el director de obra.</p>
+<h3 id="aparatos-a-presion">Aparatos a presión</h3>
+<p>Son: depósitos de GNL, PPR, regasificadores de consumo, regasificador de descarga y depósito de odorizante. Cada uno lleva su <strong>dossier de construcción (PED 97/23/CE)</strong>:</p>
+<ul>
+<li><strong>Declaración de Conformidad CE</strong>: denominación, modelo, fabricante, n.º de fabricación, volumen, diámetro, presión de diseño y de prueba, código de diseño (AD Merkblätter, ASME VIII, CODAP), examen CE, módulo y organismo notificado.</li>
+<li><strong>Certificados</strong>: procedimientos de soldadura, soldadores, soldaduras, ensayos no destructivos, prueba de presión, <strong>control de vacío</strong>, materiales y trazabilidad, elementos incorporados (VES, niveles…), plano y esquema, manual y <strong>placa de características</strong>.</li>
+</ul>
+<h3 id="despues-de-la-puesta-en-servicio">Después de la puesta en servicio</h3>
+<ul>
+<li>Datos de descargas y partes de incidencias.</li>
+<li><strong>Partes de mantenimiento (check-list)</strong> y anotaciones en el <strong>Libro de Mantenimiento</strong>.</li>
+<li><strong>Certificados de revisiones periódicas</strong> de los equipos a presión.</li>
+<li>Certificados periódicos eléctricos si se requieren.</li>
+</ul>
+<h2 id="tema-7-operacion">Tema 7 · Operación</h2>
+<p>Una PS funciona sola: la operación es sobre todo <strong>supervisión</strong> (telegestión desde el CCD en distribución; PLC + GPRS/ADSL con web en industria). Hay presencia en descargas, cambios de régimen (p. ej. pasar a agua caliente en invierno) y mantenimiento. El momento de más riesgo es la <strong>descarga</strong>.</p>
+<h3 id="esquema_6">Esquema</h3>
+<ol>
+<li>Supervisión y análisis de registros · 2. Manual de Operaciones, personal y dotación</li>
+<li>Puesta en frío y tarado del PPR · 4. Primera descarga</li>
+<li>Puesta en servicio de regasificadores, calderas, VCF, regulación y odorizadores</li>
+<li>Descarga de cisternas (3 fases; con RD y con bomba)</li>
+<li>Fin de servicio, retirada de GNL, inertizado y desguace · 8. Ampliaciones (CMD, CRA, DRE)</li>
+</ol>
+<h3 id="personal-y-dotacion">Personal y dotación</h3>
+<ul>
+<li><strong>Manual de Operaciones</strong>: lo prepara el suministrador/instalador; equipos, arranque y paro, planos, comportamiento del GNL y medidas ante derrames.</li>
+<li>El operador debe conocer válvulas y mandos a distancia, saber interpretar registros anómalos, el historial de incidencias y el Plan de Emergencia.</li>
+<li><strong>Dos personas</strong> recomendadas en cualquier operación y <strong>obligatorias en descargas</strong>.</li>
+<li>Dotación mínima: <strong>explosímetro con alarma visual y sonora</strong>, EPI (casco, guantes, calzado, protección auditiva) y comunicación. Más herramientas antideflagrantes, medidores eléctricos y de tierra, juntas, kits de reguladores y linternas antideflagrantes.</li>
+</ul>
+<h3 id="puesta-en-frio-con-n2-liquido-a-196-c">Puesta en frío (con N₂ líquido a −196 °C)</h3>
+<p>Se hace en cada depósito antes del primer GNL y <strong>cada vez que el depósito ha estado a temperatura ambiente</strong>. La hace o controla un experto (normalmente el instalador criogénico) y se levanta <strong>Acta de puesta en frío</strong>. El depósito llega de fábrica con <strong>N₂ a \~0,1 bar</strong> para que no entre aire húmedo (el hielo dañaría asientos y taparía conductos).</p>
+<ol>
+<li>Todo cerrado salvo manómetro y nivel.</li>
+<li>Quitar la manguera de 3" y poner la <strong>reducción DN 80 × DN 40</strong> para la manguera de N₂ de la cisterna.</li>
+<li>Abrir VD y VL, dar N₂ frío gaseoso y abrir <strong>despacio el venteo VA</strong>. El gas barre de abajo arriba hasta que el venteo sale frío (nube).</li>
+<li>Cisterna &gt; 2 bar; el depósito por debajo, regulando con la salida de N₂ y con VA.</li>
+<li>Alternar periodos cortos de <strong>N₂ líquido</strong> hasta que empiece a subir el nivel. El experto decide la cantidad final según los días hasta la primera cisterna.</li>
+<li>Medir vacío todo el proceso (<strong>&lt; 0,6 mbar abs</strong>) y vigilar la presión las <strong>12 h siguientes</strong>.</li>
+</ol>
+<h3 id="tarado-del-ppr-ejemplo-deposito-de-5-bar">Tarado del PPR (ejemplo depósito de 5 bar)</h3>
+<ol>
+<li>Abrir VSP y VEP. Si el PPR se hiela, el regulador está tarado por encima de la presión del depósito.</li>
+<li>Si no, apretar el muelle y subir con N₂ hasta que disparen las VES (5 bar). Medir vacío, buscar fugas y <strong>comprobar que la VES vuelve a cerrar</strong>.</li>
+<li>Bajar a 3,5 bar, deshelar con agua y comprobar que el regulador no pasa. Si pasa, aflojar.</li>
+<li>Apretar poco a poco hasta que abra a <strong>3,5 bar</strong> (presión mínima de trabajo). Debe cerrar hacia 4 bar.</li>
+<li>Cerrar <strong>primero VEP</strong> y, una vez gasificado y deshelado, <strong>VSP</strong>. Si la cisterna se retrasa y sube la presión, ventear por VA antes de que salten las VES.</li>
+</ol>
+<h3 id="primera-descarga-de-gnl">Primera descarga de GNL</h3>
+<ul>
+<li>Antes hay que <strong>sacar el N₂ líquido</strong> que queda (si no, diluye el GNL y baja su poder calorífico): por la tapa del filtro del PPR y VEP dentro del cubeto (protegiendo el hormigón) o, si hay regasificadores atmosféricos, por su salida (así se enfrían). <strong>Con regasificadores de agua caliente no se puede</strong>: aún no hay gas para las calderas.</li>
+<li>Despresurizar el N₂ y descargar como siempre (1–2 bar de diferencia) por VD y VL.</li>
+<li><strong>No usar VG en la primera descarga</strong>: el depósito y el N₂ están más fríos que el GNL y la ducha no condensa. Si se acerca a 5 bar, ventear por VA.</li>
+<li>Al acabar, poner en servicio el PPR ya tarado y abrir VC.</li>
+</ul>
+<h3 id="puesta-en-servicio-de-equipos">Puesta en servicio de equipos</h3>
+<table>
+<thead>
+<tr>
+<th>Equipo</th>
+<th>Claves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regasificadores atmosféricos</td>
+<td>Probar antes las válvulas de alternancia desde el cuadro; VCF abierta; uno a uno (automática, entrada, salida); abrir VC y la salida despacio viendo cómo se hiela; programar alternancia (p. ej. cada 6 h)</td>
+</tr>
+<tr>
+<td>Regasificadores de agua caliente</td>
+<td>Circuito lleno de <strong>agua + glicol</strong>, purgado y bombeando a temperatura ambiente; VCF abierta; mejor dar gas por la <strong>economizadora</strong> (fase gas) para no necesitar calor de vaporización; purgar con detector; caldera al mínimo; <strong>si el retorno se acerca a 0 °C, parar</strong>; calentar a <strong>40–50 °C</strong> antes de dar servicio</td>
+</tr>
+<tr>
+<td>Calderas</td>
+<td>Mejor con el SAT del fabricante; alternancia de bombas; cascada. La consigna de cierre de la VCF en torno a <strong>+10 °C del agua de retorno</strong></td>
+</tr>
+<tr>
+<td>VCF</td>
+<td>Verificar por PLC que abre, cierra, <strong>cierra por fallo eléctrico o neumático</strong> y que los finales de carrera señalizan bien</td>
+</tr>
+<tr>
+<td>Regulación / ERM</td>
+<td>Todo cerrado incluidas VIS; cartuchos filtrantes puestos; placa de pretarado. Abrir entrada ERM → entrada de línea → VIS → regulador → contador (by-pass, entrada, salida). La salida de planta sigue cerrada. Red nueva: llenar por el by-pass del contador</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Regulador de acción directa</strong> (pasos clave): purga VP un poco abierta → abrir V1 mínimo → rearmar la VIS despacio sin soltar viendo subir M2 → cerrar VP para ver la <strong>sobrepresión de cierre (5–15 %)</strong> y que la presión no siga subiendo (estanquidad a caudal nulo) → ajustar el muelle (<strong>horario sube, antihorario baja</strong>) → tarar VIS → abrir V1 al 100 % → abrir V2 despacio → reajustar con caudal real. La VES se tara subiendo la salida o en banco.</p>
+<h3 id="odorizador-de-contacto">Odorizador de contacto</h3>
+<ul>
+<li><strong>Llenado</strong>: anotar fecha y nivel; cerrar 1 y 2; dejar la 3 (ya ajustada); despresurizar por la 4 a través del <strong>filtro de carbón activo</strong>; flexible de 12 mm de la 5 a la «S» (tubo buzo) del bidón; N₂ con manorreductor a <strong>\~0,2 bar</strong> a la «D» con flexible de 8 mm; llenar hasta <strong>\~75 %</strong>; cerrar D y S, cerrar 5 y 4, abrir 1 y 2; buscar fugas; anotar.</li>
+<li><strong>Ajuste</strong> con la válvula 3 según controles en la red. Control de THT gastado frente a Nm³ cada <strong>dos meses</strong>.</li>
+<li><strong>THT</strong>: bidones inox de <strong>50 l</strong> (tipo Schmidt GA 50). Igualar potenciales electrostáticos antes de trasvasar; no tocar bidones calientes por el sol.</li>
+<li><strong>Derrame de THT</strong>: arena fina y seca y tratar con <strong>lejía diluida (1 de lejía por 2 de agua)</strong>, o serrín con aceite. <strong>Nunca lejía concentrada</strong>: reacción violenta.</li>
+<li>Odorizador por dosificación: puesta en marcha con el SAT del suministrador.</li>
+</ul>
+<h3 id="descarga-de-cisternas-las-3-fases">Descarga de cisternas: las 3 fases</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Qué se hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 · Previas</strong></td>
+<td>Conductor con ADR. Cisterna <strong>horizontal y orientada a la salida</strong> (irse sin maniobras). Motor parado, freno, marcha corta, <strong>batería desconectada</strong>, <strong>calzos</strong>, llaves en poder del operador. Explosímetro en la zona. Extintores. Sin ajenos ni trabajos peligrosos a <strong>&lt; 15 m</strong>. Revisar depósito (VES heladas, manómetro o nivel fuera de uso, fugas) y flexibles. <strong>Comprobar que cabe (95 %)</strong>. Tierra: <strong>pinza con el interruptor en 0 y después a 1</strong></td>
+</tr>
+<tr>
+<td><strong>2 · Descarga y purga</strong></td>
+<td>Motor parado salvo bomba de cisterna (con protocolo de explosimetría; conectar y desconectar mangueras siempre con motor parado). EPI criogénico. Herramientas antichispa. <strong>No golpear conexiones</strong> (fragilización). Vigilar presión y nivel. <strong>Mínimo 2 personas</strong>; conductor <strong>fuera de la cabina</strong> junto al armario de la cisterna. Purgar mangueras y circuitos al final</td>
+</tr>
+<tr>
+<td><strong>3 · Finales</strong></td>
+<td>Mangueras a soportes con tapones; quitar tierra, calzos y extintores; todo cerrado; explosímetro; rellenar la <strong>lista de comprobaciones</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Descarga con RD (ejemplo: cisterna a 1,5 bar, depósito a 4 bar)</strong></p>
+<ol>
+<li><strong>Igualar</strong>: abrir VG, VDG, G1 y VB hasta igualar (p. ej. 3,6 bar). Cerrar VB.</li>
+<li><strong>Presurizar</strong>: abrir VDL y L1 hasta tener la cisterna 1,5–2 bar por encima (p. ej. 5,5 bar).</li>
+<li><strong>Descargar</strong>: abrir VD y L2 (entra por VG y baja la presión), luego VL. Mantener la diferencia con VG. Al vaciarse, por L2 pasa gas: <strong>cambia el sonido</strong>.</li>
+<li><strong>Purgar MD</strong>: el gas empuja el líquido por VG. Cerrar VG y VD.</li>
+<li><strong>Purgar MG, ML y RD</strong>: cerrar VDL y abrir VB; luego cerrar VDG y abrir VDL. Cerrar VL.</li>
+<li><strong>Despresurizar</strong>: abrir las purgas Vp hasta dejar la cisterna a <strong>1 bar</strong>; cerrar L2, G1, L1; agotar presión; cerrar todo y desconectar.</li>
+</ol>
+<p><strong>Descarga con bomba y protocolo de explosimetría</strong></p>
+<ul>
+<li>Con el motor <strong>parado</strong>: comprobar el explosímetro (aviso <strong>acústico más fuerte que el motor</strong> y luminoso visible de día). Medir la zona. <strong>Purgar el aire de la manguera con gas del depósito</strong> abriendo un poco VG hasta detectar gas. Medir la purga y la <strong>admisión de aire del motor</strong>. Dejar el explosímetro <strong>bajo la zona de válvulas</strong> a la vista y al oído. Poner <strong>apagallamas en el escape</strong>.</li>
+<li>Arrancar motor y bomba; vigilar fugas los primeros segundos. Si hay fugas: <strong>parar motor y desconectar batería</strong>.</li>
+<li>Medir <strong>cada 15 min</strong> junto a la bomba, en el escape y en los flexibles, y anotarlo en el protocolo (hasta 120 min).</li>
+<li>Abrir VG, VD y L2; controlar la presión con VL.</li>
+<li><strong>Si el explosímetro pasa del 10 % del LIE: parar motor y desconectar batería.</strong></li>
+<li>Al terminar (contador de la cisterna o nivel): parar bomba, desconectar batería, cerrar L2 y VG. Purgar a venteo el tramo VD–L2–Vp y luego VD–VG–VL. El apagallamas se quita <strong>fuera de la planta</strong>.</li>
+</ul>
+<h3 id="fin-de-servicio-inertizado-y-desguace">Fin de servicio, inertizado y desguace</h3>
+<ul>
+<li><strong>Estacional</strong> (secaderos, conserveras): agotar el GNL; si queda, el boil-off sale por las VES o se ventea. Al volver, el depósito está caliente: <strong>nueva puesta en frío</strong>. <strong>Más de un año sin suministro: inertizar</strong> (ITC-04).</li>
+<li><strong>Definitivo</strong> (cese o llega el gasoducto): siempre inertizar.</li>
+<li><strong>Retirar GNL</strong>: por boil-off y VES, regasificando y venteando o derramando en el cubeto por VEP; todo eso solo vale si es residual. Si hay cantidad, <strong>cisterna con bomba</strong> (se aprovecha). El último fondo siempre sale por boil-off o por VEP, porque la salida a consumo sobresale del fondo.</li>
+<li><strong>Inertizado</strong>: con <strong>N₂ a temperatura ambiente</strong>, nunca criogénico (condensaría el gas). Primero tuberías aguas abajo con depósito aislado por <strong>discos ciegos</strong>; luego el depósito. Partir de 0,1 bar, presurizar con N₂ a \~1 bar, dejar mezclar, ventear a 0,1 bar y repetir hasta <strong>≥ 86 % N₂ / ≤ 14 % gas</strong>. Dejarlo a <strong>0,1 bar</strong> y comprobar el vacío.</li>
+<li><strong>Desguace para reutilizar</strong>: recopilar información técnica, administrativa e histórica y datos del destino; visita para marcar equipos, conjuntos y puntos de corte; procedimiento de traslado con medios, planning, residuos y Plan de Seguridad y Salud. No merece la pena aprovechar tramos de tubería soldada.</li>
+</ul>
+<h3 id="ampliaciones-y-reserva">Ampliaciones y reserva</h3>
+<ul>
+<li>Consumo punta industrial: suma de potencias máximas de los equipos que pueden funcionar a la vez, más margen.</li>
+<li><strong>CMD (m³ GNL/día) = CMD (Nm³/día) / 580</strong>.</li>
+<li><strong>CRA = 0,9 × CNA</strong>; <strong>DRE = CRA / CMD</strong>; para dimensionar, <strong>CRA = CMD × DRE</strong>.</li>
+<li>Reserva recomendada: <strong>3–4 días</strong>. Además hay que tener margen para que quepa una cisterna entera.</li>
+<li>Ejemplo: 8 m³/día con un depósito de 60 m³ → DRE 6,75 días, bien. Pero para meter 47 m³ hay que bajar a 0,95 × 60 − 47 = 10 m³; quitando el 5 % de fondo quedan (10 − 3) / 8 = <strong>0,875 días</strong> de margen: inviable. Con <strong>80 m³</strong>: 0,95 × 80 − 47 = 29 → (29 − 4) / 8 = <strong>3,12 días</strong>: aceptable.</li>
+</ul>
+<h2 id="tema-8-mantenimiento-preventivo-y-revisiones-periodicas">Tema 8 · Mantenimiento preventivo y revisiones periódicas</h2>
+<p>El titular es el responsable del mantenimiento y debe tener contrato con un especialista criogénico con urgencias 24 h. Lo habitual son <strong>2 visitas al año</strong> con una <strong>Hoja de Control</strong> por visita, revisión cada <strong>5 años</strong> y prueba neumática cada <strong>15 años</strong>.</p>
+<h3 id="esquema_7">Esquema</h3>
+<ol>
+<li>Mantenimiento (ITC-04 art. 6.1) · 2. Revisiones periódicas (art. 6.2) · 3. Revisiones de equipos a presión (RD 2060/2008)</li>
+<li>Manual de Mantenimiento y Hoja de Control · 5. Instrucciones por punto de la hoja · 6. Personal, dotación y documentación</li>
+</ol>
+<h3 id="mantenimiento-quien-y-como">Mantenimiento: quién y cómo</h3>
+<ul>
+<li>El <strong>titular</strong> (o los usuarios) responde de que la planta esté siempre en servicio y segura, y de atender las recomendaciones del suministrador.</li>
+<li><strong>Contrato</strong> con especialista criogénico con <strong>urgencias permanentes</strong>. La empresa mantenedora necesita: carné de <strong>instaladora de recipientes a presión</strong>, de <strong>instaladora de gas</strong>, <strong>al menos un especialista criogénico</strong> y <strong>servicio 24 h todo el año</strong>.</li>
+<li>El titular puede mantener él mismo si acredita medios y cumple esos requisitos. Las distribuidoras pueden hacerlo con medios propios.</li>
+<li><strong>Libro de Mantenimiento</strong> (o archivo documental si la mantenedora tiene sistema de calidad certificado). En cada visita: estado general, defectos, reparaciones y <strong>lecturas de potencial de protección</strong>. Lo puede consultar la Administración.</li>
+<li>El titular custodia el contrato vigente, el Libro y el <strong>certificado de la última revisión</strong>.</li>
+<li><strong>Frecuencia</strong>: industrias <strong>2 veces al año</strong>; distribuidoras 2 o más.</li>
+</ul>
+<h3 id="revisiones-periodicas-itc-04">Revisiones periódicas (ITC-04)</h3>
+<table>
+<thead>
+<tr>
+<th>Revisión</th>
+<th>Quién</th>
+<th>Qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cada 5 años</strong></td>
+<td><strong>P × V ≤ 300</strong>: especialista criogénico, mantenimiento propio (justificándolo ante la CA) u OC. <strong>P × V &gt; 300</strong>: <strong>obligatoriamente OC</strong></td>
+<td>Vacío (<strong>&lt; 0,60 mbar</strong>), estanquidad (o vacío en su lugar), comprobar y <strong>precintar VES</strong>, condiciones reglamentarias, <strong>toma de tierra</strong></td>
+</tr>
+<tr>
+<td><strong>Cada 15 años</strong></td>
+<td><strong>OC asistido por especialista criogénico</strong>, que emite acta</td>
+<td><strong>Prueba neumática a 1,1 × presión máxima admisible</strong>, con gas inerte o el propio gas (para no meter humedad)</td>
+</tr>
+</tbody>
+</table>
+<p>P en bar (máxima de trabajo) y V en m³ geométricos. Ejemplo: 60 m³ × 5 bar = 300 → todavía puede hacerla el especialista; 80 m³ × 5 bar = 400 → OC.</p>
+<p>El certificado de la revisión de 5 años se hace <strong>por cuadruplicado</strong> (usuario, propiedad, Comunidad Autónoma). Si la revisión detecta cambios respecto al proyecto, se avisa enseguida a la CA.</p>
+<h3 id="equipos-a-presion-rd-20602008">Equipos a presión (RD 2060/2008)</h3>
+<p>El <strong>depósito ya queda cubierto</strong> por las revisiones de la ITC-04. El resto se revisa según su categoría (I a IV, en la Declaración CE): <strong>odorizante, categoría II</strong>; <strong>depósitos y regasificadores, categoría IV</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Nivel (categorías III y IV)</th>
+<th>Cada</th>
+<th>Quién</th>
+<th>Qué</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td><strong>2 años</strong></td>
+<td>Empresa instaladora de equipos a presión</td>
+<td>En servicio: documentación y visual</td>
+</tr>
+<tr>
+<td>B</td>
+<td><strong>4 años</strong></td>
+<td>OCA</td>
+<td>Fuera de servicio</td>
+</tr>
+<tr>
+<td>C</td>
+<td><strong>12 años</strong></td>
+<td>OCA</td>
+<td>Fuera de servicio con prueba de presión</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hoja-de-control-35-puntos">Hoja de Control (35 puntos)</h3>
+<p>Antes de ir, <strong>consultar la telegestión</strong> y al responsable de seguimiento: la mayoría de incidencias se detectan ahí (presiones raras, niveles que no cuadran con el consumo). Se marca C / NC / NA.</p>
+<ul>
+<li><strong>Depósito (1–9)</strong>: manómetro y transmisor (anotar P y hora), nivel y transmisor (anotar % y hora), fugas, maniobra de válvulas, fugas y estado del PPR, <strong>4 VES y precintos</strong>, óxido, vacío.</li>
+<li><strong>Descarga (10–15)</strong>: mangueras y tapones, RD, manguera de agua, pinza y tierras.</li>
+<li><strong>Regasificación (16–23)</strong>: estado y fugas, temperatura de salida de gas y de agua, puntos fríos, aislamientos, soportes, <strong>VCF</strong>.</li>
+<li><strong>Regulación y odorización (24–30)</strong>: fugas, línea en servicio y alternancia, reguladores, manómetros, odorizador y nivel de THT.</li>
+<li><strong>General (31–35)</strong>: cubeto limpio, acceso de cisternas, puertas y vallado (con carteles), luces, <strong>extintores caducados</strong>.</li>
+<li><strong>Sala de calderas</strong> (ventilación, fugas, agua, temperaturas ida/retorno, compresor, análisis de humos) y <strong>cuadro de control</strong> (pilotos, maniobras, señales).</li>
+</ul>
+<h3 id="instrucciones-clave">Instrucciones clave</h3>
+<ul>
+<li><strong>Presión</strong>: si manómetro y transmisor no coinciden, comparar con otro manómetro o con uno patrón; si el manómetro está bien, revisar la salida eléctrica del transmisor.</li>
+<li><strong>Nivel</strong>: si no coincide, comprobar el cero abriendo el by-pass. Si hay duda, cambiar el nivel y mientras tanto <strong>controlar las descargas por la válvula de punto alto</strong>.</li>
+<li><strong>Nota técnica del nivel</strong>: mide la columna de GNL. Depósito de 3,5 m lleno: 0,95 × 350 cm × 0,43 g/cm³ ≈ <strong>143 mbar</strong>. A 3,5 bar una toma ve 3,5 y la otra 3,643 bar: <strong>antes de tocar Vn1 o Vn2, abrir el by-pass Vb</strong> para no dañar la célula.</li>
+<li><strong>Fugas</strong>: pasadas con <strong>explosímetro</strong> por juntas, bridas y vástagos.</li>
+<li><strong>Válvulas criogénicas</strong>: mover un par de vueltas y <strong>dejarlas como estaban</strong>.</li>
+<li><strong>VES heladas y con ruido</strong> = están venteando: buscar la causa (regulador del PPR que no cierra, VES defectuosa…).</li>
+<li><strong>Vacío</strong>: sensores DV-4 (0,01–20 Torr) y DV-6 (0,001–1 Torr). <strong>1 Torr = 1,3332 mbar; 0,60 mbar = 0,45 Torr</strong> (límite). Ejemplo: 0,252 Torr × 1,3332 = 0,336 mbar → correcto. Procedimiento: quitar caperuza, cero y baterías, conectar, abrir válvula de vacío, esperar a que se estabilice y anotar.</li>
+<li><strong>Mangueras</strong>: colgadas y <strong>con tapones roscados</strong> tras cada descarga.</li>
+<li><strong>Puntos fríos</strong> (hielo anómalo) = posible fuga criogénica.</li>
+</ul>
+<h3 id="personal-dotacion-y-papeles">Personal, dotación y papeles</h3>
+<ul>
+<li>Equipo de mantenimiento: <strong>mínimo 2 personas</strong>, formadas y con procedimientos escritos.</li>
+<li>Dotación en el vehículo: Hoja de Control y datos de la planta, <strong>explosímetro con alarma visual y sonora</strong>, <strong>medidor de vacío</strong>, multímetro, medidor de tierras, analizador de humos, <strong>manómetro calibrado</strong>, herramientas antideflagrantes, agua jabonosa, grasa, desbloqueante, teflón, juntas, linternas antideflagrantes, extinción y botiquín, EPI y comunicación.</li>
+<li>Documentación: Hoja de Control firmada por el responsable del equipo (una copia para el usuario y otra con el informe de la visita).</li>
+</ul>
+<h2 id="tema-9-incidencias-y-actuaciones-correctivas">Tema 9 · Incidencias y actuaciones correctivas</h2>
+<p>Una <strong>incidencia</strong> es un funcionamiento anómalo <strong>sin peligro inmediato</strong> para la planta o las personas (si hay peligro, es emergencia: tema 10). Casi todas se detectan por <strong>telegestión</strong> y suelen ser lentas, o tienen equipos de reserva.</p>
+<h3 id="esquema_8">Esquema</h3>
+<ol>
+<li>Mecánicas (lo único que se mueve): regulador del PPR, VES, válvulas, reguladores de salida, bombas</li>
+<li>Eléctricas: nivel, presión, VCF, fallos eléctricos y de comunicaciones, circuito de agua caliente</li>
+<li>Pequeñas fugas: externas de GNL o GN, e internas al espacio intermedio (pérdida de vacío)</li>
+</ol>
+<h3 id="tabla-de-diagnostico">Tabla de diagnóstico</h3>
+<table>
+<thead>
+<tr>
+<th>N.º</th>
+<th>Síntoma</th>
+<th>Causa</th>
+<th>Qué hacer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Presión del depósito <strong>baja poco a poco</strong> al vaciarse</td>
+<td>Regulador del PPR <strong>no abre</strong></td>
+<td>Apretar el tornillo <strong>¼ de vuelta</strong> y esperar a ver si se hiela la entrada; repetir. Recuperada la presión, devolver las vueltas y vigilar. Si persiste, <strong>sustituir</strong> (mejor del fabricante del depósito; no repararlo con medios propios)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Presión <strong>sube</strong>; PPR y su entrada <strong>helados</strong>; <strong>se oye pasar gas</strong></td>
+<td>Regulador del PPR <strong>no cierra</strong></td>
+<td>Si está cerca de las VES: cerrar <strong>VEP</strong> y ventear por <strong>VA</strong>. Reabrir VEP y <strong>aflojar ¼ de vuelta</strong> hasta que cierre (cesa el ruido, se deshiela). Devolver vueltas y comprobar que abre a su consigna. Si persiste, sustituir</td>
+</tr>
+<tr>
+<td>2 bis</td>
+<td>Presión sube <strong>sin hielo</strong> en el PPR</td>
+<td>Posible <strong>pérdida de vacío</strong></td>
+<td>Ver incidencia 14</td>
+</tr>
+<tr>
+<td>3</td>
+<td>VES ventea gas frío <strong>con la presión al máximo</strong> (5 bar)</td>
+<td>Regulador del PPR no cierra</td>
+<td>Ventear por VA a 0,5–1 bar por debajo y ver que la VES cierra. Luego como la 2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>VES ventea <strong>con presión normal</strong> (4 bar). Difícil de ver en telegestión</td>
+<td>VES que se quedó <strong>clavada</strong> tras disparar, o <strong>muelle roto</strong></td>
+<td>Pasar con la <strong>válvula de 3 vías</strong> a las VES de reserva, deshelar con agua y secar, volver. Si no fuga, estaba clavada: vigilar. Si vuelve a fugar, sustituirla</td>
+</tr>
+<tr>
+<td>5</td>
+<td>VG no estanca: hielo en tuberías de descarga y gas por la Vs de línea o el flexible de 3"</td>
+<td>Asiento de VG</td>
+<td>Montar <strong>otra válvula en serie</strong> con brida ciega: despresurizar por VA (dejarla algo abierta), soltar la brida de salida, acoplar la nueva. Luego cortar tubo con <strong>purga de N₂</strong>, soldar, radiografiar y probar. Pantallas, detección continua, extintores</td>
+</tr>
+<tr>
+<td>6</td>
+<td>VL no estanca (sale <strong>GNL</strong>)</td>
+<td>Asiento de VL</td>
+<td>Igual que la 5, pero <strong>siempre queda la presión de la columna de líquido</strong>: con el nivel más bajo posible o vaciando el depósito</td>
+</tr>
+<tr>
+<td>7</td>
+<td>VC no estanca</td>
+<td>Asiento de VC</td>
+<td>Con un solo depósito <strong>pasa desapercibido</strong>; con varios se hiela la tubería del cerrado. Como la 6</td>
+</tr>
+<tr>
+<td>8–9</td>
+<td>VEP, VSP, Vpa, Vn1, Vn2 no estancas</td>
+<td>—</td>
+<td>Segunda válvula en serie en un enlace aguas abajo</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Nivel dudoso o <strong>siempre igual</strong></td>
+<td>Transmisor, fuga en el tubing o célula dañada</td>
+<td>Abrir <strong>Vb</strong> y ver que marca <strong>cero</strong>; buscar fugas en los 2 tubing; purgar; esperar sin hielo; abrir Vn1 y Vn2 con Vb abierta; <strong>cerrar Vb</strong>; si no marca, sustituir</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Manómetro y transmisor no coinciden</td>
+<td>Uno de los dos</td>
+<td>Comprobar el manómetro con otro nuevo o patrón. Si está bien, comprobar 4–20 mA al 0-25-50-75-100 % (fondo 6 bar: 0-1,5-3-4,5-6 bar)</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>VCF que no cierra</strong> (en prueba)</td>
+<td>Termoelemento, PLC mal programado, falta de aire o gas al actuador, falta de electricidad, bloqueo mecánico</td>
+<td>2.º termoelemento de reserva y comparar temperaturas; simular baja temperatura y fallo eléctrico; <strong>presostato</strong> en la alimentación neumática; finales de carrera. <strong>En servicio sería grave</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="reguladores-de-salida-accion-directa">Reguladores de salida (acción directa)</h3>
+<p>Con doble línea se repara sin cortar; si no, cambio rápido por uno igual. Luego se pone en servicio como en el tema 7.</p>
+<table>
+<thead>
+<tr>
+<th>Síntoma</th>
+<th>Causas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Presión de salida <strong>nula</strong></td>
+<td>Sin gas de entrada (válvulas cerradas) o <strong>VIS disparada</strong> (rearmar despacio). El filtro colmatado «no es posible en una PS»</td>
+</tr>
+<tr>
+<td>Presión <strong>baja</strong></td>
+<td>Alimentación insuficiente, caudal mayor que el del regulador (cambiar por otro mayor), <strong>muelle flojo o roto</strong></td>
+</tr>
+<tr>
+<td>Presión <strong>sube</strong></td>
+<td>Junta de cierre gastada, asiento mellado, suciedad, <strong>membrana rota</strong> (sale gas por la respiración), juntas del eje, muelle a tope</td>
+</tr>
+<tr>
+<td>Presión <strong>oscila</strong></td>
+<td>Línea de impulso insuficiente o sucia, respiración mal ajustada, eje sucio, membrana de compensación rota, bombeo o resonancia</td>
+</tr>
+</tbody>
+</table>
+<h3 id="electricas-comunicaciones-y-agua-caliente">Eléctricas, comunicaciones y agua caliente</h3>
+<ul>
+<li><strong>Fallos eléctricos</strong>: infrecuentes; <strong>todos deben hacer caer la VCF</strong>.</li>
+<li><strong>Comunicaciones</strong>: se nota porque dejan de llegar datos. Llamar al responsable local (reset) o visitar.</li>
+<li><strong>Agua caliente</strong>: cualquier fallo de caldera o bomba acaba en agua y gas fríos, que vigila la seguridad. Telegestión avisa de calderas o bombas de reserva que han entrado. Usar el SAT.</li>
+</ul>
+<h3 id="fugas-pequenas">Fugas pequeñas</h3>
+<ul>
+<li>Si son de GNL o gas frío se ven por el <strong>hielo</strong>; si es gas caliente, con <strong>explosímetro</strong> (o detectores fijos en cubeto y sala de calderas).</li>
+<li><strong>Eje de válvula</strong>: reapretar levemente el prensaestopas.</li>
+<li><strong>Bridas</strong>: normales tras la primera puesta en frío o descarga; reapretar. Para cambiar una junta, trabajar con todo <strong>deshelado</strong> (natural o con agua).</li>
+<li><strong>Roscas</strong> (p. ej. circuito PPR): igual.</li>
+<li><strong>Poro en un regasificador</strong>: muy improbable; consultar al fabricante.</li>
+</ul>
+<h3 id="perdida-de-vacio-incidencia-14">Pérdida de vacío (incidencia 14)</h3>
+<p>Se detecta en las mediciones periódicas (valores cada vez peores) o por una <strong>subida de presión sin explicación</strong>. Es <strong>grave para el servicio</strong> (paro, tiempo y coste).</p>
+<ul>
+<li><strong>Causas</strong>: poro o grieta en el <strong>depósito interior</strong> o sus tubos (entra gas) o en el <strong>exterior</strong>, por corrosión (entra aire).</li>
+<li>La presión real del espacio la mide una <strong>empresa especializada</strong> (el medidor solo llega a 1 Torr).</li>
+<li>Mirar la <strong>tapa de seguridad</strong>: si saltó y hay <strong>perlita</strong> alrededor, es gas natural → el depósito va a <strong>taller</strong>.</li>
+<li>Si no saltó y la fuga es lenta: se puede seguir dando servicio rehaciendo el vacío con <strong>bomba de vacío</strong> periódicamente (siempre provisional).</li>
+<li>Para localizarla en el exterior: <strong>espectrómetro de masas de helio</strong> conectado a la bomba de vacío y rociando helio por fuera. Si no aparece, está en el interior → taller.</li>
+</ul>
+<h2 id="tema-10-seguridad-y-emergencias">Tema 10 · Seguridad y emergencias</h2>
+<p>Los riesgos son los de cualquier gas combustible (fuga, derrame, ignición, quemaduras) más los del frío (nubes frías, quemaduras por contacto, inhalación). Se ordenan en <strong>tres niveles de seguridad</strong> y, si fallan, en el <strong>Plan de Emergencia</strong>.</p>
+<h3 id="esquema_9">Esquema</h3>
+<ol>
+<li>Tres niveles de seguridad · 2. Emergencia y accidente: causas</li>
+<li>Planes de emergencia: tipos, 4 fases, legislación, activación</li>
+<li>Fuga o derrame sin incendio · 5. Con incendio (riego, BLEVE)</li>
+<li>Seguridad en trabajos de planta · 7. Seguridad en la descarga (check-list Sedigas)</li>
+<li>EPI · 9. Quemaduras por frío · 10. Asfixia · 11. Carteles</li>
+</ol>
+<h3 id="los-tres-niveles">Los tres niveles</h3>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Objetivo</th>
+<th>Ejemplos de medidas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1.º Confinar</strong> (el más importante)</td>
+<td>Que el GN y el GNL no salgan; purgas y venteos previstos y controlados</td>
+<td>Normas de diseño, materiales, equipos, montaje, pruebas, uso y mantenimiento</td>
+</tr>
+<tr>
+<td><strong>2.º Fuga sin inflamación</strong></td>
+<td>Que no prenda</td>
+<td>Aire libre o ventilación, equipos ATEX, ignición alejada, <strong>cubetos</strong>, <strong>distancias</strong>, cierre rápido de fugas, asistencia permanente</td>
+</tr>
+<tr>
+<td><strong>3.º Fuga con inflamación</strong></td>
+<td>Extinguir y gestionar la emergencia</td>
+<td>Planes de extinción y de emergencia, medios suficientes, personal formado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="causas-de-accidente-ejemplos-del-temario">Causas de accidente (ejemplos del temario)</h3>
+<ul>
+<li><strong>Incidente no resuelto</strong>: pequeña fuga en brida que prende o que crece.</li>
+<li><strong>Dos fallos a la vez</strong>: termoelemento + VCF que no cierra → rompe acero al carbono o la red de PE; nivel que falla + Vpa bloqueada → sobrellenado.</li>
+<li><strong>Defecto oculto</strong>: fisura en el depósito interior o en una manguera.</li>
+<li><strong>Error humano</strong>: mal apriete tras reparar; consignas de la VCF mal puestas que hielan el regasificador de agua; fuga de THT con el operario <strong>solo</strong> que pierde el conocimiento.</li>
+<li><strong>Fortuita</strong>: agresión externa, movimiento del terreno.</li>
+</ul>
+<h3 id="planes-de-emergencia">Planes de emergencia</h3>
+<ul>
+<li><strong>PEI</strong>: solo la propia planta (y anexos). <strong>PEE</strong>: incluye zona exterior y coordina Protección Civil, bomberos, ayuntamiento.</li>
+<li><strong>4 fases</strong>: identificar y evaluar riesgos (ETA, FTA, HAZOP) → medios de protección → redacción → implantación (divulgación, formación, <strong>simulacros</strong>, revisión). El operador no lo escribe pero debe conocerlo y practicarlo.</li>
+<li><strong>Legislación</strong>: RD 840/2015: <strong>50–200 t → PEI</strong> (≈ <strong>112–500 m³</strong> geométricos); <strong>&gt; 200 t → PEE</strong>. Además RD 1196/2003 (directriz de protección civil) y <strong>RD 393/2007 (Norma Básica de Autoprotección)</strong>.</li>
+<li><strong>Se activa</strong> por: fuga importante de GN, derrame de GNL con charco apreciable, incendio que ya no es conato, deflagración, derrame importante de THT o accidente personal grave. Aunque la planta no esté obligada a tener plan, el personal debe saber actuar.</li>
+</ul>
+<h3 id="fuga-o-derrame-sin-incendio">Fuga o derrame sin incendio</h3>
+<p>En España no constan derrames masivos en PS. La fuga se ve por la <strong>nube blanca</strong>. Dentro de la nube puede haber mezcla inflamable (<strong>4,4–17 %</strong> de gas en aire). Como la planta trabaja a 3–5 bar, un chorro puede salir del cubeto: por eso hay válvulas telemandadas en plantas grandes y pantallas antiproyección.</p>
+<ol>
+<li>Mirar el <strong>viento</strong>, acotar la zona y alejar a todos <strong>en contra del viento</strong>. Evacuar el camino de la nube.</li>
+<li><strong>Parar trasvases, descargas y maniobras</strong>.</li>
+<li><strong>Eliminar puntos de ignición</strong> (carretillas, vehículos, llamas piloto).</li>
+<li>Cerrar válvulas <strong>solo si no hay riesgo</strong> para quien lo hace.</li>
+<li><strong>Entrar con el viento a la espalda y salir con el viento de cara.</strong></li>
+<li>Quien cierre o repare: atado con <strong>cuerda larga</strong>, con <strong>equipo de respiración autónoma</strong> y traje, <strong>mínimo dos</strong>, con equipo de socorro preparado fuera.</li>
+<li>Quien tenga molestias: evacuar, reanimar si hace falta y llevar a urgencias.</li>
+<li>Si no se puede parar: valorar <strong>inflamarla</strong> (con los bomberos al mando) o, si la zona es estable, <strong>esperar a que se agote</strong>.</li>
+</ol>
+<h3 id="con-incendio">Con incendio</h3>
+<ul>
+<li><strong>Polvo seco</strong> (10 kg/t de GNL): para <strong>conatos</strong> (brida, válvula, cabina, ropa, flexible), no para incendios masivos.</li>
+<li><strong>Riego</strong> (&gt; 450 m³ y &lt; 15 m entre depósitos, 3 l/min·m²): para los depósitos <strong>vecinos</strong> (adelantarse al incendio o protegerlos de la radiación).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Situación en el cubeto</th>
+<th>¿Regar?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Derrame <strong>pequeño sin fuego</strong></td>
+<td><strong>Sí</strong>: evapora y diluye la nube y facilita llegar a las válvulas</td>
+</tr>
+<tr>
+<td>Derrame <strong>con fuego</strong></td>
+<td><strong>Sí</strong>: que la fuga no crezca por el calor</td>
+</tr>
+<tr>
+<td>Derrame <strong>masivo sin fuego</strong></td>
+<td><strong>No</strong> (aumentaría la evaporación), salvo viento que aleje la nube de zonas habitadas</td>
+</tr>
+<tr>
+<td>Derrame <strong>masivo con fuego</strong></td>
+<td><strong>Sí, masivamente</strong> (temperatura y radiación)</td>
+</tr>
+</tbody>
+</table>
+<p>En todo caso cerrar las válvulas telemandadas. El riego protege la chapa exterior y el vacío; la radiación apenas calienta el GNL de un depósito con perlita y vacío, y si se pierde el vacío las VES bastan.</p>
+<p><strong>Actuación</strong>: extintores para fuegos pequeños; evacuar a quien no tenga misión; desconectar lo eléctrico no ATEX; acercarse <strong>en la dirección del viento</strong>. <strong>No apagar un fuego de gas si no se puede cortar la fuga enseguida.</strong> Cortar el gas a la red si se puede. Incendio grande: <strong>bomberos</strong> para rociar todo cuanto antes.</p>
+<h3 id="bleve">BLEVE</h3>
+<p><em>Boiling Liquid Expanding Vapor Explosion</em>: un depósito con líquido y vapor a presión se despresuriza de golpe (rotura, embocadura, alivio rápido); todo el líquido sobrecalentado vaporiza a la vez y lanza fragmentos a <strong>200 m o más</strong> (sobre todo los fondos) con bola de fuego. Término de 1957 (EE. UU.).</p>
+<ul>
+<li>Típica del <strong>GLP</strong> con fuego exterior. Ejemplo: propano a 0 °C (≈ 4 atm ef) calentado hasta que abren las VES a 20 bar (≈ 60 °C); si la chapa cede, BLEVE. Y si estaba al 85 %, la dilatación (×1,21) lo revienta por <strong>sobrellenado</strong> antes de que salten las VES.</li>
+<li><strong>Con GNL es menos probable</strong>: depósitos de doble envolvente con perlita y menos cisternas. En España <strong>ninguna en PS</strong>, pero <strong>sí dos en cisternas de envolvente simple con poliuretano</strong> (vuelco, el poliuretano arde; la VES de 7 bar volcada puede soltar líquido y no bastar).</li>
+</ul>
+<h3 id="trabajos-en-planta">Trabajos en planta</h3>
+<ul>
+<li>Antes: repasar con <strong>detector de gas</strong>; cada trabajador con detector con alarma acústica. Trabajo preparado de antemano, sin improvisar; cada uno solo lo autorizado.</li>
+<li><strong>Herramientas antichispa</strong>; llaves fijas antiestáticas (bronce, teflón), sin alargar el mango ni golpear; <strong>nada de alicates</strong> para tuercas.</li>
+<li>Calzado sin herrajes. Suelo limpio. Cajas eléctricas cerradas.</li>
+<li>En la zona de peligro <strong>un solo operario</strong> (salvo que se necesiten más), y un <strong>vigilante a más de 15 m</strong> con equipo autónomo, máscara y extintor.</li>
+<li><strong>Sin chispas en 15 m</strong>: ni sopletes, ni fumar, ni radiales.</li>
+<li>No cambiar nada a presión o con GNL sin anularlo antes.</li>
+<li><strong>Soldar siempre sin gas</strong>, con bridas ciegas y <strong>corriente de N₂</strong> dentro; grupos alejados, pantallas y lonas. Comprobar tierras (corrientes vagabundas).</li>
+</ul>
+<h3 id="descarga-por-que-es-el-momento-de-mas-riesgo">Descarga: por qué es el momento de más riesgo</h3>
+<p>Coinciden personas maniobrando, un vehículo (escape, puntos calientes, estática), conexiones provisionales, GNL fuera del cubeto, purgas a la atmósfera y posibles fallos de nivel o presión. Y la rutina lleva a confiarse. Por eso: procedimiento escrito y personal formado, y la <strong>lista de comprobaciones de Sedigas</strong> para <strong>UN 1972, gas natural líquido refrigerado, clase 2.1</strong>.</p>
+<ul>
+<li><strong>Vehículo</strong>: extintores, <strong>calzos</strong>, linterna ATEX, <strong>2 triángulos</strong>, herramientas, chaleco EN 471, EPI, <strong>apagallamas</strong>, <strong>explosímetro</strong>, etiquetas <strong>2.1</strong> en laterales y trasera, <strong>paneles naranja 223/1972</strong> delante y detrás.</li>
+<li><strong>Documentos</strong>: identificación con foto, <strong>certificado ADR del conductor</strong>, aprobación ADR de tractora y cisterna, <strong>carta de porte</strong> (copia para el descargador), instrucciones escritas.</li>
+<li><strong>Antes</strong>: puertas contrapuestas abiertas, vehículo inmovilizado, personal formado y con EPI, pulsadores de emergencia del camión probados, extintores, herramientas, agua y manguera, zona señalizada, manta ignífuga, sin tormenta eléctrica ni trabajos incompatibles, mercancía correcta y <strong>que cabe</strong>, válvulas del cubeto cerradas o sifón con agua, tierra conectada.</li>
+<li><strong>Durante</strong>: motor parado (salvo bomba), eléctrico desconectado, tripulación fuera de cabina, presencia permanente, no fumar, sin fugas, velocidad adecuada, mangueras sin torsión, sin pasar el máximo.</li>
+<li><strong>Después</strong>: presión de la cisterna adecuada, barrido de mangueras, cierre de válvulas, mangueras en soportes con tapones, medios recogidos, zona limpia, carta de porte cumplimentada, puertas cerradas. Se anotan presión y nivel a la llegada y a la salida, kg netos y n.º de acreditación Sedigas.</li>
+<li>Sin bomba, igualmente hay que comprobar que no hay atmósfera explosiva <strong>antes de conectar y después de desconectar</strong> los flexibles.</li>
+<li>Referencia: manual de Sedigas <em>Buenas prácticas de seguridad y medio ambiente en PS de GNL</em> (2015).</li>
+</ul>
+<h3 id="epi">EPI</h3>
+<table>
+<thead>
+<tr>
+<th>Parte</th>
+<th>Equipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cabeza y cara</td>
+<td>Casco con <strong>visera antiproyecciones</strong> (EN 397)</td>
+</tr>
+<tr>
+<td>Cuerpo</td>
+<td>Ropa <strong>antiestática e ignífuga</strong> completa; mandil de cuero contra salpicaduras; chaleco de alta visibilidad (EN 471)</td>
+</tr>
+<tr>
+<td>Manos</td>
+<td>Guantes o manoplas <strong>criogénicos</strong></td>
+</tr>
+<tr>
+<td>Pies</td>
+<td>Botas de seguridad <strong>antiestáticas sin herrajes</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Además: formación en primeros auxilios, botiquín localizado y teléfonos sanitarios. En reparaciones especiales y emergencias, traje de intervención y <strong>equipo de respiración autónoma</strong>.</p>
+<h3 id="quemaduras-por-frio">Quemaduras por frío</h3>
+<ul>
+<li>Poca cantidad: se evapora y es como un pinchazo. Mucha: congelación seria, como una quemadura de 1.º a 3.º grado.</li>
+<li>Tocar una tubería recién enfriada (sin capa de hielo) pega la piel y la arranca. <strong>Ya a −20 °C hay quemadura</strong>: no fiarse de tubos con hielo.</li>
+<li>Ropa empapada de GNL: separarla de la piel o quitarla.</li>
+<li><strong>Tratar con agua fría (nunca caliente ni tibia)</strong>, luego como una quemadura y al hospital. Abrigar y dar <strong>bebidas calientes azucaradas, nunca alcohol</strong>.</li>
+</ul>
+<h3 id="asfixia">Asfixia</h3>
+<p>El gas no es tóxico, pero <strong>desplaza el oxígeno</strong>. No quedarse en locales cerrados ni en la nube; reducir la nube regando <strong>con el viento a la espalda</strong>. El aire tiene 21 % de O₂ (≈ 160 mmHg, 213 mbar de presión parcial).</p>
+<table>
+<thead>
+<tr>
+<th>O₂</th>
+<th>Efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&gt; 24 %</td>
+<td>Euforia, se pierde el sentido del peligro</td>
+</tr>
+<tr>
+<td>20–21 %</td>
+<td>Normal</td>
+</tr>
+<tr>
+<td>19 %</td>
+<td>Cansancio, bostezos</td>
+</tr>
+<tr>
+<td>14 %</td>
+<td>Pulso acelerado, mala coordinación</td>
+</tr>
+<tr>
+<td>10–12 %</td>
+<td>Náuseas, inconsciencia, labios azules</td>
+</tr>
+<tr>
+<td>8 %</td>
+<td>Convulsiones, coma en 40 s</td>
+</tr>
+<tr>
+<td>0 %</td>
+<td>Muerte tras 3 inspiraciones</td>
+</tr>
+</tbody>
+</table>
+<h3 id="carteles">Carteles</h3>
+<p>Obligatorio (UNE 60210, apartado 5.1) un cartel con tipo de instalación, peligros y medidas: gas inflamable, no tóxico, no corrosivo, inodoro antes del odorizador, incoloro, GNL a −130/−160 °C; peligro de asfixia, salpicaduras y quemaduras; prohibido fumar y acceder sin autorización; en fuga, espaldas al viento y no entrar en la nube; en incendio, polvo seco, acotar y avisar. La zona clasificada lleva la <strong>señal triangular amarilla «EX»</strong> con letras y borde negros.</p>
+<h2 id="tema-11-transporte-de-gnl">Tema 11 · Transporte de GNL</h2>
+<p>El transporte es la fase más regulada y con más probabilidad de accidente. Desde que la cisterna arranca en el cargadero hasta que para en la PS, la responsabilidad es <strong>solo del transportista</strong>; en la <strong>descarga se comparte</strong> con la planta (carga y descarga forman parte del transporte).</p>
+<h3 id="esquema_10">Esquema</h3>
+<ol>
+<li>Modelo español: siempre por carretera (nunca tren); plantas a más de 800 km sin problemas; el GNL se compra a una <strong>comercializadora</strong> que lo entrega por <strong>pesada</strong> en la terminal; el transporte lo contrata el cliente</li>
+<li>Legislación: RD 97/2014, ADR, Protocolo PD-12 · 3. Figuras · 4. Documentos · 5. Cargaderos · 6. Cisternas</li>
+</ol>
+<h3 id="legislacion-e-identificacion-del-gnl">Legislación e identificación del GNL</h3>
+<ul>
+<li><strong>RD 97/2014</strong>: transporte de mercancías peligrosas por carretera en España (aplica el ADR). Considera transporte también la carga, la descarga, las paradas y los estacionamientos.</li>
+<li><strong>ADR</strong>: se actualiza <strong>cada 2 años</strong>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Dato ADR</th>
+<th>GNL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Número ONU</td>
+<td><strong>1972</strong></td>
+</tr>
+<tr>
+<td>Nombre</td>
+<td>Metano líquido refrigerado / <strong>Gas natural líquido refrigerado</strong></td>
+</tr>
+<tr>
+<td>Clase</td>
+<td><strong>2</strong> (gases)</td>
+</tr>
+<tr>
+<td>Código de clasificación</td>
+<td><strong>3F</strong> (inflamable)</td>
+</tr>
+<tr>
+<td>Etiqueta</td>
+<td><strong>2.1</strong></td>
+</tr>
+<tr>
+<td>N.º de peligro</td>
+<td><strong>223</strong> (gas licuado refrigerado inflamable)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Protocolo PD-12</strong> (NGTS, Resolución de 4 de mayo de 2015): procedimientos entre cargadores, transportistas y comercializadores. <strong>Expedidor</strong>: en PS monocliente que compra en mercado, el <strong>cliente</strong>; si lo suministra una comercializadora, la <strong>comercializadora</strong>; en PS de distribución, el <strong>distribuidor</strong> titular.</li>
+</ul>
+<h3 id="figuras">Figuras</h3>
+<table>
+<thead>
+<tr>
+<th>Figura</th>
+<th>Quién es</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transportista</td>
+<td>Asume y hace el transporte con su organización</td>
+</tr>
+<tr>
+<td>Cargador / descargador</td>
+<td>Hace o responde de la carga y descarga (PD-12: titular de la terminal / de la PS)</td>
+</tr>
+<tr>
+<td>Expedidor</td>
+<td>Por cuya cuenta se envía; figura en la carta de porte</td>
+</tr>
+<tr>
+<td>Destinatario</td>
+<td>El del contrato de transporte</td>
+</tr>
+<tr>
+<td><strong>Consejero de seguridad</strong></td>
+<td>Obligatorio en toda empresa que transporte, cargue o <strong>descargue</strong> mercancías peligrosas: <strong>el titular de la PS debe nombrar uno</strong> (propio o subcontratado). Regulado por el <strong>RD 1566/1999</strong>, con examen y certificado. Asesora, vigila el cumplimiento, hace el <strong>informe anual</strong>, cuida la formación y redacta partes de accidentes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="documentos">Documentos</h3>
+<ul>
+<li><strong>Carta de porte</strong>: la <strong>emite el expedidor</strong> y la firma él o el cargador en su nombre. Papel o electrónica. Lleva mercancía y peso (UN 1972, clase 2, 3F), cargador, expedidor, operador, transportista, destinatario, origen y destino, fecha y <strong>matrículas de tractora y cisterna</strong>. Una copia por parte; se guarda <strong>al menos 1 año</strong>.</li>
+<li><strong>Albarán de entrega</strong>: acredita la descarga. Datos de cargador y destinatario, matrículas, conductor, <strong>calidad (PCS, PCI, densidades)</strong>, hora de salida, <strong>plazo de validez</strong> (p. ej. 20 h) y pesadas. Ejemplo: cargado 38.310 kg − tara 17.670 = 20.740 kg; descargado 17.680 kg → entregado <strong>20.630 kg</strong>.</li>
+<li><strong>Contrato de transporte</strong>: con el usuario o con su comercializadora. Precio en <strong>€/t sin peajes</strong>, según previsión mensual de un año, terminal y dirección de la PS; <strong>revisión semestral</strong> con IPC y gasóleo.</li>
+</ul>
+<h3 id="cargaderos">Cargaderos</h3>
+<p>Bombas criogénicas desde los depósitos de la terminal a la cisterna con flexibles o brazos; puestos en batería; se mide por <strong>diferencia de pesada en báscula</strong>. Rendimiento: <strong>\~15 cisternas al día por puesto</strong>.</p>
+<h3 id="cisternas">Cisternas</h3>
+<p>Peso máximo autorizado del conjunto: <strong>40 t</strong>. Las de GNL son las más voluminosas de la carretera porque el GNL pesa poco.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Envolvente simple + poliuretano (descarga total)</th>
+<th>Doble envolvente + vacío y perlita (granel con bomba)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Volumen</td>
+<td>Iniciales (1970): 40 m³ / 34 útiles. Actuales: <strong>56,5 m³ / 48 m³ útiles</strong> (\~28.000 Nm³)</td>
+<td>Ejemplo <strong>18,3 m³</strong>, sobre camión</td>
+</tr>
+<tr>
+<td>Llenado</td>
+<td><strong>85 %</strong> en origen (95 % al disparar VES)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Carga</td>
+<td>\~<strong>21.000 kg</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Material</td>
+<td><strong>AISI 304</strong>, 5 mm envolvente / 8 mm fondos, ø 2.340 mm</td>
+<td>Inox interior / acero al carbono exterior</td>
+</tr>
+<tr>
+<td>Diseño</td>
+<td>−196 °C; <strong>9,1 bar</strong> diseño y prueba</td>
+<td>−196 °C</td>
+</tr>
+<tr>
+<td>P máx servicio</td>
+<td><strong>7 bar</strong></td>
+<td><strong>3 bar</strong></td>
+</tr>
+<tr>
+<td>VES</td>
+<td><strong>Dos a 7 bar y una a 9 bar</strong> (con válvula de 3 vías)</td>
+<td>Según código</td>
+</tr>
+<tr>
+<td>Otros</td>
+<td>Semirremolque, 1 compartimento, <strong>7 rompeolas</strong>, tara \~11 t, <strong>130 mm de poliuretano</strong>, 2,6 × 14 m, armario de válvulas central</td>
+<td>Tara \~5,1 t, armario trasero</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Seguridades de la cisterna</strong>: VES, toma de tierra, manómetro, nivel y peso, <strong>punto alto al 85 %</strong>, venteo manual y automático en vuelco, <strong>bloqueo de frenos durante la descarga</strong> y <strong>pulsador neumático de emergencia que cierra las tres válvulas de fondo</strong>.</li>
+<li><strong>Válvulas</strong>: tres de fondo (V1 descarga de GNL, V2 GNL al RD, V3 retorno de gas del RD) y tres manuales (V4–V6), más VP de equilibrado de presiones.</li>
+<li><strong>Identificación</strong>: <strong>2 paneles naranja</strong> (≥ 30 × 40 cm) delante y detrás con <strong>223</strong> arriba y <strong>1972</strong> abajo; <strong>3 etiquetas 2.1</strong> (dos laterales y trasera).</li>
+<li><strong>Documentación a bordo</strong>: autorización especial del conductor, <strong>certificado ADR de la cisterna</strong>, formación ATEX, documentación de circulación.</li>
+<li><strong>Dotación mínima</strong>: extintores, <strong>calzos</strong>, linterna antideflagrante, conos o triángulos, herramientas antichispa, <strong>explosímetro</strong>, ropa reflectante y EPI.</li>
+</ul>
+<h2 id="tema-12-medioambiente">Tema 12 · Medioambiente</h2>
+<p>Las PS mejoran el medioambiente (el gas natural es el fósil que <strong>menos CO₂</strong> emite por unidad de energía) y su impacto es bajo. Lo que el operador debe minimizar son los <strong>venteos y purgas</strong>, sobre todo en las descargas.</p>
+<h3 id="esquema_11">Esquema</h3>
+<ol>
+<li>Por qué se construye una PS: sustituir fuel, gasóleo o carbón; equipos que solo van con gas (hornos, GNC/GNL para vehículos); nueva zona de distribución</li>
+<li>Entradas: <strong>GNL, THT, agua de servicio y agua de reposición</strong> del circuito de agua caliente</li>
+<li>Salidas posibles: derrames de GNL o THT, fugas, <strong>venteos y purgas voluntarios</strong>, humos de calderas, sólidos con THT</li>
+<li>Efluentes gaseosos · 5. Líquidos · 6. Residuos sólidos · 7. Ruido</li>
+</ol>
+<h3 id="lo-clave">Lo clave</h3>
+<ul>
+<li><strong>Fugas</strong>: menos que en otras instalaciones porque casi todo es soldado (SW o BW) y en gas frío se delatan por el hielo.</li>
+<li><strong>VES de los depósitos</strong>: minimizar con reguladores del PPR que funcionen, mandando la fase gas a consumo (economizador o manual) cuando hay poco consumo, y comprobando que las VES cierran (si no, pasar a las de reserva y reparar).</li>
+<li><strong>Purgas de descarga</strong>: empezar a purgar cuando en tuberías, flexibles y RD <strong>ya no quede líquido</strong>, solo gas.</li>
+<li><strong>Lo que más gas suelta</strong>: despresurizar la cisterna para el regreso (descarga con RD). Cisterna de 56,5 m³ de 3,5 a 1 bar: (3,5 − 1) × 56,5 ≈ <strong>150 Nm³</strong>, un <strong>0,5 %</strong> de lo descargado. Prácticamente inevitable. Con <strong>bomba</strong> se purga mucho menos (solo la manguera pequeña).</li>
+<li><strong>Humos de calderas</strong>: analizarlos y ajustarlos en la puesta en marcha y en cada mantenimiento.</li>
+<li><strong>Líquidos</strong>: ninguno en servicio normal. El THT se trasvasa en <strong>circuito cerrado con N₂</strong> a baja presión; si se vierte, seguir su ficha de seguridad.</li>
+<li><strong>Residuos sólidos</strong> (trapos y filtros con THT, en trazas): poca cantidad, en <strong>contenedores metálicos herméticos</strong> fuera de la zona clasificada; transporte con cabina separada por mampara y caja ventilada; neutralizante de olor; el gestor recibe la ficha del THT, firma, no abre los envases y devuelve <strong>certificado</strong> (depósito de seguridad o incineración).</li>
+<li><strong>Ruido</strong>: solo las purgas finales de la descarga; con venteo único en zona segura y las distancias, casi inaudible.</li>
+</ul>
+<h2 id="tema-13-no-conformidades">Tema 13 · No conformidades</h2>
+<p>Son los defectos imputables al técnico por incumplir las especificaciones de Sedigas o la reglamentación. Se clasifican en <strong>Críticos (C)</strong>, <strong>Principales (P)</strong> y <strong>Secundarios (S)</strong>, y el Procedimiento <strong>PG-01</strong> sanciona según la gravedad. <strong>Todo lo de seguridad y emergencias es crítico.</strong></p>
+<p>Código: <strong>bloque-gravedad-número</strong>. Bloques: 1 montaje y pruebas · 2 servicio y mantenimiento · 3 descarga · 4 seguridad y emergencias · 5 documentación.</p>
+<h3 id="criticos-c">Críticos (C)</h3>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Defecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-C-01</td>
+<td>Equipos <strong>no criogénicos</strong> en el circuito criogénico</td>
+</tr>
+<tr>
+<td>1-C-02</td>
+<td>Soldaduras criogénicas <strong>sin ensayos no destructivos</strong></td>
+</tr>
+<tr>
+<td>1-C-03</td>
+<td>No cumplir el procedimiento ni las distancias y protecciones con otros servicios</td>
+</tr>
+<tr>
+<td>1-C-04</td>
+<td>No hacer la prueba de resistencia y estanquidad, o <strong>validar resultados no alcanzados</strong></td>
+</tr>
+<tr>
+<td>2-C-01</td>
+<td>Inflamables dentro de las distancias de seguridad, <strong>aunque sea temporal</strong></td>
+</tr>
+<tr>
+<td>2-C-02</td>
+<td>Manipulación o mantenimiento por <strong>personal no experto o no autorizado</strong></td>
+</tr>
+<tr>
+<td>2-C-03</td>
+<td>Trabajar <strong>sin las herramientas adecuadas ni EPI</strong></td>
+</tr>
+<tr>
+<td>3-C-01</td>
+<td>Descargar o tocar zona criogénica <strong>sin guantes o sin visera</strong></td>
+</tr>
+<tr>
+<td>3-C-02</td>
+<td>Descargar <strong>sin la cisterna a tierra</strong></td>
+</tr>
+<tr>
+<td>3-C-03</td>
+<td>Descargar con un nivel que <strong>no deja descargar la cisterna entera</strong></td>
+</tr>
+<tr>
+<td>3-C-04</td>
+<td>Descargar con el nivel dudoso <strong>sin usar la válvula de punto alto abierta</strong></td>
+</tr>
+<tr>
+<td>3-C-05</td>
+<td>Descargar con <strong>tráfico o focos de ignición</strong> en la zona de seguridad</td>
+</tr>
+<tr>
+<td>3-C-06</td>
+<td>Que la cisterna se vaya <strong>con GNL o a más presión de la autorizada</strong></td>
+</tr>
+<tr>
+<td>4-C-1</td>
+<td>Desconocer el <strong>Plan de Emergencia</strong> o no actuar en lo que le toca</td>
+</tr>
+<tr>
+<td>4-C-2</td>
+<td><strong>No avisar o no activar</strong> el Plan cuando toca (fuga o derrame importante, incendio, THT, accidente grave)</td>
+</tr>
+<tr>
+<td>4-C-3</td>
+<td>Exponer al personal a riesgos innecesarios</td>
+</tr>
+<tr>
+<td>4-C-4</td>
+<td><strong>Echar agua a un derrame de GNL sin ignición</strong></td>
+</tr>
+<tr>
+<td>4-C-5</td>
+<td>No usar guantes criogénicos, visera, detectores, herramientas adecuadas</td>
+</tr>
+<tr>
+<td>4-C-6</td>
+<td>No tener extintores, carteles y señalización reglamentarios</td>
+</tr>
+<tr>
+<td>4-C-7 / 4-C-8</td>
+<td>No seguir los protocolos de <strong>acceso</strong> / de <strong>permisos de trabajo</strong></td>
+</tr>
+<tr>
+<td>5-C-1</td>
+<td>Desatender lo anotado como defectuoso en las <strong>Hojas de Control</strong></td>
+</tr>
+<tr>
+<td>5-C-2</td>
+<td><strong>Falsear datos</strong> en partes o documentos</td>
+</tr>
+</tbody>
+</table>
+<p>Ojo con el 4-C-4: el tema 10 dice que un derrame <strong>pequeño</strong> sin fuego sí se puede regar (para evaporar y diluir la nube). Si en el examen sale «echar agua a un derrame de GNL sin ignición» como no conformidad, la respuesta es <strong>crítica</strong>.</p>
+<h3 id="principales-p">Principales (P)</h3>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Defecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-P-1</td>
+<td>Materiales no aprobados o que no coinciden con los certificados</td>
+</tr>
+<tr>
+<td>1-P-2</td>
+<td>Soldaduras de inox por <strong>personal no homologado</strong></td>
+</tr>
+<tr>
+<td>1-P-3</td>
+<td>Hormigón con resistencia menor de la especificada</td>
+</tr>
+<tr>
+<td>1-P-4</td>
+<td>Personal en obra con certificación caducada o sancionado</td>
+</tr>
+<tr>
+<td>1-P-5</td>
+<td>Puesta en marcha con personal no experto o autorizado</td>
+</tr>
+<tr>
+<td>2-P-1</td>
+<td>Equipos de medida <strong>sin calibrar</strong> o fuera de validez</td>
+</tr>
+<tr>
+<td>2-P-2</td>
+<td>Flexibles de descarga <strong>sin tapones</strong></td>
+</tr>
+<tr>
+<td>2-P-3</td>
+<td><strong>Extintores caducados</strong> en servicio</td>
+</tr>
+<tr>
+<td>2-P-4</td>
+<td>Atender correctivos fuera del plazo del contrato</td>
+</tr>
+<tr>
+<td>2-P-5</td>
+<td>No actuar sabiendo que falla la telegestión</td>
+</tr>
+<tr>
+<td>3-P-1</td>
+<td>Descargar <strong>sin calzos ni freno de mano</strong></td>
+</tr>
+<tr>
+<td>3-P-2</td>
+<td>Descarga por personal no experto o autorizado</td>
+</tr>
+<tr>
+<td>3-P-3</td>
+<td>Descarga <strong>solo por el conductor</strong>, sin el técnico de la propiedad</td>
+</tr>
+<tr>
+<td>3-P-4</td>
+<td>Purgado incompleto de flexibles, RD y circuitos (salpicaduras, salidas de gas)</td>
+</tr>
+<tr>
+<td>3-P-5</td>
+<td>Terminar sin comprobar tapones, válvulas cerradas y ausencia de fugas <strong>antes de arrancar la cisterna</strong></td>
+</tr>
+<tr>
+<td>5-P-1 / 5-P-2</td>
+<td>No archivar los justificantes de <strong>mantenimientos</strong> / de <strong>revisiones periódicas</strong></td>
+</tr>
+<tr>
+<td>5-P-3</td>
+<td>No firmar o visar los partes que le corresponden</td>
+</tr>
+<tr>
+<td>5-P-4</td>
+<td><strong>Retrasar</strong> los controles de equipos a presión o las revisiones periódicas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="secundarios-s">Secundarios (S)</h3>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Defecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-S-1</td>
+<td>Falta de control y limpieza en el montaje</td>
+</tr>
+<tr>
+<td>2-S-1</td>
+<td>Faltan carteles de peligro y seguridad</td>
+</tr>
+<tr>
+<td>2-S-2</td>
+<td>Usar el <strong>cubeto como almacén</strong></td>
+</tr>
+<tr>
+<td>2-S-3</td>
+<td>Depósito inactivo <strong>más de un año sin inertizar</strong></td>
+</tr>
+<tr>
+<td>3-S-1</td>
+<td>No entregar o no rellenar la <strong>carta de porte o el albarán</strong></td>
+</tr>
+<tr>
+<td>3-S-2</td>
+<td>No pedir la documentación de la cisterna o del conductor</td>
+</tr>
+<tr>
+<td>5-S-1</td>
+<td>No tener centralizada la documentación de las plantas</td>
+</tr>
+</tbody>
+</table>
+<p>Trampas típicas: <strong>sin calzos = principal</strong>, pero <strong>sin tierra = crítico</strong>. <strong>Sin tapones = principal</strong>. <strong>No tener extintores = crítico (4-C-6)</strong>, pero <strong>tenerlos caducados = principal (2-P-3)</strong>. <strong>Sin carteles = secundario (2-S-1)</strong> en servicio, pero en el bloque de seguridad aparece como crítico (4-C-6).</p>
+<h2 id="fotos-con-sus-nombres">Fotos con sus nombres</h2>
+<p>Para la parte visual. Pulsa «Ocultar nombres» para taparlos y ponerte a prueba; pulsa una celda para destaparla.</p>
+<h3 id="como-nombrar-las-valvulas">Cómo nombrar las válvulas</h3>
+<p>El curso acepta varios nombres para la misma válvula. Basta con combinar una opción de cada columna.</p>
+<table>
+<thead>
+<tr>
+<th>Sigla</th>
+<th>Palabra 1</th>
+<th>Función</th>
+<th>Equipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VDG</strong></td>
+<td>Válvula / Llave</td>
+<td>de salida / de fase gas</td>
+<td>del regasificador / vaporizador de descarga</td>
+</tr>
+<tr>
+<td><strong>VDL</strong></td>
+<td>Válvula / Llave</td>
+<td>de entrada / de fase líquida</td>
+<td>del regasificador / vaporizador de descarga</td>
+</tr>
+<tr>
+<td><strong>VG</strong></td>
+<td>Válvula / Llave</td>
+<td>de carga / de llenado</td>
+<td>superior / fase gas, del depósito</td>
+</tr>
+<tr>
+<td><strong>VL</strong></td>
+<td>Válvula / Llave</td>
+<td>de carga / de llenado</td>
+<td>inferior / fase líquida, del depósito</td>
+</tr>
+</tbody>
+</table>
+<p>Los mismos nombres valen para las válvulas del PPR (entrada VEP = fase líquida, salida VSP = fase gas) y de los regasificadores a consumo, cambiando el equipo del final. VL es la mixta manual + antirretorno.</p>
+<p class="pic"><img src="img/nombres1.jpg" alt=""></p>
+
+<p class="pic"><img src="img/nombres2.jpg" alt=""></p>
+
+<h3 id="frontal-del-deposito-diapositiva-9">Frontal del depósito (diapositiva 9)</h3>
+<table class="vis">
+<thead>
+<tr>
+<th>N.º</th>
+<th>Elemento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Válvula de salida del PPR (VSP)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Válvula de tres vías (V3)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Válvulas de seguridad del depósito (VES, 2 + 2)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Válvula de alivio o venteo (VA)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Válvula de entrada al PPR (VEP)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Válvula de seguridad de línea (Vs)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Regulador del PPR (RP)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Punto alto (Vpa, 95 %)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Válvula de carga inferior (VL, fase líquida)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Válvula de carga superior (VG, fase gas, ducha)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Válvula de salida a consumo (VC)</td>
+</tr>
+</tbody>
+</table>
+<p class="pic"><img src="img/dia9.jpg" alt=""></p>
+
+<h3 id="conjunto-de-seguridad-y-control-del-deposito-diapositivas-7-y-8">Conjunto de seguridad y control del depósito (diapositivas 7 y 8)</h3>
+<table class="vis">
+<thead>
+<tr>
+<th>N.º (dia. 7)</th>
+<th>Elemento</th>
+<th>N.º (dia. 8)</th>
+<th>Elemento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Válvula de alivio (VA)</td>
+<td>1</td>
+<td>Válvula de carga superior (VG)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Válvula de seguridad (VES)</td>
+<td>2</td>
+<td>Válvula de carga inferior (VL)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Nivel (presión diferencial)</td>
+<td>3</td>
+<td>Válvula de seguridad (VES)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Manómetro de presión</td>
+<td>4</td>
+<td>Válvula de tres vías</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Válvula de by-pass del nivel (Vb, manifold)</td>
+<td>5</td>
+<td>Nivel</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Válvula de tres vías</td>
+<td>6</td>
+<td>Manómetro de presión</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>7</td>
+<td>Transmisor de presión</td>
+</tr>
+</tbody>
+</table>
+<p>Pista: las cuatro VES van en fila sobre la válvula de tres vías (con volante rojo); el nivel es el reloj grande (escala 0–100 %) y el manómetro el pequeño.</p>
+<p class="pic"><img src="img/dia7.jpg" alt=""></p>
+
+<p class="pic"><img src="img/dia8.jpg" alt=""></p>
+
+<h3 id="conjunto-de-descarga-diapositiva-5">Conjunto de descarga (diapositiva 5)</h3>
+<table class="vis">
+<thead>
+<tr>
+<th>N.º</th>
+<th>Elemento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Válvula de by-pass (VB, fase gas, 1")</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Válvula de descarga (VD, 3")</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Válvula de entrada al RD (VDL)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Válvula de salida del RD (VDG)</td>
+</tr>
+</tbody>
+</table>
+<p>Las cuatro van fijas en el límite del cubeto, con las mangueras criogénicas de inox corrugado y malla conectadas de forma permanente.</p>
+<p class="pic"><img src="img/dia5.jpg" alt=""></p>
+
+<p class="pic"><img src="img/descarga.jpg" alt=""></p>
+
+<h3 id="regasificadores-atmosfericos-diapositiva-11">Regasificadores atmosféricos (diapositiva 11)</h3>
+<table class="vis">
+<thead>
+<tr>
+<th>N.º</th>
+<th>Elemento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Válvula neumática de alternancia del regasificador</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Válvula de seguridad (de línea)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Válvula manual de entrada al regasificador</td>
+</tr>
+</tbody>
+</table>
+<p>El hielo sobre tubos y válvulas indica que ese regasificador está en servicio.</p>
+<p class="pic"><img src="img/dia11.jpg" alt=""></p>
+
+<h3 id="circuito-de-agua-caliente-diapositiva-12">Circuito de agua caliente (diapositiva 12)</h3>
+<table class="vis">
+<thead>
+<tr>
+<th>N.º</th>
+<th>Elemento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Válvula de entrada</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Filtro</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bomba de circulación (dos líneas: una en reserva)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Válvula antirretorno</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Válvula de salida</td>
+</tr>
+</tbody>
+</table>
+<p class="pic"><img src="img/dia12.jpg" alt=""></p>
+
+<h3 id="regulacion-de-salida-y-vcf">Regulación de salida y VCF</h3>
+<table class="vis">
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Dónde está</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Válvula de entrada</td>
+<td>Primera de la línea, tras el colector de entrada</td>
+</tr>
+<tr>
+<td>Filtro y manómetro diferencial</td>
+<td>Justo después de la entrada; el diferencial indica si el filtro se ensucia</td>
+</tr>
+<tr>
+<td>Manómetro de presión</td>
+<td>Entrada de la línea</td>
+</tr>
+<tr>
+<td>VIS de máxima</td>
+<td>Antes del regulador (o incorporada a él); corta si sube la presión de salida</td>
+</tr>
+<tr>
+<td>Regulador</td>
+<td>Cuerpo grande con cúpula de membrana</td>
+</tr>
+<tr>
+<td>VES</td>
+<td>En la salida, alivia a la atmósfera</td>
+</tr>
+<tr>
+<td>Válvula de salida</td>
+<td>Final de la línea</td>
+</tr>
+<tr>
+<td><strong>Válvula de frío (VCF)</strong></td>
+<td><strong>Antes de la regulación</strong>, a la salida de los regasificadores; con actuador y sensor de temperatura</td>
+</tr>
+</tbody>
+</table>
+<p>La VCF protege lo que va en acero al carbono (regulación, odorización) y la red: acero en industria, casi siempre polietileno en distribución.</p>
+<p class="pic"><img src="img/regulacion.jpg" alt=""></p>
+
+<p class="pic"><img src="img/vcf.jpg" alt=""></p>
+
+<h3 id="otras-instalaciones-diapositivas-74-y-75">Otras instalaciones (diapositivas 74 y 75)</h3>
+<ul>
+<li><strong>Contraincendios</strong>: extintores e irrigación sobre depósito. <strong>Eléctrica</strong>: puesta a tierra, zonas ATEX. <strong>Seguridad</strong>: vallado, telecontrol, cámaras. <strong>Obra civil</strong>: cubetos y pantallas.</li>
+<li>Datos de la diapositiva 75: tierra <strong>&lt; 20 Ω</strong>; varios depósitos por cubeto <strong>≤ 270 m³</strong>; cubeto–depósito <strong>≥ 1,5 m</strong>; entre depósitos del mismo cubeto <strong>≥ 2 m</strong>; cubetos no adyacentes <strong>≥ 4 m</strong>; pantalla si el punto de fuga está <strong>por encima del muro y a menos de 5 m</strong>; plantas <strong>&gt; 270 m³</strong> con válvula criogénica telemandada fuera del cubeto (telecomandada desde el centro de control si es no presencial).</li>
+</ul></main><div id="zoom"><img alt=""></div>
+<script>
+const hd=document.querySelector('header.top');const setH=()=>document.documentElement.style.setProperty('--hh',hd.offsetHeight+'px');setH();addEventListener('resize',setH);
+const z=document.getElementById('zoom'),zi=z.querySelector('img');
+document.querySelectorAll('main img').forEach(i=>i.addEventListener('click',()=>{zi.src=i.src;z.style.display='flex'}));
+z.addEventListener('click',()=>z.style.display='none');
+document.addEventListener('keydown',e=>{if(e.key==='Escape')z.style.display='none'});
+document.querySelectorAll('main table').forEach(t=>{const w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)});
+const btn=document.getElementById('modo');let on=false;
+btn.addEventListener('click',()=>{on=!on;document.querySelectorAll('table.vis').forEach(t=>t.classList.toggle('hide',on));btn.textContent=on?'Mostrar nombres':'Ocultar nombres';if(on)document.getElementById('fotos-con-sus-nombres').scrollIntoView()});
+document.querySelectorAll('table.vis td:nth-child(2n)').forEach(c=>c.addEventListener('click',()=>{c.style.filter='none'}));
+</script></body></html>

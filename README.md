@@ -64,3 +64,7 @@ En `casos-propios.js` y la carpeta `propios/` hay casos de destreza visual con d
 ## Instalar como app
 
 La web es una app instalable (PWA): `manifest.json`, iconos `icon-*.png` y `sw.js`, que guarda todo para usarla sin conexión. En Android: Chrome → menú ⋮ → «Instalar aplicación». En iPhone: Safari → Compartir → «Añadir a pantalla de inicio». Si cambias archivos, sube la versión `V` de `sw.js` para que los móviles descarguen lo nuevo.
+
+## GNL dentro de la misma app
+
+En `gnl/` está la app de Técnico de Plantas Satélite de GNL (copiada del repositorio `Sedigas-GNL`). El selector «Premium | GNL» de la cabecera pasa de una a otra sin salir de la app instalada. El progreso de cada una se guarda por separado.

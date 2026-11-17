@@ -134,3 +134,10 @@ textarea:focus{outline:none;border-color:var(--azul);box-shadow:0 0 0 4px var(--
   .stat{padding:8px 12px}.stat strong{font-size:1.25rem}
 }
 @media print{.top{position:static;backdrop-filter:none}body{background:#fff;color:#000}}
+
+/* Selector Premium / GNL */
+.cambio{display:flex;background:var(--card2);border:1px solid var(--borde);border-radius:99px;padding:3px;gap:2px;flex:none}
+.cambio a{padding:5px 13px;border-radius:99px;font-size:.84rem;font-weight:650;color:var(--gris);text-decoration:none;white-space:nowrap}
+.cambio a.on{background:var(--azul);color:#fff;box-shadow:0 2px 6px color-mix(in srgb,var(--azul) 35%,transparent)}
+@media (prefers-color-scheme:dark){.cambio a.on{color:#0c0f17}}
+@media (max-width:520px){.cambio a{padding:4px 10px;font-size:.78rem}.top{gap:8px}.progreso{display:none}}
