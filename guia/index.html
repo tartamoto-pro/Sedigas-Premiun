@@ -33,7 +33,14 @@ p.pic img{max-width:100%;max-height:340px;cursor:zoom-in;background:#fff}
 @media (prefers-color-scheme:dark){.toggle{color:#0c0f17}}
 @media (max-width:600px){main>h1{font-size:1.6rem}h2{font-size:1.2rem}nav{padding:8px 14px}.toggle{font-size:12.5px;padding:6px 11px}.cases{grid-template-columns:1fr}.case img{height:220px}td img{width:110px}}
 @media print{header,nav,.toggle{display:none}body{background:#fff}main{max-width:none;padding:0}h2{break-before:page}.case{break-inside:avoid;box-shadow:none}.case.hide-ans p{filter:none}}
-</style></head>
+</style><link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sedigas">
+<link rel="apple-touch-icon" href="../icon-180.png">
+<link rel="icon" type="image/png" href="../favicon.png">
+</head>
 <body><header class="top"><a class="brand" href="../" style="text-decoration:none">Destreza visual <span>Guía de estudio</span></a><button class="toggle" id="modo">Ocultar respuestas</button></header>
 <nav><a href="#cómo-es-el-examen-premium">Cómo es el examen Premium</a><a href="#la-regla-de-oro-mira-primero-qué-aviso-es">La regla de oro: mira
 primero qué aviso es</a><a href="#novedades-que-cambian-respuestas-une-606702023-y-esquemas-2022">Novedades
@@ -844,4 +851,5 @@ document.querySelectorAll('main table').forEach(t=>{const w=document.createEleme
 const btn=document.getElementById('modo');let on=false;
 btn.addEventListener('click',()=>{on=!on;document.querySelectorAll('.case').forEach(c=>c.classList.toggle('hide-ans',on));btn.textContent=on?'Mostrar respuestas':'Ocultar respuestas'});
 document.querySelectorAll('.case').forEach(c=>c.addEventListener('click',e=>{if(c.classList.contains('hide-ans')&&e.target.tagName!=='IMG'){c.classList.remove('hide-ans')}}));
-</script></body></html>
+</script><script>if("serviceWorker" in navigator && /^https?:$/.test(location.protocol)){addEventListener("load",()=>navigator.serviceWorker.register("../sw.js").catch(()=>{}))}</script>
+</body></html>

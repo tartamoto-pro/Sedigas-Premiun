@@ -49,6 +49,13 @@ th{background:var(--card2);font-size:.75rem;text-transform:uppercase;letter-spac
 .indice a small{display:block;font-weight:400;color:var(--gris);font-size:.78rem}
 @media print{.fallos,.hoja{break-inside:avoid}.indice{display:none}}
 </style>
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sedigas">
+<link rel="apple-touch-icon" href="../icon-180.png">
+<link rel="icon" type="image/png" href="../favicon.png">
 </head>
 <body>
 <header class="top">
@@ -454,5 +461,6 @@ function barra(f){const fs=grupo[f]||[f];const ids=fs[0];const l=fs.flatMap(x=>[
 function limpiar(f){document.querySelectorAll('ol[data-f="'+f+'"] input').forEach((cb,i)=>{cb.checked=false;cb.closest('li').classList.remove('hecho');delete st[f+i]});save();barra(f)}
 document.querySelectorAll('ol.pasos').forEach(ol=>{const f=ol.dataset.f;ol.querySelectorAll(':scope>li').forEach((li,i)=>{const cb=li.querySelector('input');const id=f+i;cb.checked=!!st[id];li.classList.toggle('hecho',cb.checked);cb.addEventListener('change',()=>{st[id]=cb.checked;li.classList.toggle('hecho',cb.checked);save();barra(f)})});barra(f)});
 </script>
+<script>if("serviceWorker" in navigator && /^https?:$/.test(location.protocol)){addEventListener("load",()=>navigator.serviceWorker.register("../sw.js").catch(()=>{}))}</script>
 </body>
 </html>

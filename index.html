@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Destreza visual · Recertificación Sedigas</title>
 <link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sedigas">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 <header class="top">
@@ -19,5 +26,6 @@
 <script src="preguntas.js"></script>
 <script src="casos-propios.js"></script>
 <script src="app.js"></script>
+<script>if("serviceWorker" in navigator && /^https?:$/.test(location.protocol)){addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}))}</script>
 </body>
 </html>

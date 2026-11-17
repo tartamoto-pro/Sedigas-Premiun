@@ -60,3 +60,7 @@ En `practico/` hay fichas paso a paso (con casillas que se guardan en el navegad
 ## Casos propios
 
 En `casos-propios.js` y la carpeta `propios/` hay casos de destreza visual con dibujos propios a partir de las especificaciones Sedigas Rev. 02 (2025). Se practican desde su propio apartado en la portada y no se mezclan con el banco de preguntas de examen (`preguntas.js`), ni con el simulacro ni con los fallos.
+
+## Instalar como app
+
+La web es una app instalable (PWA): `manifest.json`, iconos `icon-*.png` y `sw.js`, que guarda todo para usarla sin conexión. En Android: Chrome → menú ⋮ → «Instalar aplicación». En iPhone: Safari → Compartir → «Añadir a pantalla de inicio». Si cambias archivos, sube la versión `V` de `sw.js` para que los móviles descarguen lo nuevo.
