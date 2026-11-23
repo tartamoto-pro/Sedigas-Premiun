@@ -1525,5 +1525,120 @@ window.PREGUNTAS = [
   "pregunta": "En una REAPERTURA de instalación (IRI) SIN CERTIFICADO nos encontramos la instalación del dibujo (contador a 10 cm de la caldera). Evalúe la distancia marcada para este tipo de reapertura:",
   "solucion": "Explicación: en este tipo de avisos no se tienen en cuenta las distancias. Actuación: hacer la reapertura previa prueba de estanqueidad y dar gas (Parte 4 de OD, apartado 3). En un alta sí sería defecto: un contador debe estar a 20 cm como mínimo de un aparato de calefacción o ACS.",
   "nueva": true
+ },
+ {
+  "id": "N40",
+  "bloque": "PAD-1",
+  "etiqueta": "PAD-1",
+  "img": "img/078.jpg",
+  "tipo": "CI",
+  "opciones": [
+   "Correcto",
+   "Incorrecto"
+  ],
+  "correcta": "Incorrecto",
+  "pregunta": "En una puesta en servicio, el conducto de este aparato atmosférico de tiro natural sobresale 5 cm del muro que atraviesa (sin contar el deflector). ¿Es correcto?",
+  "solucion": "Incorrecto. El extremo del conducto (sin contar el deflector) debe quedar como mínimo a 10 cm del muro o pared que atraviesa (Tema 5, apartado 5.1.2).",
+  "nueva": true
+ },
+ {
+  "id": "N41",
+  "bloque": "PAD-1",
+  "etiqueta": "PAD-1",
+  "img": "img/079.jpg",
+  "tipo": "OP",
+  "pregunta": "Salida de productos de la combustión a un patio de ventilación, con una pared enfrente. ¿Qué distancia mínima debe haber desde el extremo del conducto a la pared frontal?",
+  "solucion": "Con carácter general, 2 m. Si en esa pared enfrentada hay una ventana y la diferencia de altura entre la generatriz del conducto y la ventana es de menos de 40 cm, 3 m. Con deflectores a 45° indicados por el fabricante se pueden reducir a 1,5 m y 2,2 m respectivamente (cambios UNE 60670:2023, sept. 2025).",
+  "nueva": true,
+  "opciones": null,
+  "correcta": null
+ },
+ {
+  "id": "N42",
+  "bloque": "PAD-1",
+  "etiqueta": "PAD-1",
+  "img": "img/080.jpg",
+  "tipo": "OP",
+  "pregunta": "Salida de productos de la combustión a un patio de ventilación junto a una pared lateral. ¿Qué distancia mínima debe haber desde la generatriz del conducto a la pared lateral?",
+  "solucion": "Con carácter general, 30 cm. Si hay una ventana a menos de 3 m del extremo del conducto y la diferencia de altura con la generatriz es de menos de 40 cm, 1 m. Con deflectores a 45° indicados por el fabricante se reducen a la mitad: 15 cm y 50 cm (cambios UNE 60670:2023, sept. 2025).",
+  "nueva": true,
+  "opciones": null,
+  "correcta": null
+ },
+ {
+  "id": "N43",
+  "bloque": "PAD-1",
+  "etiqueta": "PAD-1",
+  "img": "img/081.jpg",
+  "tipo": "CI",
+  "opciones": [
+   "Correcto",
+   "Incorrecto"
+  ],
+  "correcta": "Incorrecto",
+  "pregunta": "En una puesta en servicio, la tubería de gas atraviesa una cámara cerrada sin ninguna protección, tal como muestra el dibujo. ¿Es correcto?",
+  "solucion": "Incorrecto. Cuando la tubería discurre por cámaras cerradas, falsos techos, altillos o huecos, debe ir alojada en una vaina o conducto para su ventilación, con los extremos comunicados con el exterior del recinto o una zona ventilada. Además, ahí no se admiten uniones mecánicas (Tema 3).",
+  "nueva": true
+ },
+ {
+  "id": "N44",
+  "bloque": "PAD-1",
+  "etiqueta": "PAD-1",
+  "img": "img/082.jpg",
+  "tipo": "CI",
+  "opciones": [
+   "Correcto",
+   "Incorrecto"
+  ],
+  "correcta": "Incorrecto",
+  "pregunta": "En una puesta en servicio, una tubería de cobre sube por una fachada accesible protegida con una vaina de plástico. ¿Es correcta la protección?",
+  "solucion": "Incorrecto. Las tuberías que no son de acero en fachadas exteriores accesibles necesitan protección mecánica hasta 1,80 m del suelo como mínimo, con vaina de acero de 1,5 mm de espesor o de otro material de resistencia mecánica similar. El plástico no vale como protección mecánica (Tema 3).",
+  "nueva": true
+ },
+ {
+  "id": "N45",
+  "bloque": "PAD-1",
+  "etiqueta": "PAD-1",
+  "img": "img/083.jpg",
+  "tipo": "CI",
+  "opciones": [
+   "Correcto",
+   "Incorrecto"
+  ],
+  "correcta": "Incorrecto",
+  "pregunta": "Valore las ventilaciones de este recinto de centralización de contadores en planta baja (entrada y salida de aire de 150 cm² cada una).",
+  "solucion": "Incorrecto. En recintos de centralización de contadores, la entrada y la salida de aire deben tener cada una S = 10 × A (A = superficie en planta en m²) y como mínimo 200 cm², en paredes opuestas y separadas 2 m en vertical. 150 cm² no llega al mínimo (Tema 3).",
+  "nueva": true
+ },
+ {
+  "id": "N46",
+  "bloque": "PAD-2",
+  "etiqueta": "PAD-2",
+  "img": "img/084.jpg",
+  "tipo": "AN",
+  "opciones": [
+   "Sin defecto",
+   "Anomalía secundaria",
+   "Anomalía principal"
+  ],
+  "correcta": "Anomalía secundaria",
+  "pregunta": "En una inspección periódica de un edificio ya construido, una cocina tipo A (16 kW o menos) está en un local de 6 m³ con la ventilación normal de 125 cm², sin aumentar. ¿Tiene alguna anomalía?",
+  "solucion": "Anomalía secundaria. Con 16 kW o menos el volumen mínimo es 8 m³. 6 m³ es el 75 % del necesario: en edificios ya construidos se admite si se incrementa un 50 % la superficie de ventilación. Por debajo del 75 % haría falta además detección de CO con corte de gas (Tema 5, apartado 2.2).",
+  "nueva": true
+ },
+ {
+  "id": "N47",
+  "bloque": "AU",
+  "etiqueta": "AU-IR",
+  "img": "img/085.jpg",
+  "tipo": "AC",
+  "opciones": [
+   "Correcta",
+   "Incorrecta"
+  ],
+  "correcta": "Incorrecta",
+  "pregunta": "En la actuación de un aviso de SIN GAS en una IRI, la campana extractora de la cocina está conectada a la misma chimenea que el calentador tipo B de tiro natural. Según la operativa de urgencias, la instalación es:",
+  "solucion": "Incorrecta. Una campana extractora o extractor mecánico conectado a la misma chimenea que un aparato tipo B de tiro natural es una situación de riesgo. Actuación: cerrar, precintar y bloquear (si se puede) la llave que aísle el aparato afectado e informar al cliente (Parte 2 de AU).",
+  "nueva": true
  }
 ];
