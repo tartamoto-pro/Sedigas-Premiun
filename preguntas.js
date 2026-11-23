@@ -1468,5 +1468,62 @@ window.PREGUNTAS = [
    "Anomalía principal"
   ],
   "correcta": "Anomalía principal"
+ },
+ {
+  "id": "N36",
+  "bloque": "AU",
+  "etiqueta": "AU-IR",
+  "img": "img/074.jpg",
+  "tipo": "AC",
+  "opciones": [
+   "Correcta",
+   "Incorrecta"
+  ],
+  "correcta": "Correcta",
+  "pregunta": "En la actuación de un aviso de FALTA DE PRESIÓN en una IRI nos encontramos la instalación del dibujo (aparato tipo B, local de 9 m³ sin ventilación). Según la operativa de urgencias, la instalación es:",
+  "solucion": "Explicación: le falta ventilación, pero al tener el local más de 8 m³ no es un defecto a considerar en este aviso (Parte 2 de AU, apartado 6.4). Actuación: hacer la prueba de estanqueidad y dar gas (apartado 6.3). Con 8 m³ o menos sí sería defecto a considerar.",
+  "nueva": true
+ },
+ {
+  "id": "N37",
+  "bloque": "OD",
+  "etiqueta": "OD",
+  "img": "img/075.jpg",
+  "tipo": "OP",
+  "pregunta": "Indique el nombre y la función del dispositivo 1 señalado en la fotografía.",
+  "solucion": "Nombre: regulador de abonado (también vale regulador de cliente o de usuario). Función: reduce la presión y corta el paso de gas por mínima presión, porque lleva la VIS de mínima incorporada (Parte 2 de AU, apartado 4.2; Parte 2 de OD, apartado 1.2).",
+  "nueva": true,
+  "opciones": null,
+  "correcta": null
+ },
+ {
+  "id": "N38",
+  "bloque": "OD",
+  "etiqueta": "OD",
+  "img": "img/076.jpg",
+  "tipo": "AC",
+  "opciones": [
+   "Correcta",
+   "Incorrecta"
+  ],
+  "correcta": "Correcta",
+  "pregunta": "Vamos a realizar un aviso de CAMBIO DE CONTADOR en la vivienda que se muestra (salida de productos de la combustión a 15 cm de la ventana y de la rejilla). Para este tipo de aviso, la distancia es:",
+  "solucion": "Explicación: en un cambio de contador no se tienen en cuenta las distancias. Actuación: realizar el cambio de contador (Parte 3 de OD, apartado 2.2). En un alta sí sería defecto: la salida debe quedar a 40 cm como mínimo de ventanas y aberturas.",
+  "nueva": true
+ },
+ {
+  "id": "N39",
+  "bloque": "OD",
+  "etiqueta": "OD",
+  "img": "img/077.jpg",
+  "tipo": "AC",
+  "opciones": [
+   "Correcta",
+   "Incorrecta"
+  ],
+  "correcta": "Correcta",
+  "pregunta": "En una REAPERTURA de instalación (IRI) SIN CERTIFICADO nos encontramos la instalación del dibujo (contador a 10 cm de la caldera). Evalúe la distancia marcada para este tipo de reapertura:",
+  "solucion": "Explicación: en este tipo de avisos no se tienen en cuenta las distancias. Actuación: hacer la reapertura previa prueba de estanqueidad y dar gas (Parte 4 de OD, apartado 3). En un alta sí sería defecto: un contador debe estar a 20 cm como mínimo de un aparato de calefacción o ACS.",
+  "nueva": true
  }
 ];
