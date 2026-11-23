@@ -402,7 +402,7 @@ window.PREGUNTAS = [
   "img": "img/028.jpg",
   "tipo": "OP",
   "pregunta": "Indique el nombre y modelo de armario de regulación debajo de cada dibujo.",
-  "solucion": "A-6 unifamiliar · A-10 bifamiliar · A-25.",
+  "solucion": "A-6 unifamiliar · A-10 bifamiliar · A-25. Ojo: en otra versión del examen el tercer dibujo es un armario más grande y la respuesta correcta es A-6, A-10, A-100. Fíjate bien en el tercer dibujo antes de contestar.",
   "nueva": false
  },
  {
