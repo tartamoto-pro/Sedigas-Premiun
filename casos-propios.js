@@ -2,7 +2,7 @@
 // Van aparte del banco de preguntas de examen (preguntas.js).
 window.PROPIOS = [
  {
-  "id": "N01",
+  "id": "P01",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n01.svg",
@@ -18,7 +18,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N02",
+  "id": "P02",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n02.svg",
@@ -34,7 +34,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N03",
+  "id": "P03",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n03.svg",
@@ -50,7 +50,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N04",
+  "id": "P04",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n04.svg",
@@ -66,7 +66,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N05",
+  "id": "P05",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n05.svg",
@@ -82,7 +82,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N06",
+  "id": "P06",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n06.svg",
@@ -98,7 +98,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N07",
+  "id": "P07",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n07.svg",
@@ -114,7 +114,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N08",
+  "id": "P08",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n08.svg",
@@ -130,7 +130,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N09",
+  "id": "P09",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n09.svg",
@@ -146,7 +146,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N10",
+  "id": "P10",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n10.svg",
@@ -162,7 +162,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N11",
+  "id": "P11",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n11.svg",
@@ -178,7 +178,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N12",
+  "id": "P12",
   "bloque": "PAD-1",
   "etiqueta": "PAD-1",
   "img": "propios/n12.svg",
@@ -189,7 +189,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N13",
+  "id": "P13",
   "bloque": "PAD-2",
   "etiqueta": "PAD-2",
   "img": "propios/n13.svg",
@@ -206,7 +206,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N14",
+  "id": "P14",
   "bloque": "PAD-2",
   "etiqueta": "PAD-2",
   "img": "propios/n14.svg",
@@ -223,7 +223,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N15",
+  "id": "P15",
   "bloque": "PAD-2",
   "etiqueta": "PAD-2",
   "img": "propios/n15.svg",
@@ -240,7 +240,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N16",
+  "id": "P16",
   "bloque": "PAD-2",
   "etiqueta": "PAD-2",
   "img": "propios/n16.svg",
@@ -257,7 +257,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N17",
+  "id": "P17",
   "bloque": "PAD-2",
   "etiqueta": "PAD-2",
   "img": "propios/n17.svg",
@@ -274,7 +274,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N18",
+  "id": "P18",
   "bloque": "PAD-2",
   "etiqueta": "PAD-2",
   "img": "propios/n18.svg",
@@ -291,7 +291,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N19",
+  "id": "P19",
   "bloque": "OD",
   "etiqueta": "OD",
   "img": "propios/n19.svg",
@@ -302,7 +302,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N20",
+  "id": "P20",
   "bloque": "OD",
   "etiqueta": "OD",
   "img": "propios/n20.svg",
@@ -318,7 +318,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N21",
+  "id": "P21",
   "bloque": "AU",
   "etiqueta": "AU-IR",
   "img": "propios/n21.svg",
@@ -335,7 +335,7 @@ window.PROPIOS = [
   "propio": true
  },
  {
-  "id": "N22",
+  "id": "P22",
   "bloque": "AU",
   "etiqueta": "AU-IR",
   "img": "propios/n22.svg",

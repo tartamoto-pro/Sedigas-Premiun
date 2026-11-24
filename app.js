@@ -2,7 +2,8 @@
    Funciona sin servidor: abre index.html o publícalo en GitHub Pages. */
 const App = (() => {
   const P = window.PREGUNTAS || [];
-  const PR = window.PROPIOS || []; // casos propios, aparte del banco de examen
+  const PR = window.PROPIOS || [];
+  const PL = window.PLUS || []; // Premium Plus · AU redes // casos propios, aparte del banco de examen
   const EXAMEN = { 'PAD-1': 6, 'PAD-2': 6, 'OD': 3, 'AU': 5 }; // reparto real Premium: 20 casos, aprueba con 16
   const KEY = 'sedigas_destreza_v1';
   const $app = document.getElementById('app');
@@ -54,6 +55,12 @@ const App = (() => {
         ${tarjeta("App.practica('todas')", '', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>', 'Todas mezcladas', P.length + ' casos')}
         ${tarjeta("App.practica('fallos')", 'c-rosa', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>', 'Repasar mis fallos', fallos ? fallos + ' casos que fallaste la última vez' : 'Aún no hay fallos', fallos ? '' : 'disabled')}
       </div>
+      <h2>Premium Plus · redes</h2>
+      <p class="sub" style="margin-top:-6px">Lo que Premium Plus añade a Premium: urgencias en redes de distribución.</p>
+      <div class="grid">
+        ${tarjeta("App.practica('plus')", 'c-naranja', 'RED', 'Casos AU redes', PL.length + ' preguntas')}
+        <a class="card c-verde" href="plus/"><span class="ico">P+</span><b>Fichas Premium Plus</b><small>Detección de fugas en redes, planos y resumen de la Parte 3</small></a>
+      </div>
       <h2>Casos propios</h2>
       <p class="sub" style="margin-top:-6px">Dibujos nuevos basados en las especificaciones de 2025. Van aparte: no entran en el simulacro, en «Todas mezcladas» ni en tus fallos de examen.</p>
       <div class="grid">
@@ -82,6 +89,7 @@ const App = (() => {
   }
 
   function practica(f) {
+    if (f === 'plus') { if (!PL.length) return home(); ses = { modo: 'practica', qs: mezclar(PL), i: 0, resp: {}, aciertos: 0 }; return pregunta(); }
     if (f && f.startsWith('propios')) { const b = f.split(':')[1]; const qs = b ? PR.filter(q => b === 'OD-AU' ? (q.bloque === 'OD' || q.bloque === 'AU') : q.bloque === b) : PR; if (!qs.length) return home(); ses = { modo: 'practica', qs: mezclar(qs), i: 0, resp: {}, aciertos: 0 }; return pregunta(); }
     let qs = f === 'todas' ? P : f === 'nuevas' ? P.filter(q => q.nueva) : f === 'fallos' ? P.filter(q => est[q.id] && est[q.id].ultima === 'mal') : P.filter(q => q.bloque === f);
     if (!qs.length) return home();

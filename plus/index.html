@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premium Plus · Recertificación Sedigas</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+nav.sec{position:sticky;top:var(--hh,52px);z-index:4;background:var(--hdr);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--borde);padding:10px 20px;display:flex;gap:8px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav.sec::-webkit-scrollbar{display:none}
+nav.sec a{color:var(--tinta);text-decoration:none;font-size:13.5px;font-weight:550;padding:6px 14px;border:1px solid var(--borde);border-radius:99px;background:var(--card)}
+nav.sec a:hover{border-color:var(--azul);color:var(--azul)}
+.ficha{background:var(--card);border:1px solid var(--borde);border-radius:22px;padding:22px 24px;margin:20px 0;scroll-margin-top:120px;box-shadow:var(--sombra)}
+.ficha h2{margin:0 0 4px;font-size:1.45rem;text-transform:none;letter-spacing:-.02em;color:var(--tinta);font-weight:800;display:flex;align-items:center;gap:12px}
+.ficha h2 .n{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#ff8a3d,#2457e6);color:#fff;font-size:1rem;flex:none}
+.ficha h3{color:var(--gris);font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;margin:22px 0 8px}
+.fuente{color:var(--gris);font-size:.85rem;margin:2px 0 12px}
+.prog{display:flex;align-items:center;gap:10px;margin:6px 0 2px;font-size:.85rem;color:var(--gris)}
+.prog .barra{flex:1;margin:0}
+ol.pasos{padding-left:0;list-style:none;counter-reset:p;margin:6px 0;display:flex;flex-direction:column;gap:8px}
+ol.pasos>li{counter-increment:p;position:relative;padding:12px 14px 12px 54px;border:1px solid var(--borde);border-radius:14px;background:var(--card2);transition:background .15s,border-color .15s,opacity .15s}
+ol.pasos>li:hover{border-color:color-mix(in srgb,var(--azul) 40%,var(--borde))}
+ol.pasos>li:before{content:counter(p);position:absolute;left:14px;top:11px;width:28px;height:28px;border-radius:9px;background:var(--azul2);color:var(--azul);font-weight:800;font-size:.85rem;display:flex;align-items:center;justify-content:center;transition:all .15s}
+ol.pasos>li.hecho{background:var(--verde2);border-color:color-mix(in srgb,var(--verde) 35%,transparent)}
+ol.pasos>li.hecho label{opacity:.6}
+ol.pasos>li.hecho:before{background:var(--verde);color:#fff;content:"✓"}
+ol.pasos label{cursor:pointer;display:block}
+ol.pasos input{display:none}
+ol.pasos ul{margin:6px 0 0 0;padding-left:18px}
+.tw{overflow-x:auto}
+table{border-collapse:separate;border-spacing:0;width:100%;font-size:.92rem;margin:6px 0;border:1px solid var(--borde);border-radius:14px;overflow:hidden}
+th,td{border-bottom:1px solid var(--borde);padding:9px 12px;text-align:left;vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{background:var(--card2);font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--gris)}
+.ojo{background:var(--ambar2);border:1px solid color-mix(in srgb,var(--ambar) 35%,transparent);border-radius:14px;padding:12px 16px;margin:12px 0}
+.clave{background:var(--verde2);border:1px solid color-mix(in srgb,var(--verde) 30%,transparent);border-radius:14px;padding:12px 16px;margin:12px 0}
+.reset{margin-top:12px}
+@media (max-width:600px){.ficha{padding:16px 14px;border-radius:18px}.ficha h2{font-size:1.2rem}ol.pasos>li{padding-left:48px}ol.pasos>li:before{left:11px}nav.sec{padding:8px 14px}}
+@media print{header.top,nav.sec,.reset,.noprint,.prog{display:none}body{background:#fff}main{max-width:none;padding:0}.ficha{border:0;box-shadow:none;padding:0;margin:0 0 10px;break-before:page}.ficha:first-of-type{break-before:auto}ol.pasos>li{break-inside:avoid;background:#fff!important;padding-right:30px}ol.pasos>li label{opacity:1!important}ol.pasos>li:before{content:counter(p)!important;background:#fff!important;color:#000!important;border:1.5px solid #333}ol.pasos>li:after{content:"☐";position:absolute;right:10px;top:10px;font-size:16px}table,tr,.ojo,.clave{break-inside:avoid}.ficha h3{break-after:avoid}}
+.fallos{background:var(--rojo2);border:1px solid color-mix(in srgb,var(--rojo) 28%,transparent);border-radius:14px;padding:12px 16px;margin:14px 0 4px}
+.fallos b.t{display:block;color:var(--rojo);margin-bottom:4px}
+.fallos ul{margin:0;padding-left:18px}.fallos li{margin:3px 0}
+.hoja{background:var(--azul2);border:1px solid color-mix(in srgb,var(--azul) 25%,transparent);border-radius:14px;padding:12px 16px;margin:12px 0}
+.hoja b.t{display:block;color:var(--azul);margin-bottom:6px}
+.hoja table{background:var(--card)}
+.indice{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin:14px 0}
+.indice a{display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--borde);border-radius:14px;padding:10px 12px;text-decoration:none;color:var(--tinta);font-weight:600;font-size:.92rem;box-shadow:var(--sombra)}
+.indice a .n{flex:none;width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#ff8a3d,#2457e6);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
+.indice a small{display:block;font-weight:400;color:var(--gris);font-size:.78rem}
+@media print{.fallos,.hoja{break-inside:avoid}.indice{display:none}}
+</style>
+<link rel="manifest" href="../manifest.json">
+<meta name="theme-color" content="#ffffff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Sedigas">
+<link rel="apple-touch-icon" href="../icon-180.png">
+<link rel="icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="../">Destreza visual <span>Premium Plus</span></a>
+  <button class="btn sec noprint" onclick="print()" style="padding:7px 14px">Imprimir</button>
+</header>
+<nav class="sec">
+  <a href="#diferencias">Diferencias</a>
+  <a href="#fugas-redes">9 · Fugas en redes</a>
+  <a href="#planos">6 · Planos</a>
+  <a href="#resumen">Resumen Parte 3</a>
+</nav>
+<main>
+<h1>Premium Plus</h1>
+<p class="sub">Lo que Premium Plus añade a Premium. Basado en el PG-IR-01 y PG-IR-02 edición 09 y en la Parte 3 de AU «Redes de distribución e instalaciones auxiliares» (Rev. 00, mayo de 2011).</p>
+<div class="ojo">La Parte 3 que tenemos es la <b>revisión 00 de 2011</b>. Si hay una revisión más nueva, manda esa.</div>
+
+<section class="ficha" id="diferencias">
+<h2>Qué cambia respecto a Premium</h2>
+<p>Premium Plus incluye todo lo de Premium y añade los <b>avisos de olor a gas en redes de distribución e instalaciones auxiliares</b> y la <b>resolución de avisos en instalaciones auxiliares</b>.</p>
+<div class="tw"><table>
+<tr><th>Teórico-práctico (20 casos, aprobado con 16, 2,5 h)</th><th>Premium</th><th>Premium Plus</th></tr>
+<tr><td>PAD-1</td><td>6</td><td>5</td></tr>
+<tr><td>PAD-2</td><td>6</td><td>5</td></tr>
+<tr><td>OD</td><td>3</td><td>3</td></tr>
+<tr><td>AU receptoras</td><td>5</td><td>4</td></tr>
+<tr><td><b>AU redes</b></td><td>—</td><td><b>3</b></td></tr>
+</table></div>
+<p><b>Test (solo certificación):</b> unas 10 preguntas de la Parte 3 de AU y 2 de la Parte 4 de AU (prevención de riesgos).</p>
+<p><b>Práctico:</b> las mismas pruebas que Premium (estanquidad, combustión, cocina, conjunto de regulación, contador y parte, explosímetro) <b>más dos</b>: interpretación de planos (prueba 6) y detección de fugas en redes (prueba 9). Las fichas de las pruebas comunes están en <a href="../practico/">Examen práctico</a>.</p>
+</section>
+
+<section class="ficha" id="fugas-redes">
+<h2><span class="n">9</span>Detección de fugas en redes</h2>
+<p class="fuente">Prueba 9 del PG-IR-02 (solo Premium Plus). Fuente: Parte 3 de AU, apartados 2.1 a 2.4.</p>
+
+<h3>A · Localización aproximada (reseguimiento)</h3>
+<ol class="pasos" data-f="redes1">
+<li><label><input type="checkbox">Comprueba el equipo: identificado, calibrado y probado con <b>gas de ensayo</b> al empezar la jornada. Detecta 0–10.000 ppm, % volumen y % LIE.</label></li>
+<li><label><input type="checkbox">Con el <b>plano</b>, sigue la traza de la tubería a pie.</label></li>
+<li><label><input type="checkbox">Elige la sonda: <b>de alfombra</b> normalmente; <b>de campana</b> en pendientes, escaleras, resaltes, zonas con mucho polvo o campo abierto.</label></li>
+<li><label><input type="checkbox">Selector en <b>máxima sensibilidad</b> (ppm) y avanza sobre la traza a la velocidad adecuada, arrastrando la alfombra o apoyando la campana.</label></li>
+<li><label><input type="checkbox">Pasa el detector por <b>todas las discontinuidades</b>: juntas, bordillos, grietas. Revisa <b>arquetas, registros y trampillas</b> de otros servicios.</label></li>
+<li><label><input type="checkbox">Ten en cuenta el firme, el tipo de suelo y la humedad, y descarta otros orígenes: <b>alcantarillas o purines</b> (metano), <b>escapes de coches, disolventes, pinturas</b>.</label></li>
+<li><label><input type="checkbox">Si das con gas, recorre la zona varias veces para <b>delimitar</b> dónde aparece.</label></li>
+</ol>
+<div class="clave"><b>Método de taladro en la localización aproximada</b> (suelos helados o poco permeables, con autorización del responsable de la distribuidora): sin edificios cerca, taladros cada <b>5 m</b> como máximo; con edificios, cada <b>2,5 m</b> o el doble de la distancia a la pared más próxima, lo menor. Profundidad mínima <b>30 cm</b>. En las acometidas, un taladro más hacia la fachada, sin taladrar encima de la acometida.</div>
+
+<h3>B · Localización precisa (taladros)</h3>
+<ol class="pasos" data-f="redes2">
+<li><label><input type="checkbox">Empieza a taladrar por <b>un extremo</b> de la zona con gas y avanza hacia el otro (no en pozos de válvulas ni bridas visitables).</label></li>
+<li><label><input type="checkbox">Broca de unos <b>14 mm</b>, atravesando el hormigón hasta el terreno poroso, sin pasar de <b>0,4 m</b>. Si hace falta más, útil manual de punta roma.</label></li>
+<li><label><input type="checkbox">Taladros separados unos <b>0,5 m</b>. Mide en cada uno con la sonda de cono (mejor con conector de succión para quitar bolsas viejas).</label></li>
+<li><label><input type="checkbox">La fuga está localizada cuando los <b>extremos dan valores parecidos</b> y el <b>máximo está en los taladros centrales</b>.</label></li>
+<li><label><input type="checkbox">Haz siempre una <b>perforación transversal</b> a la traza, hacia los edificios o recintos cerrados.</label></li>
+<li><label><input type="checkbox">Marca el punto: <b>anillo amarillo de 12 cm como máximo</b> alrededor del taladro de máxima concentración. En calzada o jardín, <b>flecha en el bordillo</b> apuntando al taladro.</label></li>
+<li><label><input type="checkbox"><b>Sella</b> todos los taladros menos los 2 o 3 de mayor concentración.</label></li>
+<li><label><input type="checkbox">Clasifica la fuga: <b>nivel 1</b> (urgente), <b>nivel 2</b> (programada) o <b>nivel 3</b> (vigilancia). Si es nivel 1, avisa enseguida al <b>CCAU</b> y pide número de aviso.</label></li>
+</ol>
+<div class="prog noprint"><div class="barra"><i id="pb-redes1" style="width:0"></i></div><span id="pt-redes1">0 de 0</span></div>
+<button class="btn sec reset" onclick="limpiar('redes1');limpiar('redes2')">Desmarcar todo</button>
+<div class="fallos"><b class="t">Lo que el examinador apunta como fallo</b><ul>
+<li>No utilizar la sonda de prelocalización adecuada (alfombra o campana).</li>
+<li>No pasar el detector de forma adecuada.</li>
+<li>No indicar la forma correcta de localizar exactamente la fuga, que es mediante taladros.</li>
+<li>No realizar la prueba.</li></ul></div>
+</section>
+
+<section class="ficha" id="planos">
+<h2><span class="n">6</span>Interpretación de planos de redes</h2>
+<p class="fuente">Prueba 6 del PG-IR-02 (solo Premium Plus). Fuente: Parte 3 de AU, apartado 8.</p>
+<div class="hoja"><b class="t">Lo que te piden</b>Leer un plano y decir el <b>material</b>, la <b>presión</b> y las <b>distancias</b>. Mira siempre la <b>leyenda</b> y los rótulos junto a la traza (diámetro y material, por ejemplo «PE 110») y la presión del tramo (BP, MPA, MPB o APA).</div>
+<h3>Códigos de material</h3>
+<div class="tw"><table>
+<tr><th>Código</th><th>Material</th><th>Código</th><th>Material</th></tr>
+<tr><td><b>PE</b></td><td>Polietileno</td><td><b>FC</b></td><td>Fibrocemento (uralita)</td></tr>
+<tr><td><b>AO</b></td><td>Acero</td><td><b>FG</b></td><td>Fundición gris (hierro)</td></tr>
+<tr><td><b>FD</b></td><td>Fundición dúctil</td><td><b>PB</b></td><td>Plomo</td></tr>
+<tr><td><b>PA</b></td><td>Plancha asfaltada</td><td><b>FP</b></td><td>Fundición Precis</td></tr>
+<tr><td><b>PV</b></td><td>PVC</td><td><b>BO</b></td><td>Bonna</td></tr>
+<tr><td><b>PT</b></td><td>Plancha encintada</td><td><b>FV</b></td><td>Fibra de vidrio</td></tr>
+<tr><td><b>CU</b></td><td>Cobre</td><td></td><td></td></tr>
+</table></div>
+<h3>Presiones (nomenclatura que verás en los planos)</h3>
+<div class="tw"><table>
+<tr><th>Antigua</th><th>Rango</th><th>Material habitual</th></tr>
+<tr><td>BP</td><td>0 a 0,05 bar</td><td>PE</td></tr>
+<tr><td>MPA</td><td>0,05 a 0,4 bar</td><td>PE</td></tr>
+<tr><td>MPB</td><td>0,4 a 4 bar</td><td>PE, algo de acero</td></tr>
+<tr><td>APA</td><td>4 a 16 bar</td><td>Acero</td></tr>
+</table></div>
+<p class="fuente">Clasificación actual (RD 919/2006): MOP hasta 0,1 bar · de 0,1 a 2 bar · de 2 a 5 bar · de 5 a 16 bar. El PE se instala preferentemente con MOP menor de 5 bar.</p>
+<h3>Símbolos que conviene reconocer</h3>
+<ul>
+<li><b>Válvula</b>: dos triángulos enfrentados (enterrable o en arqueta, con su código). <b>Cámara o pozo de válvulas</b> y recintos se dibujan con su perímetro.</li>
+<li><b>Tapón</b>, <b>te</b>, <b>reducción</b>, <b>codos</b> (con el ángulo), <b>te de toma en carga</b> (TTC, con diámetros) y <b>enlace de cambio de material</b> (por ejemplo PE | FD).</li>
+<li><b>ER/ERM</b>: cuadrado con el símbolo de regulación; <b>EM</b>: estación de medida.</li>
+<li><b>Llave de acometida</b> en armario regulador de finca, en pared o enterrado (se indica el modelo, por ejemplo A-10 o E-60).</li>
+<li><b>Protecciones</b> puntuales, longitudinales o superficiales (P1, P2, P3), <b>toma de potencial (TP)</b> y <b>estación de protección catódica (EPC)</b>.</li>
+</ul>
+<h3>Tipos de plano y escalas</h3>
+<div class="tw"><table>
+<tr><th>Plano</th><th>Escala habitual</th></tr>
+<tr><td>Situación</td><td>1:5000 o 1:1000</td></tr>
+<tr><td>Trazado en planta / perfil longitudinal</td><td>1:500 / 1:100</td></tr>
+<tr><td>Detalle</td><td>1:100, 1:50 o 1:20</td></tr>
+<tr><td>Emplazamiento de ERM y arquetas de válvulas</td><td>1:100</td></tr>
+<tr><td>Constructivos de ERM y arquetas</td><td>1:50 o 1:20</td></tr>
+</table></div>
+<p>Las distancias se miden con la escala: en un plano 1:500, <b>1 cm del plano son 5 m</b> reales; en 1:1000, 1 cm son 10 m.</p>
+<div class="fallos"><b class="t">Lo que el examinador apunta como fallo</b><ul>
+<li>Interpretar mal el plano: material, presión o distancias.</li>
+<li>No realizar la prueba.</li></ul></div>
+</section>
+
+<section class="ficha" id="resumen">
+<h2>Resumen de la Parte 3 (AU redes)</h2>
+<h3>Avisos de olor a gas en el exterior</h3>
+<ul>
+<li><b>Prioridad 1</b>: llegar en <b>30 minutos</b> como máximo y avisar al CCAU al llegar. Hablar con quien dio el aviso.</li>
+<li>Reseguimiento, taladros para acotar la fuga, obra civil para descubrir y comprobación con agua jabonosa.</li>
+<li><b>Filtración a recintos cerrados</b>: ventilar para no pasar del <b>20 % LIE</b>; si no se consigue, desalojar. Por encima del 20 % LIE en el ambiente, <b>acordonar</b>.</li>
+<li>Tras reparar, nuevo reseguimiento por si había otra fuga enmascarada.</li>
+<li>Valorar que el olor sea un <b>derrame de odorizante</b> (THT) o tierras impregnadas: se rocía con lejía.</li>
+<li>No se abandona el lugar sin autorización del CCAU. Cierre sin gas: <b>SR</b> (sin resultado). En obras: <b>FC</b> (fuga controlada, culpa del contratista) o <b>FE</b> (fuga exterior previa).</li>
+</ul>
+<h3>Situaciones de riesgo inmediato</h3>
+<p>Gas sin origen identificado · emisión considerable · escape que se filtra a recintos cerrados o a otros servicios · fuga con incendio. Medidas: cortar el gas (pinzamiento, válvulas o ER, siempre con autorización del CCAU), eliminar llamas y chispas, nadie toca interruptores ni timbres, acordonar, ventilar y desalojar si hace falta.</p>
+<h3>Fuga incendiada</h3>
+<p>En general, <b>dejarla arder</b>. Se apaga solo si hace daño grave, si después se puede cortar enseguida, si la tubería es de <b>PE o plomo</b> (se funden) o si es pequeña en zona concurrida (luego acordonar y vigilar).</p>
+<h3>Falta y exceso de presión</h3>
+<ul>
+<li><b>Falta</b>: roturas, válvulas mal maniobradas, taponamientos o disparo de la VIS de máxima de un regulador. Nunca cerrar una válvula sin autorización del CCAU.</li>
+<li><b>Exceso</b>: la causa principal es la <b>entrada de agua</b>. Si afecta a receptoras sin seguridad por máxima, cerrar las válvulas de acometida.</li>
+</ul>
+<h3>Operaciones en PE</h3>
+<div class="tw"><table>
+<tr><th>Operación</th><th>Datos clave</th></tr>
+<tr><td>Pinzamiento</td><td>Diámetros &lt; 200 mm (manual 20–63, hidráulico 63–200) · hasta el <b>70 % del doble del espesor</b> · a <b>3 diámetros</b> de una soldadura · perpendicular al eje · recuperador y marcar el punto · protegerse de la electricidad estática</td></tr>
+<tr><td>Balonamiento</td><td>Diámetros &gt; 200 mm y presión &lt; <b>0,4 bar</b> · balón con manómetro · comprobar balones y llevar de reserva</td></tr>
+<tr><td>Purgado</td><td>Tubo metálico + manguera con refuerzo metálico · salida por encima de obstáculos y personas · sin interrumpir · acabar midiendo % vol y O₂</td></tr>
+</table></div>
+<h3>Operaciones en acero</h3>
+<p>Cortar con válvulas de línea (autorización del CCAU) y sustituir el tramo con barrido de nitrógeno, o colocar un <b>manguito bipartito (Plidco)</b>: reducir presión, limpiar el tubo, montar el manguito al lado, desplazarlo sobre la fuga con la fuga a 90° de las costuras y apretar en diagonal con <b>llave antichispa</b>. Si va a ser definitivo, se suelda (soldador homologado).</p>
+<h3>Estaciones de regulación (ER / ERM)</h3>
+<p>Siempre <b>línea principal</b> (completa) y <b>secundaria</b> (completa, parcial o manual), cada una capaz del <b>100 % del caudal</b>. Línea principal con entrada APA: válvula + filtro + VIS + regulador monitor + regulador principal + válvula. Con entrada MPB: sin monitor. Manómetros clase 1 de 100 mm: APA 0–25 bar · MPB 0–6 · MPA 0–0,25 · BP 0–0,1. Válvulas de cierre rápido: <b>esfera en APA</b>, <b>mariposa</b> en MPB, MPA y BP.</p>
+<h3>Equipos</h3>
+<p>Detectores de reseguimiento capaces de <b>5 ppm</b> de metano, con sonda de alfombra, de campana y de tubo. Explosímetro, localizador de tuberías, EPI (algodón o ignífugo), señalización, pinzadores, balones, agua jabonosa, extintor y linternas antiexplosión.</p>
+</section>
+
+<p class="aviso">Practica las preguntas en «Casos AU redes», en la portada. Las casillas que marques se guardan en este navegador.</p>
+<div class="acciones noprint"><a class="btn sec" href="../">Volver al inicio</a></div>
+</main>
+<script>
+const hd=document.querySelector('header.top');const setH=()=>document.documentElement.style.setProperty('--hh',hd.offsetHeight+'px');setH();addEventListener('resize',setH);
+const K='sedigas_plus_v1';let st={};try{st=JSON.parse(localStorage.getItem(K))||{}}catch(e){}
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}};
+const grupo={redes1:['redes1','redes2'],redes2:['redes1','redes2']};
+function barra(f){const fs=grupo[f]||[f];const ids=fs[0];const l=fs.flatMap(x=>[...document.querySelectorAll('ol[data-f="'+x+'"]>li')]);const h=l.filter(x=>x.classList.contains('hecho')).length;const pb=document.getElementById('pb-'+ids),pt=document.getElementById('pt-'+ids);if(pb){pb.style.width=(100*h/l.length)+'%';pt.textContent=h+' de '+l.length}}
+function limpiar(f){document.querySelectorAll('ol[data-f="'+f+'"] input').forEach((cb,i)=>{cb.checked=false;cb.closest('li').classList.remove('hecho');delete st[f+i]});save();barra(f)}
+document.querySelectorAll('ol.pasos').forEach(ol=>{const f=ol.dataset.f;ol.querySelectorAll(':scope>li').forEach((li,i)=>{const cb=li.querySelector('input');const id=f+i;cb.checked=!!st[id];li.classList.toggle('hecho',cb.checked);cb.addEventListener('change',()=>{st[id]=cb.checked;li.classList.toggle('hecho',cb.checked);save();barra(f)})});barra(f)});
+</script>
+<script>if("serviceWorker" in navigator && /^https?:$/.test(location.protocol)){addEventListener("load",()=>navigator.serviceWorker.register("../sw.js").catch(()=>{}))}</script>
+</body>
+</html>
